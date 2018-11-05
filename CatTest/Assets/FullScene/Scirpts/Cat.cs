@@ -19,7 +19,7 @@ public class Cat : MonoBehaviour {
     public void try_picking_up()
     {
         if (GC_script.GCAnimator.GetCurrentAnimatorStateInfo(0)
-                                .IsName(GameController.State_TCC))
+                                .IsName(GameController.State_TCC))  //only can be picked up in the state of "try to catch cat";
         {
             GC_script.GCAnimator.SetTrigger("NextStep");
             Destroy(gameObject);

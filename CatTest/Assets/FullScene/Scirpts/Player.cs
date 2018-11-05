@@ -38,6 +38,7 @@ public class Player : MonoBehaviour {
         HeadTrans.Rotate(-IPC_script.Mouse_Y * MouseSensitivity, 0.0f, 0.0f);
     }
 
+    //When players enters the trigger; check the scene's objects for trigger sizes and tags;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "NPCTrigger")

@@ -5,20 +5,17 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
-    //public static int State_TTNPC = Animator.StringToHash("Base Layer.TalkToNPC");
-    //public static int State_TCC = Animator.StringToHash("Base Layer.ToCatchCat");
-    //public static int State_TRC = Animator.StringToHash("Base Layer.ToReturnCat");
-
+    //State strings, same as the name in animator controller;
     public const string State_TTNPC = "ToTalkToNPC";
     public const string State_TCC = "ToCatchCat";
     public const string State_TRC = "ToReturnCat";
     public const string State_Finished = "Finished";
 
+    //Text string showing in canvas;
     public const string State_Text1 = "Talk to the NPC";
     public const string State_Text2 = "Try to catch cat";
     public const string State_Text3 = "You caught the cat! Return to NPC";
     public const string State_Text4 = "Good job!!!!!";
-
 
     public Text StateIndicatorText;
 
@@ -31,6 +28,7 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //Update canvas text;
         if (GCAnimator.GetCurrentAnimatorStateInfo(0)
                                 .IsName(GameController.State_TTNPC))
         {

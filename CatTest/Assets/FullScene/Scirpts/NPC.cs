@@ -28,8 +28,6 @@ public class NPC : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //transform.LookAt(Player_Trans);
-
         if(available_to_act)
         {
             if(IC_script.Action_key_pressed)
