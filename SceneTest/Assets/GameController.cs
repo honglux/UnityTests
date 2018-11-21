@@ -27,12 +27,13 @@ public class GameController : MonoBehaviour {
 
         if (GameObject.Find("Global") == null)
         {
-            GameObject glo_instant = Instantiate(global) as GameObject;
+            GameObject glo_instant = Instantiate(global,new Vector3(),new Quaternion())
+                                            as GameObject;
             glo_instant.name = "Global";
         }
         glo_script = GameObject.Find("Global").GetComponent<Global>();
 
-        Debug.Log("global.glotesst1 " + glo_script.glotesst1);
+        //Debug.Log("global.glotesst1 " + glo_script.glotesst1);
 
     }
 
