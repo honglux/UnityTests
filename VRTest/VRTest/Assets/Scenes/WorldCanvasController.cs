@@ -50,8 +50,12 @@ public class WorldCanvasController : MonoBehaviour {
         EventSystem.current.RaycastAll(point_data, results);
 
         Debug.Log("results.Count " + results.Count);
+        foreach (RaycastResult rcr in results)
+        {
+            Debug.Log("result object " + rcr.gameObject.name);
+        }
 
-        if(results.Count > 0)
+        if (results.Count > 0)
         {
             //Vector3[] positions = { transform.position,
             //                        results[results.Count - 1].worldPosition };
