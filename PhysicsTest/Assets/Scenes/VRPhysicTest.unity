@@ -421,6 +421,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GT_script: {fileID: 1128919890}
   CI_script: {fileID: 1899380860}
+  Controller_TRANS: {fileID: 1899380858}
+  speed_cal_limit: 5
 --- !u!138 &148608116
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -1440,6 +1442,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GT_script: {fileID: 1212275307}
   CI_script: {fileID: 2005867577}
+  Controller_TRANS: {fileID: 2005867576}
+  speed_cal_limit: 10
 --- !u!138 &836438778
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -2138,7 +2142,7 @@ Transform:
   m_GameObject: {fileID: 1339205189}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.72, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 0.1}
+  m_LocalScale: {x: 5, y: 3, z: 0.1}
   m_Children: []
   m_Father: {fileID: 1594562364}
   m_RootOrder: 0
@@ -2467,7 +2471,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1594562358}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.757, y: 0, z: 0}
+  m_LocalPosition: {x: 0.757, y: 0.213, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 1339205195}
@@ -2675,7 +2679,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1758668445}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.5, z: 0}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
   m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2726,14 +2730,14 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!135 &1768606293
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1768606290}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 53ba0bac951e667499f96de48be4e625, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
