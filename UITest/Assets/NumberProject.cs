@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class NumberProject : MonoBehaviour
 {
-    [SerializeField] float speed = 5.0f;
+    public Vector3 Target { get; set; }
+
+    [SerializeField] private float speed = 5.0f;
 
     private bool start_flag;
 
@@ -24,18 +26,19 @@ public class NumberProject : MonoBehaviour
     {
         if(start_flag)
         {
-            transform.Translate(transform.forward * Time.deltaTime * speed);
+            transform.Translate(Target.normalized * Time.deltaTime * speed,Space.World);
         }
     }
 
-    public void start_move()
+    public void start_move(Vector3 target_pos)
     {
+        Target = target_pos;
         start_flag = true;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "DefuseWall")
+        if(other.gameObject.layer == LayerMask.NameToLayer("RayCastOnly"))
         {
             Destroy(gameObject);
         }

@@ -4,27 +4,29 @@ using UnityEngine;
 
 public class Controller_Input : MonoBehaviour {
 
-    //public enum ControllerType { LeftController,RightController}
-
-    public enum SystemActions {Grab, UISystem}
-
     public OVRInput.Controller Controller_type;
 
-    [SerializeField] private SystemActions MiddleFingerAction;
+    [SerializeField] private ControllerSystemActions MiddleFingerAction;
+    [SerializeField] private ControllerSystemActions IndexFingerAction;
 
     public System.Action UISystemDown { get; set; }
     public System.Action UISystemUp { get; set; }
+    public System.Action ShootDown { get; set; }
+    public System.Action ShootUp { get; set; }
     public bool Forward_flag { get; set; }
     public bool Grab_falg { get; set; }
     public bool Left_flag { get; set; }
     public bool Right_flag { get; set; }
 
     private bool UISystem_down_flag;
+    private bool shoot_down_flag;
 
     private void Awake()
     {
         this.UISystemDown = null;
         this.UISystemUp = null;
+        this.ShootDown = null;
+        this.ShootUp = null;
     }
 
     // Use this for initialization
@@ -34,6 +36,7 @@ public class Controller_Input : MonoBehaviour {
         this.Left_flag = false;
         this.Right_flag = false;
         this.UISystem_down_flag = false;
+        this.shoot_down_flag = false;
 	}
 	
 	// Update is called once per frame
@@ -96,14 +99,46 @@ public class Controller_Input : MonoBehaviour {
                         Forward_flag = false;
                     }
 
+                    if (Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.5f)
+                    {
+                        Debug.Log("Index");
+                        switch (IndexFingerAction)
+                        {
+                            case ControllerSystemActions.Empty:
+                                return;
+                            case ControllerSystemActions.Shoot:
+                                if(!shoot_down_flag && ShootDown != null)
+                                {
+                                    ShootDown();
+                                    shoot_down_flag = true;
+                                }
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        switch (IndexFingerAction)
+                        {
+                            case ControllerSystemActions.Empty:
+                                return;
+                            case ControllerSystemActions.Shoot:
+                                if (shoot_down_flag && ShootUp != null)
+                                {
+                                    ShootUp();
+                                    shoot_down_flag = false;
+                                }
+                                break;
+                        }
+                    }
+
                     if (Input.GetAxis("Oculus_CrossPlatform_SecondaryHandTrigger") > 0.5f)
                     {
                         switch(MiddleFingerAction)
                         {
-                            case SystemActions.Grab:
+                            case ControllerSystemActions.Grab:
                                 Grab_falg = true;
                                 break;
-                            case SystemActions.UISystem:
+                            case ControllerSystemActions.UISystem:
                                 //Debug.Log("UISystemDown null "+ UISystemDown == null);
                                 if(!UISystem_down_flag && UISystemDown != null)
                                 {
@@ -118,10 +153,10 @@ public class Controller_Input : MonoBehaviour {
                     {
                         switch (MiddleFingerAction)
                         {
-                            case SystemActions.Grab:
+                            case ControllerSystemActions.Grab:
                                 Grab_falg = false;
                                 break;
-                            case SystemActions.UISystem:
+                            case ControllerSystemActions.UISystem:
                                 if (UISystem_down_flag && UISystemDown != null)
                                 {
                                     UISystemUp();
@@ -137,3 +172,5 @@ public class Controller_Input : MonoBehaviour {
 
     }
 }
+
+public enum ControllerSystemActions { Empty, Grab, UISystem, Shoot };

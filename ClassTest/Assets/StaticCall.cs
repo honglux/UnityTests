@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public class UIButton : MonoBehaviour
+public class StaticCall : MonoBehaviour
 {
-    [SerializeField] private string Number;
+    private void Awake()
+    {
+        Debug.Log("static a " + StaticClassTest.a);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -17,11 +19,5 @@ public class UIButton : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void change_number(string number)
-    {
-        Number = number;
-        GetComponentInChildren<TextMeshPro>().text = number;
     }
 }

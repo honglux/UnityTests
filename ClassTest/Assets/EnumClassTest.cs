@@ -1,16 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public class UIButton : MonoBehaviour
+public class EnumClassTest : MonoBehaviour
 {
-    [SerializeField] private string Number;
+    public enum EnumTest2 { a, b };
 
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -18,10 +17,6 @@ public class UIButton : MonoBehaviour
     {
         
     }
-
-    public void change_number(string number)
-    {
-        Number = number;
-        GetComponentInChildren<TextMeshPro>().text = number;
-    }
 }
+
+public enum EnumTest1 { a,b};

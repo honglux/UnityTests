@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class UISystem : MonoBehaviour
 {
-    [SerializeField] private GameObject UIPanel_Prefab;
+    public enum ButtonMode { Single, Switch_One, Switch_Two };
+
+    public ButtonMode CurButtonMode;
+
+    [SerializeField] private GameObject UIPanelSwitchOne_Prefab;
     [SerializeField] private Controller_Input CI_script;
     [SerializeField] private Transform Controller_TRANS;
 
@@ -25,7 +29,6 @@ public class UISystem : MonoBehaviour
         CI_script.UISystemDown += UI_button_down;
         CI_script.UISystemUp += UI_button_up;
 
-        this.UIPanelOffsetZ = 0.0f;
         this.panel_open = false;
     }
 
@@ -51,10 +54,20 @@ public class UISystem : MonoBehaviour
 
     private void instantiate_UIPanel()
     {
-        UIPanel_OBJ = Instantiate(UIPanel_Prefab, 
-                                transform.position + Controller_TRANS.forward * UIPanelOffsetZ,
+        Vector3 position = transform.position + Controller_TRANS.forward * UIPanelOffsetZ;
+        //Debug.Log("transform.position " + transform.position);
+        //Debug.Log("position " + position);
+        switch(CurButtonMode)
+        {
+            case ButtonMode.Switch_One:
+                UIPanel_OBJ = Instantiate(UIPanelSwitchOne_Prefab,
+                                position,
                                 Quaternion.identity);
-        panel_rotation_fix();
+                panel_switchone_rotation_fix();
+                break;
+            case ButtonMode.Single:
+                break;
+        }
         UIPanel_OBJ.GetComponent<UIPanel>().Controller_TRANS = Controller_TRANS;
     }
 
@@ -62,12 +75,12 @@ public class UISystem : MonoBehaviour
     {
         if(UIPanel_OBJ != null)
         {
-            UIPanel_OBJ.GetComponent<UIPanel>().push_button();
+            UIPanel_OBJ.GetComponent<UIPanel>().PushButton();
             Destroy(UIPanel_OBJ);
         }
     }
 
-    private void panel_rotation_fix()
+    private void panel_switchone_rotation_fix()
     {
         //Debug.Log("Controller_TRANS.rotation.y " + Controller_TRANS.rotation.y);
         //UIPanel_OBJ.transform.LookAt(Camera.main.transform);

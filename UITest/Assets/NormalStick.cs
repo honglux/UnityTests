@@ -6,11 +6,15 @@ public class NormalStick : MonoBehaviour
 {
     [SerializeField] private UIPanel UIP_script;
 
-    public Collider last_collider { get; set; }
+    //private int button_index;
+    private UIButtonColliderIndexes curr_UIButtonIndex;
+    private UIButtonColliderIndexes last_UIButtonIndex;
 
     private void Start()
     {
-        last_collider = null;
+        //this.button_index = 0;
+        this.curr_UIButtonIndex = 0;
+        this.last_UIButtonIndex = 0;
     }
 
     private void Update()
@@ -25,16 +29,12 @@ public class NormalStick : MonoBehaviour
     {
         if(other.tag == "UIButton")
         {
-            if(last_collider != null)
+            curr_UIButtonIndex = other.GetComponent<UIButtonCollider>().get_index();
+            if(last_UIButtonIndex != curr_UIButtonIndex)
             {
-                Color gray = Color.gray;
-                gray.a = 0.5f;
-                last_collider.GetComponent<MeshRenderer>().material.color = gray;
+                UIP_script.ButtonHoved(curr_UIButtonIndex);
+                last_UIButtonIndex = curr_UIButtonIndex;
             }
-            Color white = Color.white;
-            white.a = 0.5f;
-            other.GetComponent<MeshRenderer>().material.color = white;
-            last_collider = other;
         }
     }
 
