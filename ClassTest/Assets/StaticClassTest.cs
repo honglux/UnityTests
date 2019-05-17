@@ -12,4 +12,13 @@ public static class StaticClassTest
         a = 10;
     }
 
+    public static IEnumerator IEstatic_test(int input)
+    {
+        while(true)
+        {
+            Debug.Log("IEstatic_test " + input);
+            yield return new WaitForSeconds(1.0f);
+        }
+    }
+
 }

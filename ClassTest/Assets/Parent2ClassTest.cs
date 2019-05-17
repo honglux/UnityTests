@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Parent2ClassTest : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class Parent2ClassTest : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         test_action += testaction_func1;
         Debug.Log("Parent2ClassTest start");
@@ -24,12 +25,28 @@ public class Parent2ClassTest : MonoBehaviour
     // Update is called once per frame
     virtual protected void Update()
     {
-        test_action();
+        //test_action();
         Debug.Log("Parent2ClassTest update");
     }
 
     virtual public void testaction_func1()
     {
         Debug.Log("testaction_func1");
+    }
+
+    protected virtual void OnDestroy()
+    {
+        Debug.Log("Parent2ClassTest OnDestroy");
+    }
+
+    protected virtual void OnApplicationQuit()
+    {
+        Debug.Log("Parent2ClassTest OnApplicationQuit");
+    }
+
+    protected virtual int exception_test()
+    {
+        //throw new NotImplementedException();  //not good;
+        return -1;
     }
 }

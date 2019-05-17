@@ -101,7 +101,7 @@ public class Controller_Input : MonoBehaviour {
 
                     if (Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.5f)
                     {
-                        Debug.Log("Index");
+                        //Debug.Log("Index");
                         switch (IndexFingerAction)
                         {
                             case ControllerSystemActions.Empty:

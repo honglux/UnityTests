@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public static class MathTest {
 
@@ -13,5 +14,19 @@ public static class MathTest {
         Debug.Log("Mathf.Atan(1)/Mathf.PI*180 " + Mathf.Atan(1)/Mathf.PI*180);
     }
 
+    public static void list_vector_test()
+    {
+        List<Vector2> lv2 = new List<Vector2>();
+        for(int i = 0;i<10;i++)
+        {
+            lv2.Add(new Vector2(i, i + 5));
+        }
+        //Debug.Log("list_vector_test "+lv2.Average())  //failed;
+    }
+
+    public static void math_test()
+    {
+        Debug.Log("Mathf.Pow(3, 4)" + Mathf.Pow(3, 4));
+    }
 
 }

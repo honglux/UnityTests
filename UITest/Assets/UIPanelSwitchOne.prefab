@@ -153,6 +153,7 @@ MonoBehaviour:
   L_Buttons_TRANS: {fileID: 3029718714796027999}
   R_Buttons_TRANS: {fileID: 1090404954718455023}
   Hoved_color: {r: 1, g: 1, b: 1, a: 0.39215687}
+  CurrUseMode: 0
   Project_Prefab: {fileID: 4962344410853747634, guid: fce276369b1d56841bec23fa00e6d6c3,
     type: 3}
 --- !u!1 &2633774531743198632

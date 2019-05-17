@@ -7,7 +7,7 @@ public class ClassTest : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         MathTest.tanTest();
-
+        MathTest.math_test();
     }
 	
 	// Update is called once per frame

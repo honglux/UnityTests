@@ -16,8 +16,9 @@ public class ThreadTest : MonoBehaviour {
         this.stop_flag = false;
         this.cube = GameObject.Find("Cube");
         //Debug.Log("cube ", cube);
-        this.thread = new Thread(thread1_test);
-        thread.Start();
+        //this.thread = new Thread(thread1_test);
+        this.thread = new Thread(new ParameterizedThreadStart(thread1_test));
+        thread.Start((int)5);
     }
 	
 	// Update is called once per frame
@@ -31,11 +32,12 @@ public class ThreadTest : MonoBehaviour {
         }
 	}
 
-    void thread1_test()
+    private void thread1_test(object c)
     {
         
         while(!stop_flag)
         {
+            Debug.Log("c " + c);
             //Debug.Log("x "+x);
             //Debug.Log("timer " + timer);
         }

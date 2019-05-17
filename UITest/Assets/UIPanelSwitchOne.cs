@@ -17,8 +17,13 @@ public class UIPanelSwitchOne : UIPanel
     {
         base.Start();
 
-        SS_script = GameObject.Find("ShootSystem").GetComponent<ShootSystem>();
-
+        switch(CurrUseMode)
+        {
+            case UseMode.Shoot:
+                SS_script = GameObject.Find("ShootSystem").GetComponent<ShootSystem>();
+                break;
+        }
+        
         selected_button = 0;
     }
 

@@ -63,6 +63,22 @@ public class ListTest : MonoBehaviour {
         //    Debug.Log("list4" + LTC4);
         //}
 
+        List<Transform> obj_list = new List<Transform>();
+        Transform obj1 = GameObject.CreatePrimitive(PrimitiveType.Cube).transform;
+        Transform obj2 = GameObject.CreatePrimitive(PrimitiveType.Sphere).transform;
+        Transform obj3 = GameObject.CreatePrimitive(PrimitiveType.Cylinder).transform;
+
+        obj_list.Add(obj1);
+        obj_list.Add(obj2);
+        obj_list.Add(obj3);
+
+        obj_list.Remove(obj2);
+
+        Debug.Log("obj_list length " + obj_list.Count);
+        foreach(Transform obj in obj_list)
+        {
+            Debug.Log("obj " + obj.name);
+        }
     }
 
     // Update is called once per frame
