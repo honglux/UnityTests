@@ -7,9 +7,13 @@ using System;
 public class JJTTest
 {
     public string Test1 = "aaa";
+
+    //Can not be property!!!
+    public string Test2 { get; set; }
     
     public JJTTest()
     {
-
+        Test1 = "aaa";
+        Test2 = "bbb";
     }
 }
