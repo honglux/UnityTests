@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System;
 
 public static class MathTest {
+
+    static MathTest()
+    {
+    }
 
     public static void tanTest()
     {
@@ -27,6 +32,11 @@ public static class MathTest {
     public static void math_test()
     {
         Debug.Log("Mathf.Pow(3, 4)" + Mathf.Pow(3, 4));
+    }
+
+    public static void natural_log()
+    {
+        Debug.Log("natural_log " + Math.Log(Math.E));
     }
 
 }
