@@ -39,4 +39,13 @@ public static class MathTest {
         Debug.Log("natural_log " + Math.Log(Math.E));
     }
 
+    public static void int_division()
+    {
+        List<int> testc = new List<int>();
+        testc.Add(2);
+        testc.Add(1);
+        testc.Add(1);
+        Debug.Log("int_division " + (testc.Count) / (float)testc[0]);
+    }
+
 }
