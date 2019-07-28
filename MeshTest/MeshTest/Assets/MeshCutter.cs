@@ -12,6 +12,7 @@ public class MeshCutter : MonoBehaviour
     private Transform NC1_TRANS;
     private Transform NC2_TRANS;
     private Material material;
+    private MeshLine mesh_line;
 
     private void Awake()
     {
@@ -19,6 +20,7 @@ public class MeshCutter : MonoBehaviour
         this.NC1_TRANS = null;
         this.NC2_TRANS = null;
         this.material = null;
+        this.mesh_line = new MeshLine();
     }
 
     // Start is called before the first frame update
@@ -30,7 +32,7 @@ public class MeshCutter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             get_trans();
         }
@@ -50,24 +52,36 @@ public class MeshCutter : MonoBehaviour
 
     private void cut()
     {
-        MeshData mesh_data = new MeshData(NM_TRANS);
-        MeshData NMD1 = mesh_data.clone();
-        MeshData NMD2 = mesh_data.clone();
+        MeshData mesh_data = NM_TRANS.GetComponent<MeshDataComp>().mesh_data;
 
-        NMD1.Verticies[1] = CP1;
-        NMD1.Verticies[3] = CP2;
-        NMD2.Verticies[0] = CP1;
-        NMD2.Verticies[2] = CP2;
-        NMD1.UVs[1] = new Vector2(0.0f, 1.0f - CP1.y);
-        NMD1.UVs[3] = new Vector2(1.0f, 1.0f - CP2.y);
-        NMD2.UVs[0] = new Vector2(0.0f, 1.0f - CP1.y);
-        NMD2.UVs[2] = new Vector2(1.0f, 1.0f - CP2.y);
+        MeshPoint CMP1 = new MeshPoint(CP1, true);
+        MeshPoint CMP2 = new MeshPoint(CP2, true);
+        get_cut_line(CMP1, CMP2);
 
-        mesh_debug(NMD1);
-        mesh_debug(NMD2);
+        List<MeshPoint> FHalf;
+        List<MeshPoint> SHalf;
+        points_cal(mesh_data.Verticies, mesh_line, CMP1, CMP2, out FHalf, out SHalf);
 
-        NC1_TRANS = generate_new_mesh(NMD1, new Vector3(-2.0f, 0.0f, 0.0f), "NC1");
-        NC1_TRANS = generate_new_mesh(NMD2, new Vector3(2.0f, 0.0f, 0.0f), "NC2");
+        mesh_debug(FHalf, true);
+        mesh_debug(SHalf, false);
+
+        MeshData NMD1 = new MeshData();
+        MeshData NMD2 = new MeshData();
+
+        //NMD1.Verticies[1].pos = CP1;
+        //NMD1.Verticies[3].pos = CP2;
+        //NMD2.Verticies[0].pos = CP1;
+        //NMD2.Verticies[2].pos = CP2;
+        //NMD1.Verticies[1].uv = new Vector2(0.0f, 1.0f - CP1.y);
+        //NMD1.Verticies[3].uv = new Vector2(1.0f, 1.0f - CP2.y);
+        //NMD2.Verticies[0].uv = new Vector2(0.0f, 1.0f - CP1.y);
+        //NMD2.Verticies[2].uv = new Vector2(1.0f, 1.0f - CP2.y);
+
+        //mesh_debug(NMD1);
+        //mesh_debug(NMD2);
+
+        //NC1_TRANS = generate_new_mesh(NMD1, new Vector3(-2.0f, 0.0f, 0.0f), "NC1");
+        //NC1_TRANS = generate_new_mesh(NMD2, new Vector3(2.0f, 0.0f, 0.0f), "NC2");
     }
 
     private Transform generate_new_mesh(MeshData mesh_data,Vector3 pos,string name)
@@ -87,5 +101,65 @@ public class MeshCutter : MonoBehaviour
     private void mesh_debug(MeshData mesh_data)
     {
         Debug.Log(" " + mesh_data.VarToString());
+    }
+
+    private void mesh_debug(List<MeshPoint> list_MP, bool FHalf)
+    {
+        foreach(MeshPoint MP in list_MP)
+        {
+            if(FHalf)
+            {
+                Transform temp_TRANS = 
+                    GameObject.CreatePrimitive(PrimitiveType.Sphere).transform;
+                temp_TRANS.position = MP.to_v3();
+                temp_TRANS.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            }
+            else
+            {
+                Transform temp_TRANS =
+                    GameObject.CreatePrimitive(PrimitiveType.Cube).transform;
+                temp_TRANS.position = MP.to_v3();
+                temp_TRANS.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            }
+        }
+    }
+
+    private void get_cut_line(MeshPoint p1, MeshPoint p2)
+    {
+        mesh_line.line_cal(p1, p2);
+    }
+
+    private void points_cal(List<MeshPoint> verticies, MeshLine cut_line,
+                            MeshPoint p1, MeshPoint p2,
+                            out List<MeshPoint> Fhalf, out List<MeshPoint> Shalf)
+    {
+        Fhalf = new List<MeshPoint>();
+        Shalf = new List<MeshPoint>();
+
+        MeshPoint MP;
+        foreach(MeshPoint vert in verticies)
+        {
+            int pos_cal = cut_line.position_cal(vert);
+            if (pos_cal == 1)
+            {
+                Fhalf.Add(vert);
+            }
+            else if(pos_cal == 0)
+            {
+                MP = vert.clone();
+                Fhalf.Add(MP);
+                Shalf.Add(vert);
+            }
+            else
+            {
+                Shalf.Add(vert);
+            }
+        }
+        MeshPoint p1C = p1.clone();
+        MeshPoint p2C = p2.clone();
+        Fhalf.Add(p1C);
+        Fhalf.Add(p2C);
+        Shalf.Add(p1);
+        Shalf.Add(p2);
     }
 }

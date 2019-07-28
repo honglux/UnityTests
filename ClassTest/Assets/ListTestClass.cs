@@ -13,5 +13,15 @@ public class ListTestClass
         this.test1 = 0;
     }
 
+    public ListTestClass(ListTestClass LTC)
+    {
+        test1 = LTC.test1;
+    }
+
+    public ListTestClass clone()
+    {
+        return new ListTestClass(this);
+    }
+
 
 }

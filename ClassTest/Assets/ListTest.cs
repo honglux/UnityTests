@@ -1,25 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class ListTest : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
 
-        ////not reference;
-        //ListTestClass listTestClass = new ListTestClass();
-        //List<ListTestClass> list = new List<ListTestClass>();
-        //for (int i = 0; i < 10; i++)
-        //{
-        //    listTestClass = new ListTestClass();
-        //    listTestClass.test1 = i;
-        //    list.Add(listTestClass);
-        //}
-        //foreach (ListTestClass LTC in list)
-        //{
-        //    Debug.Log("LTC.test1" + LTC.test1);
-        //}
+        //not reference;
+        ListTestClass listTestClass = new ListTestClass();
+        List<ListTestClass> list = new List<ListTestClass>();
+        for (int i = 0; i < 10; i++)
+        {
+            listTestClass = new ListTestClass();
+            listTestClass.test1 = i;
+            list.Add(listTestClass);
+        }
+        foreach (ListTestClass LTC in list)
+        {
+            Debug.Log("LTC.test1" + LTC.test1);
+        }
 
 
         ////not clone;
@@ -63,22 +64,22 @@ public class ListTest : MonoBehaviour {
         //    Debug.Log("list4" + LTC4);
         //}
 
-        List<Transform> obj_list = new List<Transform>();
-        Transform obj1 = GameObject.CreatePrimitive(PrimitiveType.Cube).transform;
-        Transform obj2 = GameObject.CreatePrimitive(PrimitiveType.Sphere).transform;
-        Transform obj3 = GameObject.CreatePrimitive(PrimitiveType.Cylinder).transform;
+        //clone!!!!!!!!
+        List<ListTestClass> list5 = new List<ListTestClass>(list.Select(x => x.clone()));
 
-        obj_list.Add(obj1);
-        obj_list.Add(obj2);
-        obj_list.Add(obj3);
-
-        obj_list.Remove(obj2);
-
-        Debug.Log("obj_list length " + obj_list.Count);
-        foreach(Transform obj in obj_list)
-        {
-            Debug.Log("obj " + obj.name);
-        }
+        //List<Transform> obj_list = new List<Transform>();
+        //Transform obj1 = GameObject.CreatePrimitive(PrimitiveType.Cube).transform;
+        //Transform obj2 = GameObject.CreatePrimitive(PrimitiveType.Sphere).transform;
+        //Transform obj3 = GameObject.CreatePrimitive(PrimitiveType.Cylinder).transform;
+        //obj_list.Add(obj1);
+        //obj_list.Add(obj2);
+        //obj_list.Add(obj3);
+        //obj_list.Remove(obj2);
+        //Debug.Log("obj_list length " + obj_list.Count);
+        //foreach(Transform obj in obj_list)
+        //{
+        //    Debug.Log("obj " + obj.name);
+        //}
     }
 
     // Update is called once per frame

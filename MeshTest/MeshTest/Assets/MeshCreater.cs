@@ -31,28 +31,28 @@ public class MeshCreater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    private void clone_mesh()
-    {
-        Transform clone_TRANS = new GameObject("MeshClone").transform;
-        Mesh mesh = new Mesh();
-        mesh.vertices = mesh_data.Verticies.ToArray();
-        mesh.triangles = mesh_data.Triangles.ToArray();
-        mesh.UploadMeshData(true);
-        MeshFilter MF = clone_TRANS.gameObject.AddComponent<MeshFilter>();
-        MF.mesh = mesh;
-        MeshRenderer MR = clone_TRANS.gameObject.AddComponent<MeshRenderer>();
-        clone_TRANS.position = new Vector3(3.0f, 3.0f, 3.0f);
-    }
+    //private void clone_mesh()
+    //{
+    //    Transform clone_TRANS = new GameObject("MeshClone").transform;
+    //    Mesh mesh = new Mesh();
+    //    //mesh.vertices = mesh_data.Verticies.ToArray();
+    //    mesh.triangles = mesh_data.Triangles.ToArray();
+    //    mesh.UploadMeshData(true);
+    //    MeshFilter MF = clone_TRANS.gameObject.AddComponent<MeshFilter>();
+    //    MF.mesh = mesh;
+    //    MeshRenderer MR = clone_TRANS.gameObject.AddComponent<MeshRenderer>();
+    //    clone_TRANS.position = new Vector3(3.0f, 3.0f, 3.0f);
+    //}
 
-    private MeshData change_mesh(MeshData MD)
-    {
-        Vector3 V0 = MD.Verticies[0];
-        MD.Verticies[0] = new Vector3(V0.x / 2.0f, V0.y / 2.0f, V0.z / 2.0f);
-        return MD;
-    }
+    //private MeshData change_mesh(MeshData MD)
+    //{
+    //    Vector3 V0 = MD.Verticies[0];
+    //    MD.Verticies[0] = new Vector3(V0.x / 2.0f, V0.y / 2.0f, V0.z / 2.0f);
+    //    return MD;
+    //}
 
     private void create_mesh()
     {
@@ -61,15 +61,16 @@ public class MeshCreater : MonoBehaviour
         temp_LV3.Add(new Vector3(0.0f, 1.0f, 0.0f));
         temp_LV3.Add(new Vector3(1.0f, 0.0f, 0.0f));
         temp_LV3.Add(new Vector3(1.0f, 1.0f, 0.0f));
-        mesh_data.Verticies = temp_LV3;
-        mesh_data.Triangles = (new int[] 
+        List<Vector2> UVs = new List<Vector2>();
+        UVs.Add(new Vector2(0.0f, 1.0f));
+        UVs.Add(new Vector2(0.0f, 0.0f));
+        UVs.Add(new Vector2(1.0f, 1.0f));
+        UVs.Add(new Vector2(1.0f, 0.0f));
+        mesh_data.Verticies = MeshPoint.FromVec3(temp_LV3, UVs);
+        mesh_data.Triangles = (new int[]
             { 0, 1, 2,
                 1, 3, 2
             }).ToList<int>();
-        mesh_data.UVs.Add(new Vector2(0.0f, 1.0f));
-        mesh_data.UVs.Add(new Vector2(0.0f, 0.0f));
-        mesh_data.UVs.Add(new Vector2(1.0f, 1.0f));
-        mesh_data.UVs.Add(new Vector2(1.0f, 0.0f));
 
         NM_TRANS = new GameObject("NewMesh").transform;
         Mesh mesh = new Mesh();
@@ -78,6 +79,8 @@ public class MeshCreater : MonoBehaviour
         MF.mesh = mesh;
         MeshRenderer MR = NM_TRANS.gameObject.AddComponent<MeshRenderer>();
         MR.material = material;
+        MeshDataComp MDC = NM_TRANS.gameObject.AddComponent<MeshDataComp>();
+        MDC.set_MD(mesh_data);
     }
 
     private void load_material()
