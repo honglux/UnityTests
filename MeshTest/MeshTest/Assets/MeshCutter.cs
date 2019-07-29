@@ -57,16 +57,27 @@ public class MeshCutter : MonoBehaviour
         MeshPoint CMP1 = new MeshPoint(CP1, true);
         MeshPoint CMP2 = new MeshPoint(CP2, true);
         get_cut_line(CMP1, CMP2);
+        CMP1.uv_cal(mesh_data);
+        CMP2.uv_cal(mesh_data);
 
         List<MeshPoint> FHalf;
         List<MeshPoint> SHalf;
         points_cal(mesh_data.Verticies, mesh_line, CMP1, CMP2, out FHalf, out SHalf);
 
-        mesh_debug(FHalf, true);
-        mesh_debug(SHalf, false);
-
         MeshData NMD1 = new MeshData();
         MeshData NMD2 = new MeshData();
+
+        NMD1.Verticies = FHalf;
+        NMD2.Verticies = SHalf;
+
+        mesh_debug(NMD1);
+        mesh_debug(NMD2);
+
+        NMD1 = MD_regener(NMD1);
+        NMD2 = MD_regener(NMD2);
+
+        generate_new_mesh(NMD1, new Vector3(-2.0f, 0.0f, 0.0f), "NC1");
+        generate_new_mesh(NMD2, new Vector3(2.0f, 0.0f, 0.0f), "NC2");
 
         //NMD1.Verticies[1].pos = CP1;
         //NMD1.Verticies[3].pos = CP2;
@@ -82,6 +93,12 @@ public class MeshCutter : MonoBehaviour
 
         //NC1_TRANS = generate_new_mesh(NMD1, new Vector3(-2.0f, 0.0f, 0.0f), "NC1");
         //NC1_TRANS = generate_new_mesh(NMD2, new Vector3(2.0f, 0.0f, 0.0f), "NC2");
+    }
+
+    private MeshData MD_regener(MeshData MD)
+    {
+        MD.MD_regener();
+        return MD;
     }
 
     private Transform generate_new_mesh(MeshData mesh_data,Vector3 pos,string name)

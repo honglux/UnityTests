@@ -58,6 +58,29 @@ public class PointsSorting : MonoBehaviour
         List<Vector2> list_p = points.ToList();
         list_p.Sort((p1, p2) => (less(p1, p2) ? -1 : 1));
         debug_list(list_p);
+
+        draw_tiangles(list_p);
+    }
+
+    private void draw_tiangles(List<Vector2> list_p)
+    {
+        List<Vector3> list_p3 = list_p.Select(x => (Vector3)x).ToList<Vector3>();
+        List<int> triangles = new List<int>();
+        for(int i = 1; i < list_p3.Count - 1;i++)
+        {
+            triangles.Add(0);
+            triangles.Add(i);
+            triangles.Add(i+1);
+        }
+
+        Mesh mesh = new Mesh();
+        mesh.vertices = list_p3.ToArray();
+        mesh.triangles = triangles.ToArray();
+
+        Transform NM_TRANS = new GameObject("NM").transform;
+        MeshFilter MF = NM_TRANS.gameObject.AddComponent<MeshFilter>();
+        MeshRenderer MR = NM_TRANS.gameObject.AddComponent<MeshRenderer>();
+        MF.mesh = mesh;
     }
 
     private void debug_list(List<Vector2> list_p)

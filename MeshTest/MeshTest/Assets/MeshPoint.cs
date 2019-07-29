@@ -33,6 +33,21 @@ public class MeshPoint
         this.z_pos = _pos.z;
     }
 
+    public void uv_cal(MeshData MD)
+    {
+        Debug.Log("MD.UV_poss[0] " + MD.UV_poss[0].ToString("F2"));
+        Debug.Log("MD.UV_poss[1] " + MD.UV_poss[1].ToString("F2"));
+        float x = pos.x - MD.UV_poss[0].x;
+        float y = pos.y - MD.UV_poss[0].y;
+        float range_x = MD.UV_poss[1].x - MD.UV_poss[0].x;
+        float range_y = MD.UV_poss[1].y - MD.UV_poss[0].y;
+        Debug.Log("range_x " + range_x);
+        Debug.Log("range_y " + range_y);
+        float uv_x = x / range_x;
+        float uv_y = y / range_y;
+        uv = new Vector2(uv_x, uv_y);
+    }
+
     public MeshPoint clone()
     {
         MeshPoint MP = new MeshPoint(this);
@@ -54,6 +69,36 @@ public class MeshPoint
         result += "\n";
 
         return result;
+    }
+
+    public int CompareTo(MeshPoint o_p,Vector2 center)
+    {
+        if (this.pos.x - center.x >= 0 && o_p.pos.x - center.x < 0)
+            return 1;
+        if (this.pos.x - center.x < 0 && o_p.pos.x - center.x >= 0)
+            return -1;
+        if (this.pos.x - center.x == 0 && o_p.pos.x - center.x == 0)
+        {
+            if (this.pos.y - center.y >= 0 || o_p.pos.y - center.y >= 0)
+                return (this.pos.y > o_p.pos.y) ? 1 : -1;
+            return (o_p.pos.y > this.pos.y) ? 1 : -1;
+        }
+
+        // compute the cross product of vectors (center -> a) x (center -> b)
+        float det = (this.pos.x - center.x) * (o_p.pos.y - center.y) - 
+                        (o_p.pos.x - center.x) * (this.pos.y - center.y);
+        if (det < 0)
+            return -1;
+        if (det > 0)
+            return 1;
+
+        // points a and b are on the same line from the center
+        // check which point is closer to the center
+        float d1 = (this.pos.x - center.x) * (this.pos.x - center.x) + 
+                    (this.pos.y - center.y) * (this.pos.y - center.y);
+        float d2 = (o_p.pos.x - center.x) * (o_p.pos.x - center.x) +
+                    (o_p.pos.y - center.y) * (o_p.pos.y - center.y);
+        return (d1 > d2) ? 1 : -1;
     }
 
 

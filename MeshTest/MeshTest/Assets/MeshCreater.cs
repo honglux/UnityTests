@@ -71,6 +71,7 @@ public class MeshCreater : MonoBehaviour
             { 0, 1, 2,
                 1, 3, 2
             }).ToList<int>();
+        mesh_data.set_init_UVs(temp_LV3[1], temp_LV3[2]);
 
         NM_TRANS = new GameObject("NewMesh").transform;
         Mesh mesh = new Mesh();

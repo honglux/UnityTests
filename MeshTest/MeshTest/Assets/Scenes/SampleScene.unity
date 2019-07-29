@@ -239,8 +239,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MC_script: {fileID: 139868612}
-  CP1: {x: 0, y: 0.3, z: 0}
-  CP2: {x: 1, y: 0.3, z: 0}
+  CP1: {x: 0.5, y: 0, z: 0}
+  CP2: {x: 0.5, y: 1, z: 0}
 --- !u!4 &446918393
 Transform:
   m_ObjectHideFlags: 0
