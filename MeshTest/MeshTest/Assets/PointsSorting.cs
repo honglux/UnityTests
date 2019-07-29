@@ -53,8 +53,10 @@ public class PointsSorting : MonoBehaviour
 
     private void sort_p()
     {
+        center_cal();
+
         List<Vector2> list_p = points.ToList();
-        list_p.Sort((p1, p2) => (less(p1, p2) ? 1 : 0));
+        list_p.Sort((p1, p2) => (less(p1, p2) ? -1 : 1));
         debug_list(list_p);
     }
 
