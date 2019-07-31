@@ -11,6 +11,7 @@ public class MeshData
     public Transform target_TRANS { get; set; }
     public Vector2 center_pos { get; set; }
     public Vector2[] UV_poss { get; set; }
+    public List<MeshLine> Mesh_lines { get; set; }
 
     public MeshData()
     {
@@ -20,40 +21,27 @@ public class MeshData
         //this.UVs = new List<Vector2>();
         this.center_pos = new Vector2();
         this.UV_poss = new Vector2[2];
+        this.Mesh_lines = new List<MeshLine>();
     }
 
-    //public MeshData(Transform _target_TRANS)
-    //{
-    //    this.Verticies = new List<MeshPoint>();
-    //    this.Triangles = new List<int>();
-    //    this.target_TRANS = null;
-    //    this.center_pos = new Vector2();
-    //    this.UV_poss = new Vector2[2];
-    //    //this.UVs = new List<Vector2>();
-
-    //    set_data(_target_TRANS);
-    //}
-
-    public void set_data(Transform _target_TRANS)
+    public void mesh_create(MeshPoint[] vert)
     {
-        target_TRANS = _target_TRANS;
-        Mesh mesh = target_TRANS.GetComponent<MeshFilter>().mesh;
-        Verticies = MeshPoint.FromVec3(mesh.vertices.ToList<Vector3>());
-        Triangles = mesh.triangles.ToList<int>();
-        //UVs = mesh.uv.ToList<Vector2>();
+        Verticies = vert.ToList<MeshPoint>();
+        MD_regener();
     }
-
-    //public void set_data(Vector3[] _verticies,int[] _triangles,Vector2[] _UVs)
-    //{
-    //    Verticies = _verticies.ToList<Vector3>();
-    //    Triangles = _triangles.ToList<int>();
-    //    UVs = _UVs.ToList<Vector2>();
-    //}
 
     public void set_init_UVs(Vector3 UL,Vector3 DR)
     {
         UV_poss[0] = (Vector2)UL;
         UV_poss[1] = (Vector2)DR;
+    }
+
+    public void uv_cal_all()
+    {
+        foreach(MeshPoint MP in Verticies)
+        {
+            MP.uv_cal(this);
+        }
     }
     
     public void uv_cal(ref MeshPoint MP)
@@ -125,6 +113,57 @@ public class MeshData
         return triangles;
     }
 
+    public MeshData[] cut(MeshPoint MP1,MeshPoint MP2)
+    {
+        MeshLine cut_line = new MeshLine();
+        cut_line.line_cal(MP1, MP2);
+        MP1.uv_cal(this);
+        MP2.uv_cal(this);
+
+        return points_cal(cut_line, MP1, MP2);
+    }
+
+    private MeshData[] points_cal(MeshLine cut_line, MeshPoint p1, MeshPoint p2)
+    {
+        MeshData Fhalf = new MeshData();
+        MeshData Shalf = new MeshData();
+
+        List<MeshPoint> FHMP = new List<MeshPoint>();
+        List<MeshPoint> SHMP = new List<MeshPoint>();
+
+        foreach (MeshPoint vert in Verticies)
+        {
+            int pos_cal = cut_line.position_cal(vert);
+            if (pos_cal == 1)
+            {
+                FHMP.Add(vert);
+            }
+            else if (pos_cal == 0)
+            {
+                FHMP.Add(vert.clone());
+                SHMP.Add(vert);
+            }
+            else
+            {
+                SHMP.Add(vert);
+            }
+        }
+        MeshPoint p1C = p1.clone();
+        MeshPoint p2C = p2.clone();
+        FHMP.Add(p1C);
+        FHMP.Add(p2C);
+        SHMP.Add(p1);
+        SHMP.Add(p2);
+
+        Fhalf.Verticies = FHMP;
+        Shalf.Verticies = SHMP;
+
+        Fhalf.MD_regener();
+        Shalf.MD_regener();
+
+        return new MeshData[] { Fhalf, Shalf };
+    }
+
     public MeshData clone()
     {
         MeshData MD = new MeshData();
@@ -141,16 +180,23 @@ public class MeshData
 
         foreach (MeshPoint vert in Verticies)
         {
-            result += " " + vert.VarToString();
+            result += " vert " + vert.VarToString();
         }
         result += " \n";
         foreach (int tria in Triangles)
         {
-            result += " " + tria.ToString();
+            result += " tria " + tria.ToString();
         }
         result += " \n";
 
         return result;
+    }
+
+    public void clean_destroy()
+    {
+        Transform temp_TRANS = RC.IS.MD_TRANS[this];
+        RC.IS.MD_TRANS.Remove(this);
+        GameObject.Destroy(temp_TRANS.gameObject);
     }
 
 }

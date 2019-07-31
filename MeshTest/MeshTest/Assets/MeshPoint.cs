@@ -35,14 +35,14 @@ public class MeshPoint
 
     public void uv_cal(MeshData MD)
     {
-        Debug.Log("MD.UV_poss[0] " + MD.UV_poss[0].ToString("F2"));
-        Debug.Log("MD.UV_poss[1] " + MD.UV_poss[1].ToString("F2"));
+        //Debug.Log("MD.UV_poss[0] " + MD.UV_poss[0].ToString("F2"));
+        //Debug.Log("MD.UV_poss[1] " + MD.UV_poss[1].ToString("F2"));
         float x = pos.x - MD.UV_poss[0].x;
         float y = pos.y - MD.UV_poss[0].y;
         float range_x = MD.UV_poss[1].x - MD.UV_poss[0].x;
         float range_y = MD.UV_poss[1].y - MD.UV_poss[0].y;
-        Debug.Log("range_x " + range_x);
-        Debug.Log("range_y " + range_y);
+        //Debug.Log("range_x " + range_x);
+        //Debug.Log("range_y " + range_y);
         float uv_x = x / range_x;
         float uv_y = y / range_y;
         uv = new Vector2(uv_x, uv_y);
