@@ -1,4 +1,4 @@
-﻿
+﻿using UnityEngine;
 
 public class MeshLine
 {
@@ -7,6 +7,9 @@ public class MeshLine
     public float b { get; set; }
     public bool vert_line { get; set; }
     public float vert_x { get; set; }
+    public Vector3 start_point { get; set; }
+    public Vector3 end_point { get; set; }
+    public bool infinite { get; set; }
 
     public MeshLine()
     {
@@ -14,6 +17,9 @@ public class MeshLine
         this.b = 0.0f;
         this.vert_line = false;
         this.vert_x = 0.0f;
+        this.start_point = new Vector3();
+        this.end_point = new Vector3();
+        this.infinite = false;
     }
 
     /// <summary>
@@ -66,7 +72,29 @@ public class MeshLine
         }
 
         k = (p2.pos.y - p1.pos.y) / (p2.pos.x - p1.pos.x);
-        b = p1.pos.y - p1.pos.x * k; 
+        b = p1.pos.y - p1.pos.x * k;
+        start_point = p1.pos;
+        end_point = p2.pos;
+    }
+
+    public Vector3 point_calx(float x)
+    {
+        float y = x * k + b;
+        return new Vector3(x, y, 0.0f);
+    }
+
+    public Vector3 point_caly(float y)
+    {
+        float x = (y - b) / k;
+        return new Vector3(x, y, 0.0f);
+    }
+
+    private bool point_in_cal(Vector3 point)
+    {
+        if(start_point < end_point)
+        {
+
+        }
     }
 
     public string VarToString()
@@ -81,5 +109,32 @@ public class MeshLine
 
         return result;
     }
+
+    public static Vector3 line_inter_cal(MeshLine ML1, MeshLine ML2)
+    {
+        Vector3 pos = new Vector3();
+        if((ML1.vert_line && ML2.vert_line) || (ML1.k == ML2.k))
+        {
+            return RC.NANVector3;
+        }
+        if(ML1.vert_line)
+        {
+            pos = ML2.point_calx(ML1.vert_x);
+        }
+        else if(ML2.vert_line)
+        {
+            pos = ML1.point_calx(ML2.vert_x);
+        }
+        else
+        {
+            float x = -(ML2.b - ML1.b) / (ML2.k - ML1.k);
+            pos = ML1.point_calx(x);
+        }
+
+        float 
+        
+    }
+
+
 
 }

@@ -33,6 +33,8 @@ public class MeshCutter : MonoBehaviour
     {
         MeshData mesh_data = (RC.IS.MD_TRANS.Keys).First();
 
+        Transform temp_TRANS = RC.IS.MD_TRANS[mesh_data];
+
         Vector3 pos = RC.IS.MD_TRANS[mesh_data].transform.position;
         CP1 -= pos;
         CP2 -= pos;
@@ -49,6 +51,7 @@ public class MeshCutter : MonoBehaviour
         NM2_TRANS.position = new Vector3(2.0f, 0.0f, 0.0f);
 
         mesh_data.clean_destroy();
+        Destroy(temp_TRANS.gameObject);
     }
 
     private void mesh_debug(MeshData mesh_data)

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RC : MonoBehaviour
 {
+    public static Vector3 NANVector3 = new Vector3(float.NaN, float.NaN, float.NaN);
+
     public Dictionary<MeshData,Transform> MD_TRANS { get; set; }
 
     public static RC IS { get; set; }

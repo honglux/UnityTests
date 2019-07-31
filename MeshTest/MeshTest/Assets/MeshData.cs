@@ -71,6 +71,25 @@ public class MeshData
     {
         center_cal();
         sort_vert();
+        line_regener();
+    }
+
+    /// <summary>
+    /// vertices need to be sorted first;
+    /// </summary>
+    private void line_regener()
+    {
+        Mesh_lines = new List<MeshLine>();
+        MeshLine mesh_line;
+        for(int i = 0; i < Verticies.Count - 1; i++)
+        {
+            mesh_line = new MeshLine();
+            mesh_line.line_cal(Verticies[i], Verticies[i+1]);
+            Mesh_lines.Add(mesh_line);
+        }
+        mesh_line = new MeshLine();
+        mesh_line.line_cal(Verticies[Verticies.Count-1], Verticies[0]);
+        Mesh_lines.Add(mesh_line);
     }
 
     public void center_cal()
@@ -164,6 +183,11 @@ public class MeshData
         return new MeshData[] { Fhalf, Shalf };
     }
 
+    public void line_inter_cal(MeshLine ML)
+    {
+        foreach()
+    }
+
     public MeshData clone()
     {
         MeshData MD = new MeshData();
@@ -188,15 +212,18 @@ public class MeshData
             result += " tria " + tria.ToString();
         }
         result += " \n";
+        foreach(MeshLine mesh_line in Mesh_lines)
+        {
+            result += " line " + mesh_line.VarToString();
+        }
+        result += " \n";
 
         return result;
     }
 
     public void clean_destroy()
     {
-        Transform temp_TRANS = RC.IS.MD_TRANS[this];
         RC.IS.MD_TRANS.Remove(this);
-        GameObject.Destroy(temp_TRANS.gameObject);
     }
 
 }
