@@ -72,7 +72,7 @@ public class MeshCreater : MonoBehaviour
         MeshDataComp MDC = NM_TRANS.gameObject.AddComponent<MeshDataComp>();
         MDC.set_MD(mesh_data);
 
-        RC.IS.MD_TRANS.Add(mesh_data, NM_TRANS);
+        RC.IS.MD_TRANS_DICT.Add(mesh_data, NM_TRANS);
         Debug.Log("mesh " + mesh_data.VarToString());
 
         return NM_TRANS;

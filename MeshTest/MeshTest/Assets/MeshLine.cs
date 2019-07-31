@@ -68,6 +68,7 @@ public class MeshLine
         {
             vert_line = true;
             vert_x = p2.pos.x;
+            k = float.MinValue;
             return;
         }
 
@@ -91,10 +92,30 @@ public class MeshLine
 
     private bool point_in_cal(Vector3 point)
     {
-        if(start_point < end_point)
+        if(infinite)
         {
-
+            return false;
         }
+        bool xresult = false;
+        bool yresult = false;
+        if (start_point.x <= end_point.x)
+        {
+            xresult = (point.x >= start_point.x) && (point.x <= end_point.x);
+        }
+        else
+        {
+            xresult = (point.x <= start_point.x) && (point.x >= end_point.x);
+        }
+        if(start_point.y <= end_point.y)
+        {
+            yresult = (point.y >= start_point.y) && (point.y <= end_point.y);
+        }
+        else
+        {
+            yresult = (point.y <= start_point.y) && (point.y >= end_point.y);
+        }
+
+        return xresult && yresult;
     }
 
     public string VarToString()
@@ -131,7 +152,16 @@ public class MeshLine
             pos = ML1.point_calx(x);
         }
 
-        float 
+        if ((ML1.infinite && !ML2.infinite) && (ML2.point_in_cal(pos)))
+        {
+            return pos;
+        }
+        else if ((!ML1.infinite && ML2.infinite) && (ML1.point_in_cal(pos)))
+        {
+            return pos;
+        }
+
+        return RC.NANVector3;
         
     }
 

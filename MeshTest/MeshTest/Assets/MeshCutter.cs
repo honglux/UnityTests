@@ -8,7 +8,8 @@ public class MeshCutter : MonoBehaviour
     [SerializeField] private Vector3 CP1;
     [SerializeField] private Vector3 CP2;
 
-    public static MeshCutter IS;
+    public static MeshCutter IS { get; set; }
+
     private void Awake()
     {
         IS = this;
@@ -17,7 +18,7 @@ public class MeshCutter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -25,33 +26,51 @@ public class MeshCutter : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.S))
         {
-            cut();
+            get_lines_Acut();
         }
     }
 
-    private void cut()
+    private void get_lines_Acut()
     {
-        MeshData mesh_data = (RC.IS.MD_TRANS.Keys).First();
+        Vector3 CP1_relative;
+        Vector3 CP2_relative;
+        Transform temp_TRANS;
+        MeshLine cut_line;
+        foreach (MeshData mesh_data in RC.IS.MD_TRANS_DICT.Keys.ToArray())
+        {
+            temp_TRANS = RC.IS.MD_TRANS_DICT[mesh_data];
+            CP1_relative = CP1 - temp_TRANS.position;
+            CP2_relative = CP2 - temp_TRANS.position;
+            cut_line = new MeshLine();
+            cut_line.line_cal(new MeshPoint(CP1_relative, true),
+                                new MeshPoint(CP2_relative, true));
+            cut_line.infinite = true;
+            Debug.Log(cut_line.VarToString());
+            if (cut(mesh_data, cut_line))
+            {
+                mesh_data.clean_destroy();
+                Destroy(temp_TRANS.gameObject);
+            }
+        }
+    }
 
-        Transform temp_TRANS = RC.IS.MD_TRANS[mesh_data];
+    private bool cut(MeshData mesh_data, MeshLine cut_line)
+    {
+        MeshPoint[] cut_points = mesh_data.line_inter_cal(cut_line);
+        
+        if (cut_points.Length < 2)
+        {
+            return false;
+        }
 
-        Vector3 pos = RC.IS.MD_TRANS[mesh_data].transform.position;
-        CP1 -= pos;
-        CP2 -= pos;
-
-        MeshPoint CMP1 = new MeshPoint(CP1, true);
-        MeshPoint CMP2 = new MeshPoint(CP2, true);
-
-        MeshData[] cut_meshs = mesh_data.cut(CMP1,CMP2);
-
+        MeshData[] cut_meshs = mesh_data.cut(cut_points[0], cut_points[1]);
         Transform NM1_TRANS = MeshCreater.IS.create_mesh(cut_meshs[0],false);
         Transform NM2_TRANS = MeshCreater.IS.create_mesh(cut_meshs[1],false);
 
         NM1_TRANS.position = new Vector3(-2.0f, 0.0f, 0.0f);
         NM2_TRANS.position = new Vector3(2.0f, 0.0f, 0.0f);
 
-        mesh_data.clean_destroy();
-        Destroy(temp_TRANS.gameObject);
+        return true;
     }
 
     private void mesh_debug(MeshData mesh_data)

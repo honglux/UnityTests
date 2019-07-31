@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class RC : MonoBehaviour
 {
-    public static Vector3 NANVector3 = new Vector3(float.NaN, float.NaN, float.NaN);
+    public static Vector3 NANVector3 = 
+            new Vector3(float.MinValue, float.MinValue, float.MinValue);
 
-    public Dictionary<MeshData,Transform> MD_TRANS { get; set; }
+    public Dictionary<MeshData,Transform> MD_TRANS_DICT { get; set; }
 
     public static RC IS { get; set; }
 
     private void Awake()
     {
-        MD_TRANS = new Dictionary<MeshData, Transform>();
+        MD_TRANS_DICT = new Dictionary<MeshData, Transform>();
 
         IS = this;
     }
@@ -31,7 +32,7 @@ public class RC : MonoBehaviour
 
     public void clear_MD()
     {
-        MD_TRANS.Clear();
+        MD_TRANS_DICT.Clear();
     }
 
 

@@ -183,9 +183,22 @@ public class MeshData
         return new MeshData[] { Fhalf, Shalf };
     }
 
-    public void line_inter_cal(MeshLine ML)
+    public MeshPoint[] line_inter_cal(MeshLine CL)
     {
-        foreach()
+        List<MeshPoint> mesh_points = new List<MeshPoint>();
+        Vector3 pos;
+        foreach(MeshLine mesh_line in Mesh_lines)
+        {
+            pos = MeshLine.line_inter_cal(mesh_line, CL);
+            Debug.Log("pos " + pos);
+            if(!(pos == RC.NANVector3))
+            {
+                MeshPoint MP = new MeshPoint(pos, true);
+                MP.uv_cal(this);
+                mesh_points.Add(MP);
+            }
+        }
+        return mesh_points.ToArray();
     }
 
     public MeshData clone()
@@ -223,7 +236,7 @@ public class MeshData
 
     public void clean_destroy()
     {
-        RC.IS.MD_TRANS.Remove(this);
+        RC.IS.MD_TRANS_DICT.Remove(this);
     }
 
 }
