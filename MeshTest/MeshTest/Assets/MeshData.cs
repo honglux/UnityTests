@@ -30,6 +30,11 @@ public class MeshData
         MD_regener();
     }
 
+    public void set_init_UVs(Vector2[] _UV_pos)
+    {
+        UV_poss = _UV_pos;
+    }
+
     public void set_init_UVs(Vector3 UL,Vector3 DR)
     {
         UV_poss[0] = (Vector2)UL;
@@ -72,6 +77,7 @@ public class MeshData
         center_cal();
         sort_vert();
         line_regener();
+
     }
 
     /// <summary>
@@ -112,14 +118,6 @@ public class MeshData
         Triangles = tria_regener(Verticies.Count);
     }
 
-    public void set_UVs()
-    {
-        foreach(MeshPoint MP in Verticies)
-        {
-            MP.uv = new Vector2();
-        }
-    }
-
     private List<int> tria_regener(int number)
     {
         List<int> triangles = new List<int>();
@@ -134,6 +132,8 @@ public class MeshData
 
     public MeshData[] cut(MeshPoint MP1,MeshPoint MP2)
     {
+        Debug.Log("cut1 " + MP1.pos);
+        Debug.Log("cut2 " + MP2.pos);
         MeshLine cut_line = new MeshLine();
         cut_line.line_cal(MP1, MP2);
         MP1.uv_cal(this);
@@ -180,6 +180,9 @@ public class MeshData
         Fhalf.MD_regener();
         Shalf.MD_regener();
 
+        Fhalf.set_init_UVs(this.UV_poss);
+        Shalf.set_init_UVs(this.UV_poss);
+
         return new MeshData[] { Fhalf, Shalf };
     }
 
@@ -195,6 +198,8 @@ public class MeshData
                 MeshPoint MP = new MeshPoint(pos, true);
                 MP.uv_cal(this);
                 mesh_points.Add(MP);
+                Debug.Log("@@@@@1 " + MP.VarToString());
+                Debug.Log("@@@@@2 " + this.VarToString());
             }
         }
         return mesh_points.ToArray();
@@ -221,7 +226,7 @@ public class MeshData
         result += " \n";
         foreach (int tria in Triangles)
         {
-            result += " tria " + tria.ToString();
+            result += " " + tria.ToString();
         }
         result += " \n";
         foreach(MeshLine mesh_line in Mesh_lines)
@@ -229,6 +234,12 @@ public class MeshData
             result += " line " + mesh_line.VarToString();
         }
         result += " \n";
+
+        result += " UV_poss " + UV_poss[0].ToString("F2") + " " + UV_poss[1].ToString("F2");
+        result += " \n";
+
+        Transform mesh_TRANS = RC.IS.MD_TRANS_DICT[this];
+        result += " trans " + mesh_TRANS.position;
 
         return result;
     }

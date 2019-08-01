@@ -65,10 +65,11 @@ public class MeshCutter : MonoBehaviour
 
         MeshData[] cut_meshs = mesh_data.cut(cut_points[0], cut_points[1]);
         Transform NM1_TRANS = MeshCreater.IS.create_mesh(cut_meshs[0],false,
-                                    trans_pos : new Vector3(-0.1f,0.0f,0.0f));
+                                    trans_pos : new Vector3(0.1f,0.0f,0.0f));
         Transform NM2_TRANS = MeshCreater.IS.create_mesh(cut_meshs[1],false,
-                                    trans_pos: new Vector3(0.1f, 0.0f, 0.0f));
-
+                                    trans_pos: new Vector3(-0.1f, 0.0f, 0.0f));
+        Debug.Log("mesh1 " + cut_meshs[0].VarToString());
+        Debug.Log("mesh2 " + cut_meshs[1].VarToString());
         return true;
     }
 
@@ -79,22 +80,6 @@ public class MeshCutter : MonoBehaviour
 
     private void mesh_debug(List<MeshPoint> list_MP, bool FHalf)
     {
-        foreach(MeshPoint MP in list_MP)
-        {
-            if(FHalf)
-            {
-                Transform temp_TRANS = 
-                    GameObject.CreatePrimitive(PrimitiveType.Sphere).transform;
-                temp_TRANS.position = MP.to_v3();
-                temp_TRANS.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-            }
-            else
-            {
-                Transform temp_TRANS =
-                    GameObject.CreatePrimitive(PrimitiveType.Cube).transform;
-                temp_TRANS.position = MP.to_v3();
-                temp_TRANS.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-            }
-        }
+
     }
 }

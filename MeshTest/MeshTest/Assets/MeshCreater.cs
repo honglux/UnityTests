@@ -51,7 +51,7 @@ public class MeshCreater : MonoBehaviour
         mesh_data.Verticies = verts;
         mesh_data.MD_regener();
 
-        return create_mesh(mesh_data, true,trans_pos : new Vector3(1.0f,1.0f,0.0f));
+        return create_mesh(mesh_data, true,trans_pos : trans_pos);
     }
 
     public Transform create_mesh(MeshData mesh_data, bool cal_uv, Vector3 trans_pos = new Vector3())
@@ -73,7 +73,6 @@ public class MeshCreater : MonoBehaviour
         MDC.set_MD(mesh_data);
 
         RC.IS.MD_TRANS_DICT.Add(mesh_data, NM_TRANS);
-        Debug.Log("mesh " + mesh_data.VarToString());
 
         NM_TRANS.parent = RC.IS.CutFrame_TRANS;
         NM_TRANS.localPosition = trans_pos;

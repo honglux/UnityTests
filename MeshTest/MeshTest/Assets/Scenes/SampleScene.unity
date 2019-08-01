@@ -237,8 +237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0492db13b3d6ea048a60b70afe7df049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CP1: {x: 1, y: -3, z: 20}
-  CP2: {x: 1, y: 3, z: 20}
+  CP1: {x: 0, y: -3, z: 20}
+  CP2: {x: 0, y: 3, z: 20}
 --- !u!4 &446918393
 Transform:
   m_ObjectHideFlags: 0
@@ -292,7 +292,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 645255553}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 20, y: 20, z: 0.1}
