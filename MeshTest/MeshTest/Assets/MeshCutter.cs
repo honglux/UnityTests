@@ -64,11 +64,10 @@ public class MeshCutter : MonoBehaviour
         }
 
         MeshData[] cut_meshs = mesh_data.cut(cut_points[0], cut_points[1]);
-        Transform NM1_TRANS = MeshCreater.IS.create_mesh(cut_meshs[0],false);
-        Transform NM2_TRANS = MeshCreater.IS.create_mesh(cut_meshs[1],false);
-
-        NM1_TRANS.position = new Vector3(-2.0f, 0.0f, 0.0f);
-        NM2_TRANS.position = new Vector3(2.0f, 0.0f, 0.0f);
+        Transform NM1_TRANS = MeshCreater.IS.create_mesh(cut_meshs[0],false,
+                                    trans_pos : new Vector3(-0.1f,0.0f,0.0f));
+        Transform NM2_TRANS = MeshCreater.IS.create_mesh(cut_meshs[1],false,
+                                    trans_pos: new Vector3(0.1f, 0.0f, 0.0f));
 
         return true;
     }

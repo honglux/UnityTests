@@ -64,7 +64,9 @@ public class MeshLine
 
     public void line_cal(MeshPoint p1, MeshPoint p2)
     {
-        if((p2.pos.x - p1.pos.x) == 0.0f)
+        start_point = p1.pos;
+        end_point = p2.pos;
+        if ((p2.pos.x - p1.pos.x) == 0.0f)
         {
             vert_line = true;
             vert_x = p2.pos.x;
@@ -74,8 +76,6 @@ public class MeshLine
 
         k = (p2.pos.y - p1.pos.y) / (p2.pos.x - p1.pos.x);
         b = p1.pos.y - p1.pos.x * k;
-        start_point = p1.pos;
-        end_point = p2.pos;
     }
 
     public Vector3 point_calx(float x)
@@ -126,6 +126,9 @@ public class MeshLine
         result += " b " + b.ToString("F2");
         result += " vert_line " + vert_line.ToString();
         result += " vert_x " + vert_x.ToString("F2");
+        result += " start_point " + start_point.ToString("F2");
+        result += " end_point " + end_point.ToString("F2");
+        result += " infinite " + infinite.ToString();
         result += "\n";
 
         return result;

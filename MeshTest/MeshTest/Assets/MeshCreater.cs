@@ -5,7 +5,7 @@ using System.Linq;
 
 public class MeshCreater : MonoBehaviour
 {
-    public Material material;
+    [SerializeField] private Material material;
 
     public static MeshCreater IS { get; set; }
 
@@ -35,10 +35,10 @@ public class MeshCreater : MonoBehaviour
         points.Add(new Vector3(1.0f, 1.0f, 0.0f));
         points.Add(new Vector3(-1.0f, -1.0f, 0.0f));
         points.Add(new Vector3(1.0f, -1.0f, 0.0f));
-        create_mesh(points.ToArray(),uvs);
+        create_mesh(points.ToArray(),uvs,trans_pos : Vector3.zero);
     }
 
-    public void create_mesh(Vector3[] poss,Vector3[] init_UV)
+    public Transform create_mesh(Vector3[] poss,Vector3[] init_UV,Vector3 trans_pos = new Vector3())
     {
         MeshData mesh_data = new MeshData();
         mesh_data.set_init_UVs(init_UV[0],init_UV[1]);
@@ -51,10 +51,10 @@ public class MeshCreater : MonoBehaviour
         mesh_data.Verticies = verts;
         mesh_data.MD_regener();
 
-        create_mesh(mesh_data, true);
+        return create_mesh(mesh_data, true,trans_pos : new Vector3(1.0f,1.0f,0.0f));
     }
 
-    public Transform create_mesh(MeshData mesh_data, bool cal_uv)
+    public Transform create_mesh(MeshData mesh_data, bool cal_uv, Vector3 trans_pos = new Vector3())
     {
         if(cal_uv)
         {
@@ -74,6 +74,9 @@ public class MeshCreater : MonoBehaviour
 
         RC.IS.MD_TRANS_DICT.Add(mesh_data, NM_TRANS);
         Debug.Log("mesh " + mesh_data.VarToString());
+
+        NM_TRANS.parent = RC.IS.CutFrame_TRANS;
+        NM_TRANS.localPosition = trans_pos;
 
         return NM_TRANS;
     }

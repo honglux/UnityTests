@@ -190,7 +190,6 @@ public class MeshData
         foreach(MeshLine mesh_line in Mesh_lines)
         {
             pos = MeshLine.line_inter_cal(mesh_line, CL);
-            Debug.Log("pos " + pos);
             if(!(pos == RC.NANVector3))
             {
                 MeshPoint MP = new MeshPoint(pos, true);

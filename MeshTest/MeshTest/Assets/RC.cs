@@ -7,7 +7,9 @@ public class RC : MonoBehaviour
     public static Vector3 NANVector3 = 
             new Vector3(float.MinValue, float.MinValue, float.MinValue);
 
+    public Transform CutFrame_TRANS;
     public Dictionary<MeshData,Transform> MD_TRANS_DICT { get; set; }
+    
 
     public static RC IS { get; set; }
 
