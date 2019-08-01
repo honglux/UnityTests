@@ -29,7 +29,7 @@ public class MeshCreater : MonoBehaviour
     private void first_create_mesh()
     {
         
-        Vector3[] uvs = new Vector3[] { new Vector3(-1.0f, 1.0f, 0.0f), new Vector3(1.0f, -1.0f, 0.0f) };
+        Vector3[] uvs = new Vector3[] { new Vector3(-1.0f, -1.0f, 0.0f), new Vector3(1.0f, 1.0f, 0.0f) };
         List<Vector3> points = new List<Vector3>();
         points.Add(new Vector3(-1.0f, 1.0f, 0.0f));
         points.Add(new Vector3(1.0f, 1.0f, 0.0f));

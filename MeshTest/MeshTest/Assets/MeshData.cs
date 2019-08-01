@@ -49,16 +49,16 @@ public class MeshData
         }
     }
     
-    public void uv_cal(ref MeshPoint MP)
-    {
-        float x = MP.pos.x - UV_poss[0].x;
-        float y = MP.pos.y - UV_poss[0].y;
-        float range_x = UV_poss[1].x - UV_poss[0].x;
-        float range_y = UV_poss[1].y - UV_poss[0].y;
-        float uv_x = x / range_x;
-        float uv_y = y / range_y;
-        MP.uv = new Vector2(uv_x, uv_y);
-    }
+    //public void uv_cal(ref MeshPoint MP)
+    //{
+    //    float x = MP.pos.x - UV_poss[0].x;
+    //    float y = MP.pos.y - UV_poss[0].y;
+    //    float range_x = UV_poss[1].x - UV_poss[0].x;
+    //    float range_y = UV_poss[1].y - UV_poss[0].y;
+    //    float uv_x = x / range_x;
+    //    float uv_y = y / range_y;
+    //    MP.uv = new Vector2(uv_x, uv_y);
+    //}
 
     public void to_mesh(ref Mesh mesh)
     {
@@ -132,8 +132,8 @@ public class MeshData
 
     public MeshData[] cut(MeshPoint MP1,MeshPoint MP2)
     {
-        Debug.Log("cut1 " + MP1.pos);
-        Debug.Log("cut2 " + MP2.pos);
+        //Debug.Log("cut1 " + MP1.pos);
+        //Debug.Log("cut2 " + MP2.pos);
         MeshLine cut_line = new MeshLine();
         cut_line.line_cal(MP1, MP2);
         MP1.uv_cal(this);
@@ -190,19 +190,40 @@ public class MeshData
     {
         List<MeshPoint> mesh_points = new List<MeshPoint>();
         Vector3 pos;
+        bool cornor = false;
+        HashSet<Vector3> pos_set = new HashSet<Vector3>();
         foreach(MeshLine mesh_line in Mesh_lines)
         {
-            pos = MeshLine.line_inter_cal(mesh_line, CL);
+            pos = MeshLine.line_inter_cal(mesh_line, CL,out cornor);
             if(!(pos == RC.NANVector3))
             {
-                MeshPoint MP = new MeshPoint(pos, true);
-                MP.uv_cal(this);
-                mesh_points.Add(MP);
-                Debug.Log("@@@@@1 " + MP.VarToString());
-                Debug.Log("@@@@@2 " + this.VarToString());
+                if(cornor)
+                {
+                    if(pos_set.Contains(pos))
+                    {
+                        create_cut_p(ref mesh_points, pos);
+                    }
+                    else
+                    {
+                        pos_set.Add(pos);
+                    }
+                }
+                else
+                {
+                    create_cut_p(ref mesh_points, pos);
+                }
             }
         }
         return mesh_points.ToArray();
+    }
+
+    private void create_cut_p(ref List<MeshPoint> mesh_points,Vector3 pos)
+    {
+        MeshPoint MP = new MeshPoint(pos, true);
+        MP.uv_cal(this);
+        mesh_points.Add(MP);
+        //Debug.Log("@@@@@1 " + MP.VarToString());
+        //Debug.Log("@@@@@2 " + this.VarToString());
     }
 
     public MeshData clone()

@@ -90,32 +90,90 @@ public class MeshLine
         return new Vector3(x, y, 0.0f);
     }
 
-    private bool point_in_cal(Vector3 point)
+    private int point_in_cal(Vector3 point)
     {
         if(infinite)
         {
-            return false;
-        }
-        bool xresult = false;
-        bool yresult = false;
-        if (start_point.x <= end_point.x)
-        {
-            xresult = (point.x >= start_point.x) && (point.x <= end_point.x);
-        }
-        else
-        {
-            xresult = (point.x <= start_point.x) && (point.x >= end_point.x);
-        }
-        if(start_point.y <= end_point.y)
-        {
-            yresult = (point.y >= start_point.y) && (point.y <= end_point.y);
-        }
-        else
-        {
-            yresult = (point.y <= start_point.y) && (point.y >= end_point.y);
+            return -1;
         }
 
-        return xresult && yresult;
+        bool x_result = false;
+        bool y_result = false;
+
+        if(point.x == start_point.x && point.y == start_point.y)
+        {
+            return 0;
+        }
+        else if(point.x == end_point.x && point.y == end_point.y)
+        {
+            return 0;
+        }
+        else 
+        {
+            if (start_point.x < end_point.x)
+            {
+                if (point.x > start_point.x && point.x < end_point.x)
+                {
+                    x_result = true;
+                }
+            }
+            else if(start_point.x == end_point.x)
+            {
+                if (point.x == start_point.x)
+                {
+                    x_result = true;
+                }
+            }
+            else
+            {
+                if (point.x < start_point.x && point.x > end_point.x)
+                {
+                    x_result = true;
+                }
+            }
+            if(start_point.y < end_point.y)
+            {
+                if (point.y > start_point.y && point.y < end_point.y)
+                {
+                    y_result = true;
+                }
+            }
+            else if(start_point.y == end_point.y)
+            {
+                if (point.y == start_point.y)
+                {
+                    y_result = true;
+                }
+            }
+            else
+            {
+                if (point.y < start_point.y && point.y > end_point.y)
+                {
+                    y_result = true;
+                }  
+            }
+            if (x_result && y_result)
+            {
+                return 1;
+            }
+        }
+        return -1;
+    }
+
+    private static int point_less_than(Vector2 pos1, Vector2 pos2)
+    {
+        if(pos1.x < pos2.x && pos1.y < pos2.y)
+        {
+            return 1;
+        }
+        else if(pos1.x == pos2.x && pos1.y == pos2.y)
+        {
+            return 0;
+        }
+        else
+        {
+            return -1;
+        }
     }
 
     public string VarToString()
@@ -134,8 +192,9 @@ public class MeshLine
         return result;
     }
 
-    public static Vector3 line_inter_cal(MeshLine ML1, MeshLine ML2)
+    public static Vector3 line_inter_cal(MeshLine ML1, MeshLine ML2, out bool cornor)
     {
+        cornor = false;
         Vector3 pos = new Vector3();
         if((ML1.vert_line && ML2.vert_line) || (ML1.k == ML2.k))
         {
@@ -155,13 +214,35 @@ public class MeshLine
             pos = ML1.point_calx(x);
         }
 
-        if ((ML1.infinite && !ML2.infinite) && (ML2.point_in_cal(pos)))
+        Debug.Log("##### " + pos.ToString("F2"));
+
+        if (ML1.infinite && !ML2.infinite)
         {
-            return pos;
+            int result = ML2.point_in_cal(pos);
+            //Debug.Log("result " + result + " pos "+ pos.ToString("F2"));
+            if (result == 0)
+            {
+                cornor = true;
+            }
+            if(result >= 0)
+            {
+                return pos;
+            }
+            
         }
-        else if ((!ML1.infinite && ML2.infinite) && (ML1.point_in_cal(pos)))
+        else if (!ML1.infinite && ML2.infinite)
         {
-            return pos;
+            int result = ML1.point_in_cal(pos);
+            //Debug.Log("ML1 " + ML1.VarToString());
+            //Debug.Log("result " + result + " pos " + pos.ToString("F2"));
+            if (result == 0)
+            {
+                cornor = true;
+            }
+            if(result >= 0)
+            {
+                return pos;
+            }
         }
 
         return RC.NANVector3;
