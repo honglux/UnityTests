@@ -26,7 +26,7 @@ public class Child2ClassTest : Parent2ClassTest
         count++;
         if(count>300)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 
@@ -41,5 +41,10 @@ public class Child2ClassTest : Parent2ClassTest
         base.exception_test();
         Debug.Log("exception_test2");
         return -2;
+    }
+
+    protected override void test_func22()
+    {
+        Debug.Log("Child @@@ test_func22");
     }
 }

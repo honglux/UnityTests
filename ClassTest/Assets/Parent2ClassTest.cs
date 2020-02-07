@@ -26,12 +26,22 @@ public class Parent2ClassTest : MonoBehaviour
     virtual protected void Update()
     {
         //test_action();
-        Debug.Log("Parent2ClassTest update");
+        //Debug.Log("Parent2ClassTest update");
     }
 
     virtual public void testaction_func1()
     {
         Debug.Log("testaction_func1");
+    }
+
+    public void test_func2()
+    {
+        test_func22();
+    }
+
+    protected virtual void test_func22()
+    {
+        Debug.Log("Parent !!! test_func22");
     }
 
     protected virtual void OnDestroy()
