@@ -8,6 +8,7 @@ using System.IO;
 public class WorldToViewportTest : MonoBehaviour
 {
     [SerializeField] private Camera Cam;
+    [SerializeField] private Camera CapCamera;
     [SerializeField] private Transform Target_TRANS;
     [SerializeField] private Text TM;
     [SerializeField] private Canvas Canv;
@@ -15,22 +16,26 @@ public class WorldToViewportTest : MonoBehaviour
     [SerializeField] private int PixePos;
     [SerializeField] private string FileMame;
 
-    private Dictionary<int, float> buf = new Dictionary<int, float>();
+    private Dictionary<int, float> buf;
+    private float target_init_pos;
+
+    private void Awake()
+    {
+        this.buf = new Dictionary<int, float>();
+        this.target_init_pos = 0.0f;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-
+        target_init_pos = Target_TRANS.position.z;
     }
 
     // Update is called once per frame
     void Update()
     {
-        test2();
-        if(Input.GetKeyDown(KeyCode.S))
-        {
-            write_file();
-        }
+        //test2();
+        test3();
     }
 
     private void test1()
@@ -47,6 +52,16 @@ public class WorldToViewportTest : MonoBehaviour
         TM.text = v_pos.ToString("F4");
         buf[PixePos] = v_pos.x;
         Target_TRANS.position = v_pos + Vector3.up * 3.0f;
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            write_file();
+        }
+    }
+
+    private void test3()
+    {
+        float scale = 60.0f / CapCamera.fieldOfView;
+        Target_TRANS.position = new Vector3(0.0f, 0.0f, target_init_pos * scale);
     }
 
     private void write_file()

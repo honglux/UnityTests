@@ -3048,6 +3048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cam: {fileID: 1100056306}
+  CapCamera: {fileID: 190975843}
   Target_TRANS: {fileID: 678332562}
   TM: {fileID: 1496768774}
   Canv: {fileID: 596434925}
