@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InstanceTest : MonoBehaviour
+public class InstanceTest : ParentInstanceTest
 {
     public int a = 0;
 
@@ -24,4 +24,10 @@ public class InstanceTest : MonoBehaviour
     }
 
     public static InstanceTest Instance { get; private set; }
+
+    public void test2()
+    {
+        a++;
+        Debug.Log("test2 " + a.ToString() + abc.ToString());
+    }
 }

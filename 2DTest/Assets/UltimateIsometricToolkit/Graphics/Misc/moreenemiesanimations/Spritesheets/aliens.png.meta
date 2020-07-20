@@ -1,127 +1,348 @@
 fileFormatVersion: 2
 guid: 687b7082c7dd70044a48a0c54f292840
-timeCreated: 1479639204
-licenseType: Store
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: alienBeige.png
-    21300002: alienBeige_climb1.png
-    21300004: alienBeige_climb2.png
-    21300006: alienBeige_duck.png
-    21300008: alienBeige_hurt.png
-    21300010: alienBeige_jump.png
-    21300012: alienBeige_stand.png
-    21300014: alienBeige_swim1.png
-    21300016: alienBeige_swim2.png
-    21300018: alienBeige_walk1.png
-    21300020: alienBeige_walk2.png
-    21300022: alienBlue.png
-    21300024: alienBlue_climb1.png
-    21300026: alienBlue_climb2.png
-    21300028: alienBlue_duck.png
-    21300030: alienBlue_hurt.png
-    21300032: alienBlue_jump.png
-    21300034: alienBlue_stand.png
-    21300036: alienBlue_swim1.png
-    21300038: alienBlue_swim2.png
-    21300040: alienBlue_walk1.png
-    21300042: alienBlue_walk2.png
-    21300044: alienGreen.png
-    21300046: alienGreen_climb1.png
-    21300048: alienGreen_climb2.png
-    21300050: alienGreen_duck.png
-    21300052: alienGreen_hurt.png
-    21300054: alienGreen_jump.png
-    21300056: alienGreen_stand.png
-    21300058: alienGreen_swim1.png
-    21300060: alienGreen_swim2.png
-    21300062: alienGreen_walk1.png
-    21300064: alienGreen_walk2.png
-    21300066: alienPink.png
-    21300068: alienPink_climb1.png
-    21300070: alienPink_climb2.png
-    21300072: alienPink_duck.png
-    21300074: alienPink_hurt.png
-    21300076: alienPink_jump.png
-    21300078: alienPink_stand.png
-    21300080: alienPink_swim1.png
-    21300082: alienPink_swim2.png
-    21300084: alienPink_walk1.png
-    21300086: alienPink_walk2.png
-    21300088: alienYellow.png
-    21300090: alienYellow_climb1.png
-    21300092: alienYellow_climb2.png
-    21300094: alienYellow_duck.png
-    21300096: alienYellow_hurt.png
-    21300098: alienYellow_jump.png
-    21300100: alienYellow_stand.png
-    21300102: alienYellow_swim1.png
-    21300104: alienYellow_swim2.png
-    21300106: alienYellow_walk1.png
-    21300108: alienYellow_walk2.png
-    21300110: alienBeige
-    21300112: alienBeige_climb1
-    21300114: alienBeige_climb2
-    21300116: alienBeige_duck
-    21300118: alienBeige_hurt
-    21300120: alienBeige_jump
-    21300122: alienBeige_stand
-    21300124: alienBeige_swim1
-    21300126: alienBeige_swim2
-    21300128: alienBeige_walk1
-    21300130: alienBeige_walk2
-    21300132: alienBlue
-    21300134: alienBlue_climb1
-    21300136: alienBlue_climb2
-    21300138: alienBlue_duck
-    21300140: alienBlue_hurt
-    21300142: alienBlue_jump
-    21300144: alienBlue_stand
-    21300146: alienBlue_swim1
-    21300148: alienBlue_swim2
-    21300150: alienBlue_walk1
-    21300152: alienBlue_walk2
-    21300154: alienGreen
-    21300156: alienGreen_climb1
-    21300158: alienGreen_climb2
-    21300160: alienGreen_duck
-    21300162: alienGreen_hurt
-    21300164: alienGreen_jump
-    21300166: alienGreen_stand
-    21300168: alienGreen_swim1
-    21300170: alienGreen_swim2
-    21300172: alienGreen_walk1
-    21300174: alienGreen_walk2
-    21300176: alienPink
-    21300178: alienPink_climb1
-    21300180: alienPink_climb2
-    21300182: alienPink_duck
-    21300184: alienPink_hurt
-    21300186: alienPink_jump
-    21300188: alienPink_stand
-    21300190: alienPink_swim1
-    21300192: alienPink_swim2
-    21300194: alienPink_walk1
-    21300196: alienPink_walk2
-    21300198: alienYellow
-    21300200: alienYellow_climb1
-    21300202: alienYellow_climb2
-    21300204: alienYellow_duck
-    21300206: alienYellow_hurt
-    21300208: alienYellow_jump
-    21300210: alienYellow_stand
-    21300212: alienYellow_swim1
-    21300214: alienYellow_swim2
-    21300216: alienYellow_walk1
-    21300218: alienYellow_walk2
-  serializedVersion: 2
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: alienBeige.png
+  - first:
+      213: 21300002
+    second: alienBeige_climb1.png
+  - first:
+      213: 21300004
+    second: alienBeige_climb2.png
+  - first:
+      213: 21300006
+    second: alienBeige_duck.png
+  - first:
+      213: 21300008
+    second: alienBeige_hurt.png
+  - first:
+      213: 21300010
+    second: alienBeige_jump.png
+  - first:
+      213: 21300012
+    second: alienBeige_stand.png
+  - first:
+      213: 21300014
+    second: alienBeige_swim1.png
+  - first:
+      213: 21300016
+    second: alienBeige_swim2.png
+  - first:
+      213: 21300018
+    second: alienBeige_walk1.png
+  - first:
+      213: 21300020
+    second: alienBeige_walk2.png
+  - first:
+      213: 21300022
+    second: alienBlue.png
+  - first:
+      213: 21300024
+    second: alienBlue_climb1.png
+  - first:
+      213: 21300026
+    second: alienBlue_climb2.png
+  - first:
+      213: 21300028
+    second: alienBlue_duck.png
+  - first:
+      213: 21300030
+    second: alienBlue_hurt.png
+  - first:
+      213: 21300032
+    second: alienBlue_jump.png
+  - first:
+      213: 21300034
+    second: alienBlue_stand.png
+  - first:
+      213: 21300036
+    second: alienBlue_swim1.png
+  - first:
+      213: 21300038
+    second: alienBlue_swim2.png
+  - first:
+      213: 21300040
+    second: alienBlue_walk1.png
+  - first:
+      213: 21300042
+    second: alienBlue_walk2.png
+  - first:
+      213: 21300044
+    second: alienGreen.png
+  - first:
+      213: 21300046
+    second: alienGreen_climb1.png
+  - first:
+      213: 21300048
+    second: alienGreen_climb2.png
+  - first:
+      213: 21300050
+    second: alienGreen_duck.png
+  - first:
+      213: 21300052
+    second: alienGreen_hurt.png
+  - first:
+      213: 21300054
+    second: alienGreen_jump.png
+  - first:
+      213: 21300056
+    second: alienGreen_stand.png
+  - first:
+      213: 21300058
+    second: alienGreen_swim1.png
+  - first:
+      213: 21300060
+    second: alienGreen_swim2.png
+  - first:
+      213: 21300062
+    second: alienGreen_walk1.png
+  - first:
+      213: 21300064
+    second: alienGreen_walk2.png
+  - first:
+      213: 21300066
+    second: alienPink.png
+  - first:
+      213: 21300068
+    second: alienPink_climb1.png
+  - first:
+      213: 21300070
+    second: alienPink_climb2.png
+  - first:
+      213: 21300072
+    second: alienPink_duck.png
+  - first:
+      213: 21300074
+    second: alienPink_hurt.png
+  - first:
+      213: 21300076
+    second: alienPink_jump.png
+  - first:
+      213: 21300078
+    second: alienPink_stand.png
+  - first:
+      213: 21300080
+    second: alienPink_swim1.png
+  - first:
+      213: 21300082
+    second: alienPink_swim2.png
+  - first:
+      213: 21300084
+    second: alienPink_walk1.png
+  - first:
+      213: 21300086
+    second: alienPink_walk2.png
+  - first:
+      213: 21300088
+    second: alienYellow.png
+  - first:
+      213: 21300090
+    second: alienYellow_climb1.png
+  - first:
+      213: 21300092
+    second: alienYellow_climb2.png
+  - first:
+      213: 21300094
+    second: alienYellow_duck.png
+  - first:
+      213: 21300096
+    second: alienYellow_hurt.png
+  - first:
+      213: 21300098
+    second: alienYellow_jump.png
+  - first:
+      213: 21300100
+    second: alienYellow_stand.png
+  - first:
+      213: 21300102
+    second: alienYellow_swim1.png
+  - first:
+      213: 21300104
+    second: alienYellow_swim2.png
+  - first:
+      213: 21300106
+    second: alienYellow_walk1.png
+  - first:
+      213: 21300108
+    second: alienYellow_walk2.png
+  - first:
+      213: 21300110
+    second: alienBeige
+  - first:
+      213: 21300112
+    second: alienBeige_climb1
+  - first:
+      213: 21300114
+    second: alienBeige_climb2
+  - first:
+      213: 21300116
+    second: alienBeige_duck
+  - first:
+      213: 21300118
+    second: alienBeige_hurt
+  - first:
+      213: 21300120
+    second: alienBeige_jump
+  - first:
+      213: 21300122
+    second: alienBeige_stand
+  - first:
+      213: 21300124
+    second: alienBeige_swim1
+  - first:
+      213: 21300126
+    second: alienBeige_swim2
+  - first:
+      213: 21300128
+    second: alienBeige_walk1
+  - first:
+      213: 21300130
+    second: alienBeige_walk2
+  - first:
+      213: 21300132
+    second: alienBlue
+  - first:
+      213: 21300134
+    second: alienBlue_climb1
+  - first:
+      213: 21300136
+    second: alienBlue_climb2
+  - first:
+      213: 21300138
+    second: alienBlue_duck
+  - first:
+      213: 21300140
+    second: alienBlue_hurt
+  - first:
+      213: 21300142
+    second: alienBlue_jump
+  - first:
+      213: 21300144
+    second: alienBlue_stand
+  - first:
+      213: 21300146
+    second: alienBlue_swim1
+  - first:
+      213: 21300148
+    second: alienBlue_swim2
+  - first:
+      213: 21300150
+    second: alienBlue_walk1
+  - first:
+      213: 21300152
+    second: alienBlue_walk2
+  - first:
+      213: 21300154
+    second: alienGreen
+  - first:
+      213: 21300156
+    second: alienGreen_climb1
+  - first:
+      213: 21300158
+    second: alienGreen_climb2
+  - first:
+      213: 21300160
+    second: alienGreen_duck
+  - first:
+      213: 21300162
+    second: alienGreen_hurt
+  - first:
+      213: 21300164
+    second: alienGreen_jump
+  - first:
+      213: 21300166
+    second: alienGreen_stand
+  - first:
+      213: 21300168
+    second: alienGreen_swim1
+  - first:
+      213: 21300170
+    second: alienGreen_swim2
+  - first:
+      213: 21300172
+    second: alienGreen_walk1
+  - first:
+      213: 21300174
+    second: alienGreen_walk2
+  - first:
+      213: 21300176
+    second: alienPink
+  - first:
+      213: 21300178
+    second: alienPink_climb1
+  - first:
+      213: 21300180
+    second: alienPink_climb2
+  - first:
+      213: 21300182
+    second: alienPink_duck
+  - first:
+      213: 21300184
+    second: alienPink_hurt
+  - first:
+      213: 21300186
+    second: alienPink_jump
+  - first:
+      213: 21300188
+    second: alienPink_stand
+  - first:
+      213: 21300190
+    second: alienPink_swim1
+  - first:
+      213: 21300192
+    second: alienPink_swim2
+  - first:
+      213: 21300194
+    second: alienPink_walk1
+  - first:
+      213: 21300196
+    second: alienPink_walk2
+  - first:
+      213: 21300198
+    second: alienYellow
+  - first:
+      213: 21300200
+    second: alienYellow_climb1
+  - first:
+      213: 21300202
+    second: alienYellow_climb2
+  - first:
+      213: 21300204
+    second: alienYellow_duck
+  - first:
+      213: 21300206
+    second: alienYellow_hurt
+  - first:
+      213: 21300208
+    second: alienYellow_jump
+  - first:
+      213: 21300210
+    second: alienYellow_stand
+  - first:
+      213: 21300212
+    second: alienYellow_swim1
+  - first:
+      213: 21300214
+    second: alienYellow_swim2
+  - first:
+      213: 21300216
+    second: alienYellow_walk1
+  - first:
+      213: 21300218
+    second: alienYellow_walk2
+  externalObjects: {}
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -130,37 +351,60 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: -1
     aniso: 16
-    mipBias: -1
-    wrapMode: 1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: alienBeige
+    - serializedVersion: 2
+      name: alienBeige
       rect:
         serializedVersion: 2
         x: 478
@@ -170,18 +414,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -21, y: 46}
-        - {x: -24, y: 45}
-        - {x: -33, y: 29}
-        - {x: -33, y: -35}
-        - {x: -24, y: -26}
-        - {x: -25, y: -46}
-        - {x: 25, y: -46}
-        - {x: 33, y: -31}
-        - {x: 33, y: 31}
-        - {x: 19, y: 46}
-    - name: alienBeige_climb1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8305410000000000800000000000000
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBeige_climb1
       rect:
         serializedVersion: 2
         x: 478
@@ -191,18 +435,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 33, y: 42.5}
-        - {x: 24, y: 47.5}
-        - {x: -30, y: 47.5}
-        - {x: -33, y: 43.5}
-        - {x: -33, y: -26.5}
-        - {x: -21, y: -47.5}
-        - {x: -3, y: -47.5}
-        - {x: 23, y: -43.5}
-        - {x: 32, y: -37.5}
-        - {x: 33, y: -34.5}
-    - name: alienBeige_climb2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09305410000000000800000000000000
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBeige_climb2
       rect:
         serializedVersion: 2
         x: 610
@@ -212,18 +456,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -30, y: 47.5}
-        - {x: -33, y: 40.5}
-        - {x: -33, y: -29.5}
-        - {x: -32, y: -42.5}
-        - {x: -20, y: -45.5}
-        - {x: -8, y: -47.5}
-        - {x: 25, y: -47.5}
-        - {x: 33, y: -11.5}
-        - {x: 33, y: 39.5}
-        - {x: 28, y: 47.5}
-    - name: alienBeige_duck
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29305410000000000800000000000000
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBeige_duck
       rect:
         serializedVersion: 2
         x: 278
@@ -233,16 +477,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -18.5, y: 36}
-        - {x: -22.5, y: 35}
-        - {x: -33.5, y: 18}
-        - {x: -33.5, y: -36}
-        - {x: 28.5, y: -36}
-        - {x: 33.5, y: -16}
-        - {x: 33.5, y: 23}
-        - {x: 20.5, y: 36}
-    - name: alienBeige_hurt
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49305410000000000800000000000000
+      internalID: 21300116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBeige_hurt
       rect:
         serializedVersion: 2
         x: 278
@@ -252,17 +498,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 23.5, y: 46}
-        - {x: -21.5, y: 46}
-        - {x: -33.5, y: 32}
-        - {x: -33.5, y: -30}
-        - {x: -14.5, y: -46}
-        - {x: 32.5, y: -46}
-        - {x: 33.5, y: -43}
-        - {x: 33.5, y: 38}
-        - {x: 26.5, y: 45}
-    - name: alienBeige_jump
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69305410000000000800000000000000
+      internalID: 21300118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBeige_jump
       rect:
         serializedVersion: 2
         x: 479
@@ -272,15 +519,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -33, y: 46.5}
-        - {x: -33, y: -43.5}
-        - {x: -28, y: -46.5}
-        - {x: 27, y: -46.5}
-        - {x: 33, y: -40.5}
-        - {x: 33, y: 43.5}
-        - {x: 31, y: 46.5}
-    - name: alienBeige_stand
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89305410000000000800000000000000
+      internalID: 21300120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBeige_stand
       rect:
         serializedVersion: 2
         x: 676
@@ -290,14 +540,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -33, y: 46}
-        - {x: -33, y: -46}
-        - {x: 31, y: -46}
-        - {x: 33, y: -37}
-        - {x: 33, y: 43}
-        - {x: 30, y: 46}
-    - name: alienBeige_swim1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9305410000000000800000000000000
+      internalID: 21300122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBeige_swim1
       rect:
         serializedVersion: 2
         x: 209
@@ -307,15 +561,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -30.5, y: 49}
-        - {x: -34.5, y: 46}
-        - {x: -34.5, y: -49}
-        - {x: 14.5, y: -49}
-        - {x: 34.5, y: -27}
-        - {x: 34.5, y: 39}
-        - {x: 28.5, y: 49}
-    - name: alienBeige_swim2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9305410000000000800000000000000
+      internalID: 21300124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBeige_swim2
       rect:
         serializedVersion: 2
         x: 70
@@ -325,15 +582,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -18, y: 50}
-        - {x: -24, y: 49}
-        - {x: -35, y: 40}
-        - {x: -35, y: -50}
-        - {x: 35, y: -50}
-        - {x: 35, y: 44}
-        - {x: 23, y: 50}
-    - name: alienBeige_walk1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9305410000000000800000000000000
+      internalID: 21300126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBeige_walk1
       rect:
         serializedVersion: 2
         x: 209
@@ -343,16 +603,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -24, y: 46.5}
-        - {x: -32, y: 36.5}
-        - {x: -34, y: 26.5}
-        - {x: -34, y: -37.5}
-        - {x: -26, y: -46.5}
-        - {x: 34, y: -46.5}
-        - {x: 34, y: 44.5}
-        - {x: 28, y: 46.5}
-    - name: alienBeige_walk2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a305410000000000800000000000000
+      internalID: 21300128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBeige_walk2
       rect:
         serializedVersion: 2
         x: 70
@@ -362,15 +624,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -29, y: 48}
-        - {x: -35, y: 28}
-        - {x: -35, y: -48}
-        - {x: 19, y: -48}
-        - {x: 35, y: -38}
-        - {x: 35, y: 36}
-        - {x: 21, y: 48}
-    - name: alienBlue
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a305410000000000800000000000000
+      internalID: 21300130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBlue
       rect:
         serializedVersion: 2
         x: 412
@@ -380,14 +645,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -19, y: 46}
-        - {x: -33, y: 41}
-        - {x: -33, y: -46}
-        - {x: 33, y: -46}
-        - {x: 33, y: 35}
-        - {x: 23, y: 46}
-    - name: alienBlue_climb1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a305410000000000800000000000000
+      internalID: 21300132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBlue_climb1
       rect:
         serializedVersion: 2
         x: 412
@@ -397,16 +666,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -32, y: 46}
-        - {x: -33, y: 44}
-        - {x: -33, y: -36}
-        - {x: -24, y: -46}
-        - {x: 16, y: -46}
-        - {x: 24, y: -45}
-        - {x: 33, y: -37}
-        - {x: 33, y: 46}
-    - name: alienBlue_climb2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a305410000000000800000000000000
+      internalID: 21300134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBlue_climb2
       rect:
         serializedVersion: 2
         x: 412
@@ -416,16 +687,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -31, y: 46}
-        - {x: -33, y: 44}
-        - {x: -33, y: -36}
-        - {x: -31, y: -46}
-        - {x: 25, y: -46}
-        - {x: 33, y: -10}
-        - {x: 33, y: 37}
-        - {x: 28, y: 46}
-    - name: alienBlue_duck
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a305410000000000800000000000000
+      internalID: 21300136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBlue_duck
       rect:
         serializedVersion: 2
         x: 345
@@ -435,16 +708,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -18.5, y: 36}
-        - {x: -22.5, y: 35}
-        - {x: -33.5, y: 18}
-        - {x: -33.5, y: -36}
-        - {x: 28.5, y: -36}
-        - {x: 33.5, y: -16}
-        - {x: 33.5, y: 23}
-        - {x: 20.5, y: 36}
-    - name: alienBlue_hurt
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa305410000000000800000000000000
+      internalID: 21300138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBlue_hurt
       rect:
         serializedVersion: 2
         x: 345
@@ -454,16 +729,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 29.5, y: 46}
-        - {x: -22.5, y: 46}
-        - {x: -33.5, y: 32}
-        - {x: -33.5, y: -35}
-        - {x: -6.5, y: -46}
-        - {x: 27.5, y: -46}
-        - {x: 33.5, y: -32}
-        - {x: 33.5, y: 33}
-    - name: alienBlue_jump
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca305410000000000800000000000000
+      internalID: 21300140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBlue_jump
       rect:
         serializedVersion: 2
         x: 478
@@ -473,15 +750,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -24, y: 46.5}
-        - {x: -33, y: 41.5}
-        - {x: -33, y: -46.5}
-        - {x: 31, y: -46.5}
-        - {x: 33, y: -43.5}
-        - {x: 33, y: 38.5}
-        - {x: 29, y: 46.5}
-    - name: alienBlue_stand
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea305410000000000800000000000000
+      internalID: 21300142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBlue_stand
       rect:
         serializedVersion: 2
         x: 676
@@ -491,13 +771,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -33, y: -46}
-        - {x: 33, y: -46}
-        - {x: 33, y: 46}
-        - {x: -23, y: 46}
-        - {x: -33, y: 38}
-    - name: alienBlue_swim1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b305410000000000800000000000000
+      internalID: 21300144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBlue_swim1
       rect:
         serializedVersion: 2
         x: 139
@@ -507,14 +792,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -34.5, y: 47.5}
-        - {x: -34.5, y: -47.5}
-        - {x: 23.5, y: -47.5}
-        - {x: 34.5, y: -27.5}
-        - {x: 34.5, y: 44.5}
-        - {x: 32.5, y: 47.5}
-    - name: alienBlue_swim2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b305410000000000800000000000000
+      internalID: 21300146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBlue_swim2
       rect:
         serializedVersion: 2
         x: 70
@@ -524,15 +813,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -33, y: 48.5}
-        - {x: -35, y: 45.5}
-        - {x: -35, y: -48.5}
-        - {x: 17, y: -48.5}
-        - {x: 35, y: -28.5}
-        - {x: 35, y: 46.5}
-        - {x: 30, y: 48.5}
-    - name: alienBlue_walk1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b305410000000000800000000000000
+      internalID: 21300148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBlue_walk1
       rect:
         serializedVersion: 2
         x: 544
@@ -542,16 +834,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -24, y: 46.5}
-        - {x: -33, y: 34.5}
-        - {x: -33, y: -39.5}
-        - {x: -25, y: -46.5}
-        - {x: 32, y: -46.5}
-        - {x: 33, y: -43.5}
-        - {x: 33, y: 31.5}
-        - {x: 23, y: 46.5}
-    - name: alienBlue_walk2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b305410000000000800000000000000
+      internalID: 21300150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienBlue_walk2
       rect:
         serializedVersion: 2
         x: 345
@@ -561,16 +855,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -16.5, y: 48}
-        - {x: -33.5, y: 37}
-        - {x: -33.5, y: -39}
-        - {x: -13.5, y: -48}
-        - {x: 18.5, y: -48}
-        - {x: 33.5, y: -33}
-        - {x: 33.5, y: 33}
-        - {x: 24.5, y: 48}
-    - name: alienGreen
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b305410000000000800000000000000
+      internalID: 21300152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienGreen
       rect:
         serializedVersion: 2
         x: 610
@@ -580,17 +876,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -15, y: 46}
-        - {x: -23, y: 44}
-        - {x: -33, y: 30}
-        - {x: -33, y: -31}
-        - {x: -22, y: -46}
-        - {x: 22, y: -46}
-        - {x: 33, y: -32}
-        - {x: 33, y: 33}
-        - {x: 19, y: 46}
-    - name: alienGreen_climb1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab305410000000000800000000000000
+      internalID: 21300154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienGreen_climb1
       rect:
         serializedVersion: 2
         x: 611
@@ -600,16 +897,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -23, y: 46}
-        - {x: -33, y: 38}
-        - {x: -33, y: -18}
-        - {x: -26, y: -46}
-        - {x: 27, y: -46}
-        - {x: 33, y: -20}
-        - {x: 33, y: 36}
-        - {x: 23, y: 46}
-    - name: alienGreen_climb2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb305410000000000800000000000000
+      internalID: 21300156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienGreen_climb2
       rect:
         serializedVersion: 2
         x: 676
@@ -619,16 +918,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -19, y: 46}
-        - {x: -33, y: 36}
-        - {x: -33, y: -41}
-        - {x: -27, y: -46}
-        - {x: 22, y: -46}
-        - {x: 33, y: -26}
-        - {x: 33, y: 35}
-        - {x: 30, y: 46}
-    - name: alienGreen_duck
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb305410000000000800000000000000
+      internalID: 21300158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienGreen_duck
       rect:
         serializedVersion: 2
         x: 208
@@ -638,18 +939,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 23.5, y: 33.5}
-        - {x: 17.5, y: 35.5}
-        - {x: -14.5, y: 35.5}
-        - {x: -25.5, y: 30.5}
-        - {x: -34.5, y: 13.5}
-        - {x: -34.5, y: -32.5}
-        - {x: -33.5, y: -35.5}
-        - {x: 31.5, y: -35.5}
-        - {x: 34.5, y: -18.5}
-        - {x: 34.5, y: 21.5}
-    - name: alienGreen_hurt
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c305410000000000800000000000000
+      internalID: 21300160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienGreen_hurt
       rect:
         serializedVersion: 2
         x: 140
@@ -659,15 +960,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -27.5, y: 46}
-        - {x: -34.5, y: 42}
-        - {x: -34.5, y: -28}
-        - {x: -27.5, y: -46}
-        - {x: 34.5, y: -46}
-        - {x: 34.5, y: 38}
-        - {x: 23.5, y: 46}
-    - name: alienGreen_jump
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c305410000000000800000000000000
+      internalID: 21300162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienGreen_jump
       rect:
         serializedVersion: 2
         x: 345
@@ -677,15 +981,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 30.5, y: 46.5}
-        - {x: -33.5, y: 46.5}
-        - {x: -33.5, y: -44.5}
-        - {x: -26.5, y: -46.5}
-        - {x: 26.5, y: -46.5}
-        - {x: 33.5, y: -40.5}
-        - {x: 33.5, y: 40.5}
-    - name: alienGreen_stand
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c305410000000000800000000000000
+      internalID: 21300164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienGreen_stand
       rect:
         serializedVersion: 2
         x: 676
@@ -695,16 +1002,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -21, y: 46}
-        - {x: -33, y: 41}
-        - {x: -33, y: -38}
-        - {x: -28, y: -46}
-        - {x: 28, y: -46}
-        - {x: 33, y: -30}
-        - {x: 33, y: 43}
-        - {x: 29, y: 46}
-    - name: alienGreen_swim1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c305410000000000800000000000000
+      internalID: 21300166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienGreen_swim1
       rect:
         serializedVersion: 2
         x: 209
@@ -714,15 +1023,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -23.5, y: 47.5}
-        - {x: -34.5, y: 42.5}
-        - {x: -34.5, y: -47.5}
-        - {x: 31.5, y: -47.5}
-        - {x: 34.5, y: -32.5}
-        - {x: 34.5, y: 46.5}
-        - {x: 33.5, y: 47.5}
-    - name: alienGreen_swim2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c305410000000000800000000000000
+      internalID: 21300168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienGreen_swim2
       rect:
         serializedVersion: 2
         x: 0
@@ -732,16 +1044,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -15, y: 48.5}
-        - {x: -35, y: 40.5}
-        - {x: -35, y: -30.5}
-        - {x: -29, y: -48.5}
-        - {x: 27, y: -48.5}
-        - {x: 35, y: -23.5}
-        - {x: 35, y: 45.5}
-        - {x: 31, y: 48.5}
-    - name: alienGreen_walk1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac305410000000000800000000000000
+      internalID: 21300170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienGreen_walk1
       rect:
         serializedVersion: 2
         x: 277
@@ -751,13 +1065,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -34, y: 46.5}
-        - {x: -34, y: -41.5}
-        - {x: -27, y: -46.5}
-        - {x: 34, y: -46.5}
-        - {x: 34, y: 46.5}
-    - name: alienGreen_walk2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc305410000000000800000000000000
+      internalID: 21300172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienGreen_walk2
       rect:
         serializedVersion: 2
         x: 0
@@ -767,16 +1086,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -29, y: 48}
-        - {x: -35, y: 28}
-        - {x: -35, y: -47}
-        - {x: -34, y: -48}
-        - {x: 22, y: -48}
-        - {x: 35, y: -41}
-        - {x: 35, y: 36}
-        - {x: 21, y: 48}
-    - name: alienPink
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec305410000000000800000000000000
+      internalID: 21300174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienPink
       rect:
         serializedVersion: 2
         x: 610
@@ -786,17 +1107,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -15, y: 46}
-        - {x: -23, y: 44}
-        - {x: -33, y: 30}
-        - {x: -33, y: -31}
-        - {x: -22, y: -46}
-        - {x: 22, y: -46}
-        - {x: 33, y: -32}
-        - {x: 33, y: 33}
-        - {x: 19, y: 46}
-    - name: alienPink_climb1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d305410000000000800000000000000
+      internalID: 21300176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienPink_climb1
       rect:
         serializedVersion: 2
         x: 610
@@ -806,16 +1128,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -32, y: 46}
-        - {x: -33, y: 44}
-        - {x: -33, y: -36}
-        - {x: -24, y: -46}
-        - {x: 16, y: -46}
-        - {x: 24, y: -45}
-        - {x: 33, y: -37}
-        - {x: 33, y: 46}
-    - name: alienPink_climb2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d305410000000000800000000000000
+      internalID: 21300178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienPink_climb2
       rect:
         serializedVersion: 2
         x: 545
@@ -825,16 +1149,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -31, y: 46}
-        - {x: -33, y: 44}
-        - {x: -33, y: -36}
-        - {x: -31, y: -46}
-        - {x: 25, y: -46}
-        - {x: 33, y: -10}
-        - {x: 33, y: 37}
-        - {x: 28, y: 46}
-    - name: alienPink_duck
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d305410000000000800000000000000
+      internalID: 21300180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienPink_duck
       rect:
         serializedVersion: 2
         x: 208
@@ -844,18 +1170,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 23.5, y: 33.5}
-        - {x: 17.5, y: 35.5}
-        - {x: -14.5, y: 35.5}
-        - {x: -25.5, y: 30.5}
-        - {x: -34.5, y: 13.5}
-        - {x: -34.5, y: -32.5}
-        - {x: -33.5, y: -35.5}
-        - {x: 31.5, y: -35.5}
-        - {x: 34.5, y: -18.5}
-        - {x: 34.5, y: 21.5}
-    - name: alienPink_hurt
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d305410000000000800000000000000
+      internalID: 21300182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienPink_hurt
       rect:
         serializedVersion: 2
         x: 70
@@ -865,15 +1191,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -27.5, y: 46}
-        - {x: -34.5, y: 42}
-        - {x: -34.5, y: -28}
-        - {x: -27.5, y: -46}
-        - {x: 34.5, y: -46}
-        - {x: 34.5, y: 38}
-        - {x: 23.5, y: 46}
-    - name: alienPink_jump
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d305410000000000800000000000000
+      internalID: 21300184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienPink_jump
       rect:
         serializedVersion: 2
         x: 412
@@ -883,15 +1212,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 30.5, y: 46.5}
-        - {x: -33.5, y: 46.5}
-        - {x: -33.5, y: -44.5}
-        - {x: -26.5, y: -46.5}
-        - {x: 26.5, y: -46.5}
-        - {x: 33.5, y: -40.5}
-        - {x: 33.5, y: 40.5}
-    - name: alienPink_stand
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad305410000000000800000000000000
+      internalID: 21300186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienPink_stand
       rect:
         serializedVersion: 2
         x: 544
@@ -901,16 +1233,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -21, y: 46}
-        - {x: -33, y: 41}
-        - {x: -33, y: -38}
-        - {x: -28, y: -46}
-        - {x: 28, y: -46}
-        - {x: 33, y: -30}
-        - {x: 33, y: 43}
-        - {x: 29, y: 46}
-    - name: alienPink_swim1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd305410000000000800000000000000
+      internalID: 21300188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienPink_swim1
       rect:
         serializedVersion: 2
         x: 140
@@ -920,14 +1254,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -34.5, y: 47.5}
-        - {x: -34.5, y: -47.5}
-        - {x: 23.5, y: -47.5}
-        - {x: 34.5, y: -27.5}
-        - {x: 34.5, y: 44.5}
-        - {x: 32.5, y: 47.5}
-    - name: alienPink_swim2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed305410000000000800000000000000
+      internalID: 21300190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienPink_swim2
       rect:
         serializedVersion: 2
         x: 0
@@ -937,15 +1275,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -33, y: 48.5}
-        - {x: -35, y: 45.5}
-        - {x: -35, y: -48.5}
-        - {x: 17, y: -48.5}
-        - {x: 35, y: -28.5}
-        - {x: 35, y: 46.5}
-        - {x: 30, y: 48.5}
-    - name: alienPink_walk1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e305410000000000800000000000000
+      internalID: 21300192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienPink_walk1
       rect:
         serializedVersion: 2
         x: 277
@@ -955,16 +1296,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -24, y: 46.5}
-        - {x: -32, y: 36.5}
-        - {x: -34, y: 26.5}
-        - {x: -34, y: -37.5}
-        - {x: -26, y: -46.5}
-        - {x: 34, y: -46.5}
-        - {x: 34, y: 44.5}
-        - {x: 28, y: 46.5}
-    - name: alienPink_walk2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e305410000000000800000000000000
+      internalID: 21300194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienPink_walk2
       rect:
         serializedVersion: 2
         x: 0
@@ -974,15 +1317,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -29, y: 48}
-        - {x: -35, y: 28}
-        - {x: -35, y: -48}
-        - {x: 19, y: -48}
-        - {x: 35, y: -38}
-        - {x: 35, y: 36}
-        - {x: 21, y: 48}
-    - name: alienYellow
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e305410000000000800000000000000
+      internalID: 21300196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienYellow
       rect:
         serializedVersion: 2
         x: 478
@@ -992,16 +1338,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -32, y: 41}
-        - {x: -33, y: 34}
-        - {x: -33, y: -37}
-        - {x: -28, y: -41}
-        - {x: 21, y: -41}
-        - {x: 33, y: -30}
-        - {x: 33, y: 27}
-        - {x: 19, y: 41}
-    - name: alienYellow_climb1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e305410000000000800000000000000
+      internalID: 21300198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienYellow_climb1
       rect:
         serializedVersion: 2
         x: 544
@@ -1011,15 +1359,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -33, y: 41}
-        - {x: -33, y: -23}
-        - {x: -21, y: -41}
-        - {x: 10, y: -41}
-        - {x: 33, y: -35}
-        - {x: 33, y: 36}
-        - {x: 31, y: 41}
-    - name: alienYellow_climb2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e305410000000000800000000000000
+      internalID: 21300200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienYellow_climb2
       rect:
         serializedVersion: 2
         x: 544
@@ -1029,17 +1380,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -31, y: 41}
-        - {x: -33, y: 28}
-        - {x: -33, y: -20}
-        - {x: -28, y: -34}
-        - {x: -26, y: -41}
-        - {x: 24, y: -41}
-        - {x: 33, y: -9}
-        - {x: 33, y: 34}
-        - {x: 29, y: 41}
-    - name: alienYellow_duck
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae305410000000000800000000000000
+      internalID: 21300202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienYellow_duck
       rect:
         serializedVersion: 2
         x: 209
@@ -1049,14 +1401,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -28, y: 33.5}
-        - {x: -34, y: 20.5}
-        - {x: -34, y: -33.5}
-        - {x: 34, y: -33.5}
-        - {x: 34, y: 22.5}
-        - {x: 21, y: 33.5}
-    - name: alienYellow_hurt
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce305410000000000800000000000000
+      internalID: 21300204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienYellow_hurt
       rect:
         serializedVersion: 2
         x: 140
@@ -1066,15 +1422,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -30.5, y: 40.5}
-        - {x: -34.5, y: 26.5}
-        - {x: -34.5, y: -26.5}
-        - {x: -10.5, y: -40.5}
-        - {x: 34.5, y: -40.5}
-        - {x: 34.5, y: 36.5}
-        - {x: 21.5, y: 40.5}
-    - name: alienYellow_jump
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee305410000000000800000000000000
+      internalID: 21300206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienYellow_jump
       rect:
         serializedVersion: 2
         x: 345
@@ -1084,15 +1443,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -28.5, y: 41.5}
-        - {x: -33.5, y: 40.5}
-        - {x: -33.5, y: -37.5}
-        - {x: -32.5, y: -41.5}
-        - {x: 33.5, y: -41.5}
-        - {x: 33.5, y: 40.5}
-        - {x: 32.5, y: 41.5}
-    - name: alienYellow_stand
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f305410000000000800000000000000
+      internalID: 21300208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienYellow_stand
       rect:
         serializedVersion: 2
         x: 412
@@ -1102,15 +1464,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -23, y: 41}
-        - {x: -33, y: 35}
-        - {x: -33, y: -41}
-        - {x: 22, y: -41}
-        - {x: 33, y: -34}
-        - {x: 33, y: 32}
-        - {x: 28, y: 41}
-    - name: alienYellow_swim1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f305410000000000800000000000000
+      internalID: 21300210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienYellow_swim1
       rect:
         serializedVersion: 2
         x: 140
@@ -1120,16 +1485,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 23.5, y: 42.5}
-        - {x: -29.5, y: 42.5}
-        - {x: -34.5, y: 33.5}
-        - {x: -34.5, y: -42.5}
-        - {x: 13.5, y: -42.5}
-        - {x: 18.5, y: -38.5}
-        - {x: 34.5, y: -20.5}
-        - {x: 34.5, y: 27.5}
-    - name: alienYellow_swim2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f305410000000000800000000000000
+      internalID: 21300212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienYellow_swim2
       rect:
         serializedVersion: 2
         x: 70
@@ -1139,16 +1506,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -24, y: 43.5}
-        - {x: -35, y: 25.5}
-        - {x: -35, y: -26.5}
-        - {x: -33, y: -43.5}
-        - {x: 25, y: -43.5}
-        - {x: 35, y: -31.5}
-        - {x: 35, y: 30.5}
-        - {x: 31, y: 43.5}
-    - name: alienYellow_walk1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f305410000000000800000000000000
+      internalID: 21300214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienYellow_walk1
       rect:
         serializedVersion: 2
         x: 277
@@ -1158,14 +1527,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -33, y: 41.5}
-        - {x: -34, y: 40.5}
-        - {x: -34, y: -41.5}
-        - {x: 34, y: -41.5}
-        - {x: 34, y: 37.5}
-        - {x: 25, y: 41.5}
-    - name: alienYellow_walk2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f305410000000000800000000000000
+      internalID: 21300216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alienYellow_walk2
       rect:
         serializedVersion: 2
         x: 0
@@ -1175,16 +1548,29 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -30, y: 43}
-        - {x: -35, y: 23}
-        - {x: -35, y: -16}
-        - {x: -29, y: -16}
-        - {x: -10, y: -43}
-        - {x: 35, y: -43}
-        - {x: 35, y: 43}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af305410000000000800000000000000
+      internalID: 21300218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+
 
 public class MeshData
 {
@@ -35,7 +35,7 @@ public class MeshData
         UV_poss = _UV_pos;
     }
 
-    public void set_init_UVs(Vector3 UL,Vector3 DR)
+    public void set_init_UVs(Vector3 UL, Vector3 DR)
     {
         UV_poss[0] = (Vector2)UL;
         UV_poss[1] = (Vector2)DR;
@@ -43,12 +43,12 @@ public class MeshData
 
     public void uv_cal_all()
     {
-        foreach(MeshPoint MP in Verticies)
+        foreach (MeshPoint MP in Verticies)
         {
-            MP.uv_cal(this);
+            MP.uv_cal();
         }
     }
-    
+
     //public void uv_cal(ref MeshPoint MP)
     //{
     //    float x = MP.pos.x - UV_poss[0].x;
@@ -87,14 +87,14 @@ public class MeshData
     {
         Mesh_lines = new List<MeshLine>();
         MeshLine mesh_line;
-        for(int i = 0; i < Verticies.Count - 1; i++)
+        for (int i = 0; i < Verticies.Count - 1; i++)
         {
             mesh_line = new MeshLine();
-            mesh_line.line_cal(Verticies[i], Verticies[i+1]);
+            mesh_line.line_cal(Verticies[i], Verticies[i + 1]);
             Mesh_lines.Add(mesh_line);
         }
         mesh_line = new MeshLine();
-        mesh_line.line_cal(Verticies[Verticies.Count-1], Verticies[0]);
+        mesh_line.line_cal(Verticies[Verticies.Count - 1], Verticies[0]);
         Mesh_lines.Add(mesh_line);
     }
 
@@ -107,7 +107,7 @@ public class MeshData
             ave_x += poi.pos.x;
             ave_y += poi.pos.y;
         }
-        center_pos = new Vector2(ave_x / (float)Verticies.Count, 
+        center_pos = new Vector2(ave_x / (float)Verticies.Count,
                                     ave_y / (float)Verticies.Count);
     }
 
@@ -121,7 +121,7 @@ public class MeshData
     private List<int> tria_regener(int number)
     {
         List<int> triangles = new List<int>();
-        for(int i = 1;i<number - 1;i++)
+        for (int i = 1; i < number - 1; i++)
         {
             triangles.Add(0);
             triangles.Add(i);
@@ -130,14 +130,14 @@ public class MeshData
         return triangles;
     }
 
-    public MeshData[] cut(MeshPoint MP1,MeshPoint MP2)
+    public MeshData[] cut(MeshPoint MP1, MeshPoint MP2)
     {
         //Debug.Log("cut1 " + MP1.pos);
         //Debug.Log("cut2 " + MP2.pos);
         MeshLine cut_line = new MeshLine();
         cut_line.line_cal(MP1, MP2);
-        MP1.uv_cal(this);
-        MP2.uv_cal(this);
+        MP1.uv_cal();
+        MP2.uv_cal();
 
         return points_cal(cut_line, MP1, MP2);
     }
@@ -192,14 +192,14 @@ public class MeshData
         Vector3 pos;
         bool cornor = false;
         HashSet<Vector3> pos_set = new HashSet<Vector3>();
-        foreach(MeshLine mesh_line in Mesh_lines)
+        foreach (MeshLine mesh_line in Mesh_lines)
         {
-            pos = MeshLine.line_inter_cal(mesh_line, CL,out cornor);
-            if(!(pos == RC.NANVector3))
+            pos = MeshLine.line_inter_cal(mesh_line, CL, out cornor);
+            if (!(pos == RC.NANVector3))
             {
-                if(cornor)
+                if (cornor)
                 {
-                    if(pos_set.Contains(pos))
+                    if (pos_set.Contains(pos))
                     {
                         create_cut_p(ref mesh_points, pos);
                     }
@@ -217,10 +217,10 @@ public class MeshData
         return mesh_points.ToArray();
     }
 
-    private void create_cut_p(ref List<MeshPoint> mesh_points,Vector3 pos)
+    private void create_cut_p(ref List<MeshPoint> mesh_points, Vector3 pos)
     {
-        MeshPoint MP = new MeshPoint(pos, true);
-        MP.uv_cal(this);
+        MeshPoint MP = new MeshPoint(pos, true, this);
+        MP.uv_cal();
         mesh_points.Add(MP);
         //Debug.Log("@@@@@1 " + MP.VarToString());
         //Debug.Log("@@@@@2 " + this.VarToString());
@@ -250,7 +250,7 @@ public class MeshData
             result += " " + tria.ToString();
         }
         result += " \n";
-        foreach(MeshLine mesh_line in Mesh_lines)
+        foreach (MeshLine mesh_line in Mesh_lines)
         {
             result += " line " + mesh_line.VarToString();
         }
@@ -271,3 +271,4 @@ public class MeshData
     }
 
 }
+

@@ -25,6 +25,6 @@ public class MeshDataComp : MonoBehaviour
 
     public void set_MD(MeshData _mesh_data)
     {
-        mesh_data = _mesh_data.clone();
+        mesh_data = _mesh_data;
     }
 }

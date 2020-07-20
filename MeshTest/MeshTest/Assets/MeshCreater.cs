@@ -6,6 +6,7 @@ using System.Linq;
 public class MeshCreater : MonoBehaviour
 {
     [SerializeField] private Material material;
+    [SerializeField] private Texture2D texture1;
 
     public static MeshCreater IS { get; set; }
 
@@ -28,7 +29,6 @@ public class MeshCreater : MonoBehaviour
 
     private void first_create_mesh()
     {
-        
         Vector3[] uvs = new Vector3[] { new Vector3(-1.0f, -1.0f, 0.0f), new Vector3(1.0f, 1.0f, 0.0f) };
         List<Vector3> points = new List<Vector3>();
         points.Add(new Vector3(-1.0f, 1.0f, 0.0f));
@@ -46,7 +46,7 @@ public class MeshCreater : MonoBehaviour
         List<MeshPoint> verts = new List<MeshPoint>();
         foreach(Vector3 pos in poss)
         {
-            verts.Add(new MeshPoint(pos, false));
+            verts.Add(new MeshPoint(pos, false, mesh_data));
         }
         mesh_data.Verticies = verts;
         mesh_data.MD_regener();
@@ -71,7 +71,7 @@ public class MeshCreater : MonoBehaviour
         MR.material = material;
         MeshDataComp MDC = NM_TRANS.gameObject.AddComponent<MeshDataComp>();
         MDC.set_MD(mesh_data);
-
+        material.mainTexture = texture1;
         RC.IS.MD_TRANS_DICT.Add(mesh_data, NM_TRANS);
 
         NM_TRANS.parent = RC.IS.CutFrame_TRANS;

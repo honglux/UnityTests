@@ -1,217 +1,618 @@
 fileFormatVersion: 2
 guid: 64ff5133eee182540b9cc52322e70ff4
-timeCreated: 1479639218
-licenseType: Store
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: barnacle.png
-    21300002: barnacle_bite.png
-    21300004: barnacle_dead.png
-    21300006: barnacle_hit.png
-    21300008: bat.png
-    21300010: bat_dead.png
-    21300012: bat_fly.png
-    21300014: bat_hang.png
-    21300016: bat_hit.png
-    21300018: bee.png
-    21300020: bee_dead.png
-    21300022: bee_fly.png
-    21300024: bee_hit.png
-    21300026: fishGreen.png
-    21300028: fishGreen_dead.png
-    21300030: fishGreen_hit.png
-    21300032: fishGreen_swim.png
-    21300034: fishPink.png
-    21300036: fishPink_dead.png
-    21300038: fishPink_hit.png
-    21300040: fishPink_swim.png
-    21300042: fly.png
-    21300044: fly_dead.png
-    21300046: fly_fly.png
-    21300048: fly_hit.png
-    21300050: frog.png
-    21300052: frog_dead.png
-    21300054: frog_hit.png
-    21300056: frog_leap.png
-    21300058: ghost.png
-    21300060: ghost_dead.png
-    21300062: ghost_hit.png
-    21300064: ghost_normal.png
-    21300066: grassBlock.png
-    21300068: grassBlock_dead.png
-    21300070: grassBlock_hit.png
-    21300072: grassBlock_jump.png
-    21300074: ladyBug.png
-    21300076: ladyBug_fly.png
-    21300078: ladyBug_hit.png
-    21300080: ladyBug_walk.png
-    21300082: mouse.png
-    21300084: mouse_dead.png
-    21300086: mouse_hit.png
-    21300088: mouse_walk.png
-    21300090: piranha.png
-    21300092: piranha_dead.png
-    21300094: piranha_down.png
-    21300096: piranha_hit.png
-    21300098: slime.png
-    21300100: slimeBlock.png
-    21300102: slimeBlock_dead.png
-    21300104: slimeBlock_hit.png
-    21300106: slimeBlue.png
-    21300108: slimeBlue_blue.png
-    21300110: slimeBlue_dead.png
-    21300112: slimeBlue_hit.png
-    21300114: slimeBlue_squashed.png
-    21300116: slimeGreen.png
-    21300118: slimeGreen_dead.png
-    21300120: slimeGreen_hit.png
-    21300122: slimeGreen_squashed.png
-    21300124: slimeGreen_walk.png
-    21300126: slime_dead.png
-    21300128: slime_hit.png
-    21300130: slime_squashed.png
-    21300132: slime_walk.png
-    21300134: snail.png
-    21300136: snail_hit.png
-    21300138: snail_shell.png
-    21300140: snail_walk.png
-    21300142: snake.png
-    21300144: snakeLava.png
-    21300146: snakeLava_ani.png
-    21300148: snakeLava_dead.png
-    21300150: snakeLava_hit.png
-    21300152: snakeSlime.png
-    21300154: snakeSlime_ani.png
-    21300156: snakeSlime_dead.png
-    21300158: snakeSlime_hit.png
-    21300160: snake_dead.png
-    21300162: snake_hit.png
-    21300164: snake_walk.png
-    21300166: spider.png
-    21300168: spider_dead.png
-    21300170: spider_hit.png
-    21300172: spider_walk1.png
-    21300174: spider_walk2.png
-    21300176: spinner.png
-    21300178: spinnerHalf.png
-    21300180: spinnerHalf_dead.png
-    21300182: spinnerHalf_hit.png
-    21300184: spinnerHalf_spin.png
-    21300186: spinner_dead.png
-    21300188: spinner_hit.png
-    21300190: spinner_spin.png
-    21300192: worm.png
-    21300194: worm_dead.png
-    21300196: worm_hit.png
-    21300198: worm_walk.png
-    21300200: barnacle
-    21300202: barnacle_bite
-    21300204: barnacle_dead
-    21300206: barnacle_hit
-    21300208: bat
-    21300210: bat_dead
-    21300212: bat_fly
-    21300214: bat_hang
-    21300216: bat_hit
-    21300218: bee
-    21300220: bee_dead
-    21300222: bee_fly
-    21300224: bee_hit
-    21300226: fishGreen
-    21300228: fishGreen_dead
-    21300230: fishGreen_hit
-    21300232: fishGreen_swim
-    21300234: fishPink
-    21300236: fishPink_dead
-    21300238: fishPink_hit
-    21300240: fishPink_swim
-    21300242: fly
-    21300244: fly_dead
-    21300246: fly_fly
-    21300248: fly_hit
-    21300250: frog
-    21300252: frog_dead
-    21300254: frog_hit
-    21300256: frog_leap
-    21300258: ghost
-    21300260: ghost_dead
-    21300262: ghost_hit
-    21300264: ghost_normal
-    21300266: grassBlock
-    21300268: grassBlock_dead
-    21300270: grassBlock_hit
-    21300272: grassBlock_jump
-    21300274: ladyBug
-    21300276: ladyBug_fly
-    21300278: ladyBug_hit
-    21300280: ladyBug_walk
-    21300282: mouse
-    21300284: mouse_dead
-    21300286: mouse_hit
-    21300288: mouse_walk
-    21300290: piranha
-    21300292: piranha_dead
-    21300294: piranha_down
-    21300296: piranha_hit
-    21300298: slime
-    21300300: slimeBlock
-    21300302: slimeBlock_dead
-    21300304: slimeBlock_hit
-    21300306: slimeBlue
-    21300308: slimeBlue_blue
-    21300310: slimeBlue_dead
-    21300312: slimeBlue_hit
-    21300314: slimeBlue_squashed
-    21300316: slimeGreen
-    21300318: slimeGreen_dead
-    21300320: slimeGreen_hit
-    21300322: slimeGreen_squashed
-    21300324: slimeGreen_walk
-    21300326: slime_dead
-    21300328: slime_hit
-    21300330: slime_squashed
-    21300332: slime_walk
-    21300334: snail
-    21300336: snail_hit
-    21300338: snail_shell
-    21300340: snail_walk
-    21300342: snake
-    21300344: snakeLava
-    21300346: snakeLava_ani
-    21300348: snakeLava_dead
-    21300350: snakeLava_hit
-    21300352: snakeSlime
-    21300354: snakeSlime_ani
-    21300356: snakeSlime_dead
-    21300358: snakeSlime_hit
-    21300360: snake_dead
-    21300362: snake_hit
-    21300364: snake_walk
-    21300366: spider
-    21300368: spider_dead
-    21300370: spider_hit
-    21300372: spider_walk1
-    21300374: spider_walk2
-    21300376: spinner
-    21300378: spinnerHalf
-    21300380: spinnerHalf_dead
-    21300382: spinnerHalf_hit
-    21300384: spinnerHalf_spin
-    21300386: spinner_dead
-    21300388: spinner_hit
-    21300390: spinner_spin
-    21300392: worm
-    21300394: worm_dead
-    21300396: worm_hit
-    21300398: worm_walk
-  serializedVersion: 2
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: barnacle.png
+  - first:
+      213: 21300002
+    second: barnacle_bite.png
+  - first:
+      213: 21300004
+    second: barnacle_dead.png
+  - first:
+      213: 21300006
+    second: barnacle_hit.png
+  - first:
+      213: 21300008
+    second: bat.png
+  - first:
+      213: 21300010
+    second: bat_dead.png
+  - first:
+      213: 21300012
+    second: bat_fly.png
+  - first:
+      213: 21300014
+    second: bat_hang.png
+  - first:
+      213: 21300016
+    second: bat_hit.png
+  - first:
+      213: 21300018
+    second: bee.png
+  - first:
+      213: 21300020
+    second: bee_dead.png
+  - first:
+      213: 21300022
+    second: bee_fly.png
+  - first:
+      213: 21300024
+    second: bee_hit.png
+  - first:
+      213: 21300026
+    second: fishGreen.png
+  - first:
+      213: 21300028
+    second: fishGreen_dead.png
+  - first:
+      213: 21300030
+    second: fishGreen_hit.png
+  - first:
+      213: 21300032
+    second: fishGreen_swim.png
+  - first:
+      213: 21300034
+    second: fishPink.png
+  - first:
+      213: 21300036
+    second: fishPink_dead.png
+  - first:
+      213: 21300038
+    second: fishPink_hit.png
+  - first:
+      213: 21300040
+    second: fishPink_swim.png
+  - first:
+      213: 21300042
+    second: fly.png
+  - first:
+      213: 21300044
+    second: fly_dead.png
+  - first:
+      213: 21300046
+    second: fly_fly.png
+  - first:
+      213: 21300048
+    second: fly_hit.png
+  - first:
+      213: 21300050
+    second: frog.png
+  - first:
+      213: 21300052
+    second: frog_dead.png
+  - first:
+      213: 21300054
+    second: frog_hit.png
+  - first:
+      213: 21300056
+    second: frog_leap.png
+  - first:
+      213: 21300058
+    second: ghost.png
+  - first:
+      213: 21300060
+    second: ghost_dead.png
+  - first:
+      213: 21300062
+    second: ghost_hit.png
+  - first:
+      213: 21300064
+    second: ghost_normal.png
+  - first:
+      213: 21300066
+    second: grassBlock.png
+  - first:
+      213: 21300068
+    second: grassBlock_dead.png
+  - first:
+      213: 21300070
+    second: grassBlock_hit.png
+  - first:
+      213: 21300072
+    second: grassBlock_jump.png
+  - first:
+      213: 21300074
+    second: ladyBug.png
+  - first:
+      213: 21300076
+    second: ladyBug_fly.png
+  - first:
+      213: 21300078
+    second: ladyBug_hit.png
+  - first:
+      213: 21300080
+    second: ladyBug_walk.png
+  - first:
+      213: 21300082
+    second: mouse.png
+  - first:
+      213: 21300084
+    second: mouse_dead.png
+  - first:
+      213: 21300086
+    second: mouse_hit.png
+  - first:
+      213: 21300088
+    second: mouse_walk.png
+  - first:
+      213: 21300090
+    second: piranha.png
+  - first:
+      213: 21300092
+    second: piranha_dead.png
+  - first:
+      213: 21300094
+    second: piranha_down.png
+  - first:
+      213: 21300096
+    second: piranha_hit.png
+  - first:
+      213: 21300098
+    second: slime.png
+  - first:
+      213: 21300100
+    second: slimeBlock.png
+  - first:
+      213: 21300102
+    second: slimeBlock_dead.png
+  - first:
+      213: 21300104
+    second: slimeBlock_hit.png
+  - first:
+      213: 21300106
+    second: slimeBlue.png
+  - first:
+      213: 21300108
+    second: slimeBlue_blue.png
+  - first:
+      213: 21300110
+    second: slimeBlue_dead.png
+  - first:
+      213: 21300112
+    second: slimeBlue_hit.png
+  - first:
+      213: 21300114
+    second: slimeBlue_squashed.png
+  - first:
+      213: 21300116
+    second: slimeGreen.png
+  - first:
+      213: 21300118
+    second: slimeGreen_dead.png
+  - first:
+      213: 21300120
+    second: slimeGreen_hit.png
+  - first:
+      213: 21300122
+    second: slimeGreen_squashed.png
+  - first:
+      213: 21300124
+    second: slimeGreen_walk.png
+  - first:
+      213: 21300126
+    second: slime_dead.png
+  - first:
+      213: 21300128
+    second: slime_hit.png
+  - first:
+      213: 21300130
+    second: slime_squashed.png
+  - first:
+      213: 21300132
+    second: slime_walk.png
+  - first:
+      213: 21300134
+    second: snail.png
+  - first:
+      213: 21300136
+    second: snail_hit.png
+  - first:
+      213: 21300138
+    second: snail_shell.png
+  - first:
+      213: 21300140
+    second: snail_walk.png
+  - first:
+      213: 21300142
+    second: snake.png
+  - first:
+      213: 21300144
+    second: snakeLava.png
+  - first:
+      213: 21300146
+    second: snakeLava_ani.png
+  - first:
+      213: 21300148
+    second: snakeLava_dead.png
+  - first:
+      213: 21300150
+    second: snakeLava_hit.png
+  - first:
+      213: 21300152
+    second: snakeSlime.png
+  - first:
+      213: 21300154
+    second: snakeSlime_ani.png
+  - first:
+      213: 21300156
+    second: snakeSlime_dead.png
+  - first:
+      213: 21300158
+    second: snakeSlime_hit.png
+  - first:
+      213: 21300160
+    second: snake_dead.png
+  - first:
+      213: 21300162
+    second: snake_hit.png
+  - first:
+      213: 21300164
+    second: snake_walk.png
+  - first:
+      213: 21300166
+    second: spider.png
+  - first:
+      213: 21300168
+    second: spider_dead.png
+  - first:
+      213: 21300170
+    second: spider_hit.png
+  - first:
+      213: 21300172
+    second: spider_walk1.png
+  - first:
+      213: 21300174
+    second: spider_walk2.png
+  - first:
+      213: 21300176
+    second: spinner.png
+  - first:
+      213: 21300178
+    second: spinnerHalf.png
+  - first:
+      213: 21300180
+    second: spinnerHalf_dead.png
+  - first:
+      213: 21300182
+    second: spinnerHalf_hit.png
+  - first:
+      213: 21300184
+    second: spinnerHalf_spin.png
+  - first:
+      213: 21300186
+    second: spinner_dead.png
+  - first:
+      213: 21300188
+    second: spinner_hit.png
+  - first:
+      213: 21300190
+    second: spinner_spin.png
+  - first:
+      213: 21300192
+    second: worm.png
+  - first:
+      213: 21300194
+    second: worm_dead.png
+  - first:
+      213: 21300196
+    second: worm_hit.png
+  - first:
+      213: 21300198
+    second: worm_walk.png
+  - first:
+      213: 21300200
+    second: barnacle
+  - first:
+      213: 21300202
+    second: barnacle_bite
+  - first:
+      213: 21300204
+    second: barnacle_dead
+  - first:
+      213: 21300206
+    second: barnacle_hit
+  - first:
+      213: 21300208
+    second: bat
+  - first:
+      213: 21300210
+    second: bat_dead
+  - first:
+      213: 21300212
+    second: bat_fly
+  - first:
+      213: 21300214
+    second: bat_hang
+  - first:
+      213: 21300216
+    second: bat_hit
+  - first:
+      213: 21300218
+    second: bee
+  - first:
+      213: 21300220
+    second: bee_dead
+  - first:
+      213: 21300222
+    second: bee_fly
+  - first:
+      213: 21300224
+    second: bee_hit
+  - first:
+      213: 21300226
+    second: fishGreen
+  - first:
+      213: 21300228
+    second: fishGreen_dead
+  - first:
+      213: 21300230
+    second: fishGreen_hit
+  - first:
+      213: 21300232
+    second: fishGreen_swim
+  - first:
+      213: 21300234
+    second: fishPink
+  - first:
+      213: 21300236
+    second: fishPink_dead
+  - first:
+      213: 21300238
+    second: fishPink_hit
+  - first:
+      213: 21300240
+    second: fishPink_swim
+  - first:
+      213: 21300242
+    second: fly
+  - first:
+      213: 21300244
+    second: fly_dead
+  - first:
+      213: 21300246
+    second: fly_fly
+  - first:
+      213: 21300248
+    second: fly_hit
+  - first:
+      213: 21300250
+    second: frog
+  - first:
+      213: 21300252
+    second: frog_dead
+  - first:
+      213: 21300254
+    second: frog_hit
+  - first:
+      213: 21300256
+    second: frog_leap
+  - first:
+      213: 21300258
+    second: ghost
+  - first:
+      213: 21300260
+    second: ghost_dead
+  - first:
+      213: 21300262
+    second: ghost_hit
+  - first:
+      213: 21300264
+    second: ghost_normal
+  - first:
+      213: 21300266
+    second: grassBlock
+  - first:
+      213: 21300268
+    second: grassBlock_dead
+  - first:
+      213: 21300270
+    second: grassBlock_hit
+  - first:
+      213: 21300272
+    second: grassBlock_jump
+  - first:
+      213: 21300274
+    second: ladyBug
+  - first:
+      213: 21300276
+    second: ladyBug_fly
+  - first:
+      213: 21300278
+    second: ladyBug_hit
+  - first:
+      213: 21300280
+    second: ladyBug_walk
+  - first:
+      213: 21300282
+    second: mouse
+  - first:
+      213: 21300284
+    second: mouse_dead
+  - first:
+      213: 21300286
+    second: mouse_hit
+  - first:
+      213: 21300288
+    second: mouse_walk
+  - first:
+      213: 21300290
+    second: piranha
+  - first:
+      213: 21300292
+    second: piranha_dead
+  - first:
+      213: 21300294
+    second: piranha_down
+  - first:
+      213: 21300296
+    second: piranha_hit
+  - first:
+      213: 21300298
+    second: slime
+  - first:
+      213: 21300300
+    second: slimeBlock
+  - first:
+      213: 21300302
+    second: slimeBlock_dead
+  - first:
+      213: 21300304
+    second: slimeBlock_hit
+  - first:
+      213: 21300306
+    second: slimeBlue
+  - first:
+      213: 21300308
+    second: slimeBlue_blue
+  - first:
+      213: 21300310
+    second: slimeBlue_dead
+  - first:
+      213: 21300312
+    second: slimeBlue_hit
+  - first:
+      213: 21300314
+    second: slimeBlue_squashed
+  - first:
+      213: 21300316
+    second: slimeGreen
+  - first:
+      213: 21300318
+    second: slimeGreen_dead
+  - first:
+      213: 21300320
+    second: slimeGreen_hit
+  - first:
+      213: 21300322
+    second: slimeGreen_squashed
+  - first:
+      213: 21300324
+    second: slimeGreen_walk
+  - first:
+      213: 21300326
+    second: slime_dead
+  - first:
+      213: 21300328
+    second: slime_hit
+  - first:
+      213: 21300330
+    second: slime_squashed
+  - first:
+      213: 21300332
+    second: slime_walk
+  - first:
+      213: 21300334
+    second: snail
+  - first:
+      213: 21300336
+    second: snail_hit
+  - first:
+      213: 21300338
+    second: snail_shell
+  - first:
+      213: 21300340
+    second: snail_walk
+  - first:
+      213: 21300342
+    second: snake
+  - first:
+      213: 21300344
+    second: snakeLava
+  - first:
+      213: 21300346
+    second: snakeLava_ani
+  - first:
+      213: 21300348
+    second: snakeLava_dead
+  - first:
+      213: 21300350
+    second: snakeLava_hit
+  - first:
+      213: 21300352
+    second: snakeSlime
+  - first:
+      213: 21300354
+    second: snakeSlime_ani
+  - first:
+      213: 21300356
+    second: snakeSlime_dead
+  - first:
+      213: 21300358
+    second: snakeSlime_hit
+  - first:
+      213: 21300360
+    second: snake_dead
+  - first:
+      213: 21300362
+    second: snake_hit
+  - first:
+      213: 21300364
+    second: snake_walk
+  - first:
+      213: 21300366
+    second: spider
+  - first:
+      213: 21300368
+    second: spider_dead
+  - first:
+      213: 21300370
+    second: spider_hit
+  - first:
+      213: 21300372
+    second: spider_walk1
+  - first:
+      213: 21300374
+    second: spider_walk2
+  - first:
+      213: 21300376
+    second: spinner
+  - first:
+      213: 21300378
+    second: spinnerHalf
+  - first:
+      213: 21300380
+    second: spinnerHalf_dead
+  - first:
+      213: 21300382
+    second: spinnerHalf_hit
+  - first:
+      213: 21300384
+    second: spinnerHalf_spin
+  - first:
+      213: 21300386
+    second: spinner_dead
+  - first:
+      213: 21300388
+    second: spinner_hit
+  - first:
+      213: 21300390
+    second: spinner_spin
+  - first:
+      213: 21300392
+    second: worm
+  - first:
+      213: 21300394
+    second: worm_dead
+  - first:
+      213: 21300396
+    second: worm_hit
+  - first:
+      213: 21300398
+    second: worm_walk
+  externalObjects: {}
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -220,37 +621,60 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: -1
     aniso: 16
-    mipBias: -1
-    wrapMode: 1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: barnacle
+    - serializedVersion: 2
+      name: barnacle
       rect:
         serializedVersion: 2
         x: 318
@@ -260,15 +684,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -18.5, y: 28.5}
-        - {x: -24.5, y: 5.5}
-        - {x: -25.5, y: -12.5}
-        - {x: -25.5, y: -28.5}
-        - {x: 25.5, y: -28.5}
-        - {x: 25.5, y: 15.5}
-        - {x: 18.5, y: 28.5}
-    - name: barnacle_bite
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e305410000000000800000000000000
+      internalID: 21300200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barnacle_bite
       rect:
         serializedVersion: 2
         x: 528
@@ -278,15 +705,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -11.5, y: 29}
-        - {x: -15.5, y: 28}
-        - {x: -25.5, y: 5}
-        - {x: -25.5, y: -29}
-        - {x: 25.5, y: -29}
-        - {x: 25.5, y: 16}
-        - {x: 14.5, y: 29}
-    - name: barnacle_dead
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae305410000000000800000000000000
+      internalID: 21300202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barnacle_dead
       rect:
         serializedVersion: 2
         x: 477
@@ -296,15 +726,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -18.5, y: 28.5}
-        - {x: -24.5, y: 5.5}
-        - {x: -25.5, y: -12.5}
-        - {x: -25.5, y: -28.5}
-        - {x: 25.5, y: -28.5}
-        - {x: 25.5, y: 15.5}
-        - {x: 18.5, y: 28.5}
-    - name: barnacle_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce305410000000000800000000000000
+      internalID: 21300204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barnacle_hit
       rect:
         serializedVersion: 2
         x: 477
@@ -314,15 +747,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 16.5, y: 28.5}
-        - {x: -18.5, y: 28.5}
-        - {x: -25.5, y: 20.5}
-        - {x: -25.5, y: -28.5}
-        - {x: 25.5, y: -28.5}
-        - {x: 25.5, y: 10.5}
-        - {x: 19.5, y: 24.5}
-    - name: bat
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee305410000000000800000000000000
+      internalID: 21300206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat
       rect:
         serializedVersion: 2
         x: 71
@@ -332,15 +768,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -35, y: 23.5}
-        - {x: -35, y: 3.5}
-        - {x: -16, y: -17.5}
-        - {x: -3, y: -23.5}
-        - {x: 25, y: -23.5}
-        - {x: 35, y: -9.5}
-        - {x: 35, y: 23.5}
-    - name: bat_dead
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f305410000000000800000000000000
+      internalID: 21300208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat_dead
       rect:
         serializedVersion: 2
         x: 71
@@ -350,15 +789,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -35, y: 23.5}
-        - {x: -35, y: 3.5}
-        - {x: -16, y: -17.5}
-        - {x: -3, y: -23.5}
-        - {x: 25, y: -23.5}
-        - {x: 35, y: -9.5}
-        - {x: 35, y: 23.5}
-    - name: bat_fly
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f305410000000000800000000000000
+      internalID: 21300210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat_fly
       rect:
         serializedVersion: 2
         x: 0
@@ -368,18 +810,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -38, y: 18.5}
-        - {x: -44, y: 17.5}
-        - {x: -44, y: 8.5}
-        - {x: -34, y: -3.5}
-        - {x: -13, y: -16.5}
-        - {x: -4, y: -18.5}
-        - {x: 21, y: -18.5}
-        - {x: 44, y: 4.5}
-        - {x: 44, y: 16.5}
-        - {x: 40, y: 18.5}
-    - name: bat_hang
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f305410000000000800000000000000
+      internalID: 21300212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat_hang
       rect:
         serializedVersion: 2
         x: 571
@@ -389,17 +831,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 11, y: 24}
-        - {x: -11, y: 24}
-        - {x: -19, y: 12}
-        - {x: -19, y: -24}
-        - {x: -1, y: -24}
-        - {x: 14, y: -19}
-        - {x: 18, y: -15}
-        - {x: 19, y: -10}
-        - {x: 19, y: 13}
-    - name: bat_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f305410000000000800000000000000
+      internalID: 21300214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat_hit
       rect:
         serializedVersion: 2
         x: 71
@@ -409,16 +852,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -35, y: 23.5}
-        - {x: -35, y: 3.5}
-        - {x: -18, y: -18.5}
-        - {x: 1, y: -23.5}
-        - {x: 18, y: -23.5}
-        - {x: 28, y: -9.5}
-        - {x: 35, y: 0.5}
-        - {x: 35, y: 23.5}
-    - name: bee
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f305410000000000800000000000000
+      internalID: 21300216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bee
       rect:
         serializedVersion: 2
         x: 315
@@ -428,16 +873,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -28, y: 24}
-        - {x: -28, y: -17}
-        - {x: -22, y: -22}
-        - {x: -6, y: -24}
-        - {x: 19, y: -24}
-        - {x: 21, y: -23}
-        - {x: 28, y: -9}
-        - {x: 28, y: 24}
-    - name: bee_dead
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af305410000000000800000000000000
+      internalID: 21300218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bee_dead
       rect:
         serializedVersion: 2
         x: 315
@@ -447,16 +894,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -28, y: 24}
-        - {x: -28, y: -17}
-        - {x: -22, y: -22}
-        - {x: -6, y: -24}
-        - {x: 19, y: -24}
-        - {x: 21, y: -23}
-        - {x: 28, y: -9}
-        - {x: 28, y: 24}
-    - name: bee_fly
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf305410000000000800000000000000
+      internalID: 21300220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bee_fly
       rect:
         serializedVersion: 2
         x: 140
@@ -466,13 +915,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -30.5, y: 21}
-        - {x: -30.5, y: -21}
-        - {x: 24.5, y: -21}
-        - {x: 30.5, y: -7}
-        - {x: 30.5, y: 21}
-    - name: bee_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef305410000000000800000000000000
+      internalID: 21300222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bee_hit
       rect:
         serializedVersion: 2
         x: 315
@@ -482,13 +936,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -28, y: 24}
-        - {x: -28, y: -24}
-        - {x: 26, y: -24}
-        - {x: 28, y: -20}
-        - {x: 28, y: 24}
-    - name: fishGreen
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00405410000000000800000000000000
+      internalID: 21300224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishGreen
       rect:
         serializedVersion: 2
         x: 202
@@ -498,17 +957,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -24, y: 22.5}
-        - {x: -30, y: 11.5}
-        - {x: -30, y: -20.5}
-        - {x: -27, y: -22.5}
-        - {x: 17, y: -22.5}
-        - {x: 28, y: -20.5}
-        - {x: 30, y: -13.5}
-        - {x: 30, y: 7.5}
-        - {x: 9, y: 22.5}
-    - name: fishGreen_dead
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20405410000000000800000000000000
+      internalID: 21300226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishGreen_dead
       rect:
         serializedVersion: 2
         x: 197
@@ -518,17 +978,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -24, y: 22.5}
-        - {x: -30, y: 11.5}
-        - {x: -30, y: -20.5}
-        - {x: -27, y: -22.5}
-        - {x: 17, y: -22.5}
-        - {x: 28, y: -20.5}
-        - {x: 30, y: -13.5}
-        - {x: 30, y: 7.5}
-        - {x: 9, y: 22.5}
-    - name: fishGreen_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40405410000000000800000000000000
+      internalID: 21300228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishGreen_hit
       rect:
         serializedVersion: 2
         x: 314
@@ -538,19 +999,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 10.5, y: 21}
-        - {x: 4.5, y: 22}
-        - {x: -15.5, y: 22}
-        - {x: -28.5, y: 10}
-        - {x: -28.5, y: -12}
-        - {x: -24.5, y: -20}
-        - {x: -19.5, y: -22}
-        - {x: 8.5, y: -22}
-        - {x: 24.5, y: -16}
-        - {x: 28.5, y: -7}
-        - {x: 28.5, y: 7}
-    - name: fishGreen_swim
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60405410000000000800000000000000
+      internalID: 21300230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishGreen_swim
       rect:
         serializedVersion: 2
         x: 261
@@ -560,19 +1020,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 10.5, y: 21}
-        - {x: 4.5, y: 22}
-        - {x: -15.5, y: 22}
-        - {x: -28.5, y: 10}
-        - {x: -28.5, y: -12}
-        - {x: -24.5, y: -20}
-        - {x: -19.5, y: -22}
-        - {x: 8.5, y: -22}
-        - {x: 24.5, y: -16}
-        - {x: 28.5, y: -7}
-        - {x: 28.5, y: 7}
-    - name: fishPink
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80405410000000000800000000000000
+      internalID: 21300232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishPink
       rect:
         serializedVersion: 2
         x: 201
@@ -582,17 +1041,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -24, y: 22.5}
-        - {x: -30, y: 11.5}
-        - {x: -30, y: -20.5}
-        - {x: -27, y: -22.5}
-        - {x: 17, y: -22.5}
-        - {x: 28, y: -20.5}
-        - {x: 30, y: -13.5}
-        - {x: 30, y: 7.5}
-        - {x: 9, y: 22.5}
-    - name: fishPink_dead
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0405410000000000800000000000000
+      internalID: 21300234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishPink_dead
       rect:
         serializedVersion: 2
         x: 201
@@ -602,17 +1062,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -24, y: 22.5}
-        - {x: -30, y: 11.5}
-        - {x: -30, y: -20.5}
-        - {x: -27, y: -22.5}
-        - {x: 17, y: -22.5}
-        - {x: 28, y: -20.5}
-        - {x: 30, y: -13.5}
-        - {x: 30, y: 7.5}
-        - {x: 9, y: 22.5}
-    - name: fishPink_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0405410000000000800000000000000
+      internalID: 21300236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishPink_hit
       rect:
         serializedVersion: 2
         x: 314
@@ -622,19 +1083,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 10.5, y: 21}
-        - {x: 4.5, y: 22}
-        - {x: -15.5, y: 22}
-        - {x: -28.5, y: 10}
-        - {x: -28.5, y: -12}
-        - {x: -24.5, y: -20}
-        - {x: -19.5, y: -22}
-        - {x: 8.5, y: -22}
-        - {x: 24.5, y: -16}
-        - {x: 28.5, y: -7}
-        - {x: 28.5, y: 7}
-    - name: fishPink_swim
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0405410000000000800000000000000
+      internalID: 21300238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishPink_swim
       rect:
         serializedVersion: 2
         x: 261
@@ -644,19 +1104,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 10.5, y: 21}
-        - {x: 4.5, y: 22}
-        - {x: -15.5, y: 22}
-        - {x: -28.5, y: 10}
-        - {x: -28.5, y: -12}
-        - {x: -24.5, y: -20}
-        - {x: -19.5, y: -22}
-        - {x: 8.5, y: -22}
-        - {x: 24.5, y: -16}
-        - {x: 28.5, y: -7}
-        - {x: 28.5, y: 7}
-    - name: fly
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01405410000000000800000000000000
+      internalID: 21300240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fly
       rect:
         serializedVersion: 2
         x: 262
@@ -666,12 +1125,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -28.5, y: 22.5}
-        - {x: -28.5, y: -22.5}
-        - {x: 28.5, y: -22.5}
-        - {x: 28.5, y: 22.5}
-    - name: fly_dead
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21405410000000000800000000000000
+      internalID: 21300242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fly_dead
       rect:
         serializedVersion: 2
         x: 261
@@ -681,12 +1146,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -28.5, y: 22.5}
-        - {x: -28.5, y: -22.5}
-        - {x: 28.5, y: -22.5}
-        - {x: 28.5, y: 22.5}
-    - name: fly_fly
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41405410000000000800000000000000
+      internalID: 21300244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fly_fly
       rect:
         serializedVersion: 2
         x: 71
@@ -696,18 +1167,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -30.5, y: 19.5}
-        - {x: -32.5, y: 14.5}
-        - {x: -32.5, y: 2.5}
-        - {x: -27.5, y: 0.5}
-        - {x: -30.5, y: -18.5}
-        - {x: -25.5, y: -19.5}
-        - {x: 27.5, y: -19.5}
-        - {x: 32.5, y: -14.5}
-        - {x: 32.5, y: 18.5}
-        - {x: 31.5, y: 19.5}
-    - name: fly_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61405410000000000800000000000000
+      internalID: 21300246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fly_hit
       rect:
         serializedVersion: 2
         x: 261
@@ -717,12 +1188,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -28.5, y: 22.5}
-        - {x: -28.5, y: -22.5}
-        - {x: 28.5, y: -22.5}
-        - {x: 28.5, y: 22.5}
-    - name: frog
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81405410000000000800000000000000
+      internalID: 21300248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frog
       rect:
         serializedVersion: 2
         x: 257
@@ -732,15 +1209,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -14, y: 19.5}
-        - {x: -19, y: 13.5}
-        - {x: -29, y: 2.5}
-        - {x: -29, y: -19.5}
-        - {x: 29, y: -19.5}
-        - {x: 29, y: 6.5}
-        - {x: 12, y: 19.5}
-    - name: frog_dead
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1405410000000000800000000000000
+      internalID: 21300250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frog_dead
       rect:
         serializedVersion: 2
         x: 140
@@ -750,16 +1230,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -30.5, y: -18}
-        - {x: -27.5, y: -27}
-        - {x: 30.5, y: -27}
-        - {x: 30.5, y: 9}
-        - {x: 23.5, y: 20}
-        - {x: 3.5, y: 27}
-        - {x: -29.5, y: 27}
-        - {x: -30.5, y: 25}
-    - name: frog_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1405410000000000800000000000000
+      internalID: 21300252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frog_hit
       rect:
         serializedVersion: 2
         x: 141
@@ -769,16 +1251,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 5.5, y: 27}
-        - {x: -27.5, y: 27}
-        - {x: -30.5, y: 22}
-        - {x: -30.5, y: -18}
-        - {x: -13.5, y: -27}
-        - {x: 30.5, y: -27}
-        - {x: 30.5, y: 6}
-        - {x: 24.5, y: 22}
-    - name: frog_leap
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1405410000000000800000000000000
+      internalID: 21300254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frog_leap
       rect:
         serializedVersion: 2
         x: 197
@@ -788,16 +1272,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -30.5, y: -18}
-        - {x: -27.5, y: -27}
-        - {x: 30.5, y: -27}
-        - {x: 30.5, y: 9}
-        - {x: 23.5, y: 20}
-        - {x: 3.5, y: 27}
-        - {x: -29.5, y: 27}
-        - {x: -30.5, y: 25}
-    - name: ghost
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02405410000000000800000000000000
+      internalID: 21300256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghost
       rect:
         serializedVersion: 2
         x: 528
@@ -807,14 +1293,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -22.5, y: 36.5}
-        - {x: -25.5, y: 35.5}
-        - {x: -25.5, y: -27.5}
-        - {x: -19.5, y: -36.5}
-        - {x: 25.5, y: -36.5}
-        - {x: 25.5, y: 36.5}
-    - name: ghost_dead
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22405410000000000800000000000000
+      internalID: 21300258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghost_dead
       rect:
         serializedVersion: 2
         x: 477
@@ -824,14 +1314,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -22.5, y: 36.5}
-        - {x: -25.5, y: 35.5}
-        - {x: -25.5, y: -27.5}
-        - {x: -19.5, y: -36.5}
-        - {x: 25.5, y: -36.5}
-        - {x: 25.5, y: 36.5}
-    - name: ghost_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42405410000000000800000000000000
+      internalID: 21300260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghost_hit
       rect:
         serializedVersion: 2
         x: 477
@@ -841,17 +1335,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 25.5, y: -36.5}
-        - {x: 25.5, y: 36.5}
-        - {x: -22.5, y: 36.5}
-        - {x: -25.5, y: 35.5}
-        - {x: -25.5, y: -27.5}
-        - {x: -19.5, y: -36.5}
-        - {x: 4.5, y: -36.5}
-        - {x: 6.5, y: -34.5}
-        - {x: 8.5, y: -36.5}
-    - name: ghost_normal
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62405410000000000800000000000000
+      internalID: 21300262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghost_normal
       rect:
         serializedVersion: 2
         x: 371
@@ -861,14 +1356,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -22.5, y: 36.5}
-        - {x: -25.5, y: 35.5}
-        - {x: -25.5, y: -27.5}
-        - {x: -19.5, y: -36.5}
-        - {x: 25.5, y: -36.5}
-        - {x: 25.5, y: 36.5}
-    - name: grassBlock
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82405410000000000800000000000000
+      internalID: 21300264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassBlock
       rect:
         serializedVersion: 2
         x: 0
@@ -878,12 +1377,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -35.5, y: 35}
-        - {x: -35.5, y: -35}
-        - {x: 35.5, y: -35}
-        - {x: 35.5, y: 35}
-    - name: grassBlock_dead
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2405410000000000800000000000000
+      internalID: 21300266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassBlock_dead
       rect:
         serializedVersion: 2
         x: 0
@@ -893,12 +1398,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -35.5, y: 35}
-        - {x: -35.5, y: -35}
-        - {x: 35.5, y: -35}
-        - {x: 35.5, y: 35}
-    - name: grassBlock_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2405410000000000800000000000000
+      internalID: 21300268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassBlock_hit
       rect:
         serializedVersion: 2
         x: 0
@@ -908,12 +1419,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -35.5, y: 35}
-        - {x: -35.5, y: -35}
-        - {x: 35.5, y: -35}
-        - {x: 35.5, y: 35}
-    - name: grassBlock_jump
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2405410000000000800000000000000
+      internalID: 21300270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassBlock_jump
       rect:
         serializedVersion: 2
         x: 0
@@ -923,13 +1440,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -35.5, y: 35}
-        - {x: -35.5, y: -35}
-        - {x: 35.5, y: -35}
-        - {x: 35.5, y: 33}
-        - {x: 33.5, y: 35}
-    - name: ladyBug
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03405410000000000800000000000000
+      internalID: 21300272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ladyBug
       rect:
         serializedVersion: 2
         x: 141
@@ -939,15 +1461,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -14, y: 17}
-        - {x: -22, y: 16}
-        - {x: -29, y: 3}
-        - {x: -29, y: -17}
-        - {x: 29, y: -17}
-        - {x: 29, y: 9}
-        - {x: 27, y: 17}
-    - name: ladyBug_fly
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23405410000000000800000000000000
+      internalID: 21300274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ladyBug_fly
       rect:
         serializedVersion: 2
         x: 201
@@ -957,16 +1482,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 28.5, y: 12}
-        - {x: 23.5, y: 21}
-        - {x: -10.5, y: 21}
-        - {x: -29.5, y: 14}
-        - {x: -29.5, y: -21}
-        - {x: 26.5, y: -21}
-        - {x: 29.5, y: -18}
-        - {x: 29.5, y: 11}
-    - name: ladyBug_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43405410000000000800000000000000
+      internalID: 21300276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ladyBug_hit
       rect:
         serializedVersion: 2
         x: 257
@@ -976,15 +1503,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -14, y: 17}
-        - {x: -22, y: 16}
-        - {x: -29, y: 3}
-        - {x: -29, y: -17}
-        - {x: 29, y: -17}
-        - {x: 29, y: 9}
-        - {x: 27, y: 17}
-    - name: ladyBug_walk
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63405410000000000800000000000000
+      internalID: 21300278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ladyBug_walk
       rect:
         serializedVersion: 2
         x: 135
@@ -994,14 +1524,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20.5, y: 17}
-        - {x: -30.5, y: 6}
-        - {x: -30.5, y: -17}
-        - {x: 30.5, y: -17}
-        - {x: 30.5, y: 14}
-        - {x: 23.5, y: 17}
-    - name: mouse
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83405410000000000800000000000000
+      internalID: 21300280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mouse
       rect:
         serializedVersion: 2
         x: 197
@@ -1011,15 +1545,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -28.5, y: 17.5}
-        - {x: -29.5, y: 13.5}
-        - {x: -29.5, y: -17.5}
-        - {x: 25.5, y: -17.5}
-        - {x: 29.5, y: -11.5}
-        - {x: 29.5, y: 14.5}
-        - {x: 16.5, y: 17.5}
-    - name: mouse_dead
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3405410000000000800000000000000
+      internalID: 21300282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mouse_dead
       rect:
         serializedVersion: 2
         x: 202
@@ -1029,15 +1566,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -28.5, y: 17.5}
-        - {x: -29.5, y: 13.5}
-        - {x: -29.5, y: -17.5}
-        - {x: 25.5, y: -17.5}
-        - {x: 29.5, y: -11.5}
-        - {x: 29.5, y: 14.5}
-        - {x: 16.5, y: 17.5}
-    - name: mouse_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3405410000000000800000000000000
+      internalID: 21300284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mouse_hit
       rect:
         serializedVersion: 2
         x: 202
@@ -1047,23 +1587,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 21.5, y: 1.5}
-        - {x: 21.5, y: -0.5}
-        - {x: 22.5, y: -1.5}
-        - {x: 20.5, y: -4.5}
-        - {x: 21.5, y: -4.5}
-        - {x: 20.5, y: -2.5}
-        - {x: 14.5, y: 5.5}
-        - {x: -7.5, y: 17.5}
-        - {x: -25.5, y: 17.5}
-        - {x: -29.5, y: 4.5}
-        - {x: -29.5, y: -17.5}
-        - {x: 25.5, y: -17.5}
-        - {x: 29.5, y: -11.5}
-        - {x: 29.5, y: 4.5}
-        - {x: 24.5, y: 6.5}
-    - name: mouse_walk
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3405410000000000800000000000000
+      internalID: 21300286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mouse_walk
       rect:
         serializedVersion: 2
         x: 256
@@ -1073,17 +1608,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 25, y: 3.5}
-        - {x: 22, y: 0.5}
-        - {x: 9, y: 10.5}
-        - {x: -9, y: 17.5}
-        - {x: -29, y: 17.5}
-        - {x: -29, y: -17.5}
-        - {x: 29, y: -17.5}
-        - {x: 29, y: 2.5}
-        - {x: 28, y: 3.5}
-    - name: piranha
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04405410000000000800000000000000
+      internalID: 21300288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piranha
       rect:
         serializedVersion: 2
         x: 529
@@ -1093,17 +1629,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -11.5, y: 30}
-        - {x: -22.5, y: 25}
-        - {x: -22.5, y: -11}
-        - {x: -21.5, y: -15}
-        - {x: -8.5, y: -30}
-        - {x: 13.5, y: -30}
-        - {x: 22.5, y: -11}
-        - {x: 22.5, y: 28}
-        - {x: 20.5, y: 30}
-    - name: piranha_dead
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24405410000000000800000000000000
+      internalID: 21300290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piranha_dead
       rect:
         serializedVersion: 2
         x: 528
@@ -1113,16 +1650,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -7.5, y: 30}
-        - {x: -22.5, y: 20}
-        - {x: -22.5, y: -21}
-        - {x: -12.5, y: -30}
-        - {x: 21.5, y: -30}
-        - {x: 22.5, y: -26}
-        - {x: 22.5, y: 26}
-        - {x: 17.5, y: 30}
-    - name: piranha_down
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44405410000000000800000000000000
+      internalID: 21300292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piranha_down
       rect:
         serializedVersion: 2
         x: 529
@@ -1132,16 +1671,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -7.5, y: 30}
-        - {x: -22.5, y: 20}
-        - {x: -22.5, y: -21}
-        - {x: -12.5, y: -30}
-        - {x: 21.5, y: -30}
-        - {x: 22.5, y: -26}
-        - {x: 22.5, y: 26}
-        - {x: 17.5, y: 30}
-    - name: piranha_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64405410000000000800000000000000
+      internalID: 21300294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piranha_hit
       rect:
         serializedVersion: 2
         x: 573
@@ -1151,17 +1692,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -11.5, y: 30}
-        - {x: -22.5, y: 25}
-        - {x: -22.5, y: -11}
-        - {x: -21.5, y: -15}
-        - {x: -8.5, y: -30}
-        - {x: 13.5, y: -30}
-        - {x: 22.5, y: -11}
-        - {x: 22.5, y: 28}
-        - {x: 20.5, y: 30}
-    - name: slime
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84405410000000000800000000000000
+      internalID: 21300296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime
       rect:
         serializedVersion: 2
         x: 526
@@ -1171,15 +1713,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 14.5, y: 17}
-        - {x: -17.5, y: 17}
-        - {x: -24.5, y: 7}
-        - {x: -24.5, y: -17}
-        - {x: 24.5, y: -17}
-        - {x: 24.5, y: 6}
-        - {x: 16.5, y: 16}
-    - name: slimeBlock
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4405410000000000800000000000000
+      internalID: 21300298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimeBlock
       rect:
         serializedVersion: 2
         x: 371
@@ -1189,12 +1734,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -25.5, y: 25}
-        - {x: -25.5, y: -25}
-        - {x: 25.5, y: -25}
-        - {x: 25.5, y: 25}
-    - name: slimeBlock_dead
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4405410000000000800000000000000
+      internalID: 21300300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimeBlock_dead
       rect:
         serializedVersion: 2
         x: 477
@@ -1204,12 +1755,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -25.5, y: 25}
-        - {x: -25.5, y: -25}
-        - {x: 25.5, y: -25}
-        - {x: 25.5, y: 25}
-    - name: slimeBlock_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4405410000000000800000000000000
+      internalID: 21300302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimeBlock_hit
       rect:
         serializedVersion: 2
         x: 372
@@ -1219,12 +1776,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -25.5, y: 25}
-        - {x: -25.5, y: -25}
-        - {x: 25.5, y: -25}
-        - {x: 25.5, y: 25}
-    - name: slimeBlue
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05405410000000000800000000000000
+      internalID: 21300304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimeBlue
       rect:
         serializedVersion: 2
         x: 528
@@ -1234,15 +1797,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 14.5, y: 17}
-        - {x: -17.5, y: 17}
-        - {x: -24.5, y: 7}
-        - {x: -24.5, y: -17}
-        - {x: 24.5, y: -17}
-        - {x: 24.5, y: 6}
-        - {x: 16.5, y: 16}
-    - name: slimeBlue_blue
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25405410000000000800000000000000
+      internalID: 21300306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimeBlue_blue
       rect:
         serializedVersion: 2
         x: 258
@@ -1253,7 +1819,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: slimeBlue_dead
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45405410000000000800000000000000
+      internalID: 21300308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimeBlue_dead
       rect:
         serializedVersion: 2
         x: 373
@@ -1263,15 +1839,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 14.5, y: 17}
-        - {x: -17.5, y: 17}
-        - {x: -24.5, y: 7}
-        - {x: -24.5, y: -17}
-        - {x: 24.5, y: -17}
-        - {x: 24.5, y: 6}
-        - {x: 16.5, y: 16}
-    - name: slimeBlue_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65405410000000000800000000000000
+      internalID: 21300310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimeBlue_hit
       rect:
         serializedVersion: 2
         x: 477
@@ -1281,15 +1860,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 14.5, y: 17}
-        - {x: -17.5, y: 17}
-        - {x: -24.5, y: 7}
-        - {x: -24.5, y: -17}
-        - {x: 24.5, y: -17}
-        - {x: 24.5, y: 6}
-        - {x: 16.5, y: 16}
-    - name: slimeBlue_squashed
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85405410000000000800000000000000
+      internalID: 21300312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimeBlue_squashed
       rect:
         serializedVersion: 2
         x: 257
@@ -1300,7 +1882,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: slimeGreen
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5405410000000000800000000000000
+      internalID: 21300314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimeGreen
       rect:
         serializedVersion: 2
         x: 140
@@ -1310,15 +1902,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 14.5, y: 17}
-        - {x: -17.5, y: 17}
-        - {x: -24.5, y: 7}
-        - {x: -24.5, y: -17}
-        - {x: 24.5, y: -17}
-        - {x: 24.5, y: 6}
-        - {x: 16.5, y: 16}
-    - name: slimeGreen_dead
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5405410000000000800000000000000
+      internalID: 21300316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimeGreen_dead
       rect:
         serializedVersion: 2
         x: 425
@@ -1328,15 +1923,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 14.5, y: 17}
-        - {x: -17.5, y: 17}
-        - {x: -24.5, y: 7}
-        - {x: -24.5, y: -17}
-        - {x: 24.5, y: -17}
-        - {x: 24.5, y: 6}
-        - {x: 16.5, y: 16}
-    - name: slimeGreen_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5405410000000000800000000000000
+      internalID: 21300318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimeGreen_hit
       rect:
         serializedVersion: 2
         x: 477
@@ -1346,15 +1944,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 14.5, y: 17}
-        - {x: -17.5, y: 17}
-        - {x: -24.5, y: 7}
-        - {x: -24.5, y: -17}
-        - {x: 24.5, y: -17}
-        - {x: 24.5, y: 6}
-        - {x: 16.5, y: 16}
-    - name: slimeGreen_squashed
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06405410000000000800000000000000
+      internalID: 21300320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimeGreen_squashed
       rect:
         serializedVersion: 2
         x: 72
@@ -1365,7 +1966,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: slimeGreen_walk
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26405410000000000800000000000000
+      internalID: 21300322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimeGreen_walk
       rect:
         serializedVersion: 2
         x: 257
@@ -1376,7 +1987,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: slime_dead
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46405410000000000800000000000000
+      internalID: 21300324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dead
       rect:
         serializedVersion: 2
         x: 528
@@ -1386,15 +2007,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 14.5, y: 17}
-        - {x: -17.5, y: 17}
-        - {x: -24.5, y: 7}
-        - {x: -24.5, y: -17}
-        - {x: 24.5, y: -17}
-        - {x: 24.5, y: 6}
-        - {x: 16.5, y: 16}
-    - name: slime_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66405410000000000800000000000000
+      internalID: 21300326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_hit
       rect:
         serializedVersion: 2
         x: 477
@@ -1404,15 +2028,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 14.5, y: 17}
-        - {x: -17.5, y: 17}
-        - {x: -24.5, y: 7}
-        - {x: -24.5, y: -17}
-        - {x: 24.5, y: -17}
-        - {x: 24.5, y: 6}
-        - {x: 16.5, y: 16}
-    - name: slime_squashed
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86405410000000000800000000000000
+      internalID: 21300328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_squashed
       rect:
         serializedVersion: 2
         x: 258
@@ -1423,7 +2050,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: slime_walk
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6405410000000000800000000000000
+      internalID: 21300330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_walk
       rect:
         serializedVersion: 2
         x: 257
@@ -1434,7 +2071,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: snail
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6405410000000000800000000000000
+      internalID: 21300332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snail
       rect:
         serializedVersion: 2
         x: 314
@@ -1444,14 +2091,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -13.5, y: 20}
-        - {x: -27.5, y: 4}
-        - {x: -27.5, y: -20}
-        - {x: 27.5, y: -20}
-        - {x: 27.5, y: 13}
-        - {x: 19.5, y: 20}
-    - name: snail_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6405410000000000800000000000000
+      internalID: 21300334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snail_hit
       rect:
         serializedVersion: 2
         x: 318
@@ -1461,14 +2112,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -13.5, y: 20}
-        - {x: -27.5, y: 4}
-        - {x: -27.5, y: -20}
-        - {x: 27.5, y: -20}
-        - {x: 27.5, y: 13}
-        - {x: 19.5, y: 20}
-    - name: snail_shell
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07405410000000000800000000000000
+      internalID: 21300336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snail_shell
       rect:
         serializedVersion: 2
         x: 528
@@ -1478,14 +2133,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -14.5, y: 17.5}
-        - {x: -21.5, y: 10.5}
-        - {x: -21.5, y: -17.5}
-        - {x: 21.5, y: -17.5}
-        - {x: 21.5, y: 11.5}
-        - {x: 19.5, y: 17.5}
-    - name: snail_walk
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27405410000000000800000000000000
+      internalID: 21300338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snail_walk
       rect:
         serializedVersion: 2
         x: 197
@@ -1495,15 +2154,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -11, y: 20}
-        - {x: -24, y: 17}
-        - {x: -30, y: -1}
-        - {x: -30, y: -20}
-        - {x: 30, y: -20}
-        - {x: 30, y: 11}
-        - {x: 23, y: 20}
-    - name: snake
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47405410000000000800000000000000
+      internalID: 21300340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snake
       rect:
         serializedVersion: 2
         x: 88
@@ -1514,7 +2176,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: snakeLava
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67405410000000000800000000000000
+      internalID: 21300342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snakeLava
       rect:
         serializedVersion: 2
         x: 372
@@ -1524,15 +2196,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20.5, y: 73.5}
-        - {x: -26.5, y: 55.5}
-        - {x: -26.5, y: -73.5}
-        - {x: 22.5, y: -73.5}
-        - {x: 26.5, y: -57.5}
-        - {x: 26.5, y: 63.5}
-        - {x: 20.5, y: 73.5}
-    - name: snakeLava_ani
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87405410000000000800000000000000
+      internalID: 21300344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snakeLava_ani
       rect:
         serializedVersion: 2
         x: 477
@@ -1542,13 +2217,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -26, y: 73.5}
-        - {x: -26, y: -73.5}
-        - {x: 26, y: -73.5}
-        - {x: 26, y: 68.5}
-        - {x: 23, y: 73.5}
-    - name: snakeLava_dead
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7405410000000000800000000000000
+      internalID: 21300346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snakeLava_dead
       rect:
         serializedVersion: 2
         x: 424
@@ -1558,15 +2238,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20.5, y: 73.5}
-        - {x: -26.5, y: 55.5}
-        - {x: -26.5, y: -73.5}
-        - {x: 22.5, y: -73.5}
-        - {x: 26.5, y: -57.5}
-        - {x: 26.5, y: 63.5}
-        - {x: 20.5, y: 73.5}
-    - name: snakeLava_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7405410000000000800000000000000
+      internalID: 21300348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snakeLava_hit
       rect:
         serializedVersion: 2
         x: 371
@@ -1576,15 +2259,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20.5, y: 73.5}
-        - {x: -26.5, y: 55.5}
-        - {x: -26.5, y: -73.5}
-        - {x: 22.5, y: -73.5}
-        - {x: 26.5, y: -57.5}
-        - {x: 26.5, y: 63.5}
-        - {x: 20.5, y: 73.5}
-    - name: snakeSlime
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7405410000000000800000000000000
+      internalID: 21300350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snakeSlime
       rect:
         serializedVersion: 2
         x: 424
@@ -1594,15 +2280,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20.5, y: 73.5}
-        - {x: -26.5, y: 55.5}
-        - {x: -26.5, y: -73.5}
-        - {x: 22.5, y: -73.5}
-        - {x: 26.5, y: -57.5}
-        - {x: 26.5, y: 63.5}
-        - {x: 20.5, y: 73.5}
-    - name: snakeSlime_ani
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08405410000000000800000000000000
+      internalID: 21300352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snakeSlime_ani
       rect:
         serializedVersion: 2
         x: 425
@@ -1612,13 +2301,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -26, y: 73.5}
-        - {x: -26, y: -73.5}
-        - {x: 26, y: -73.5}
-        - {x: 26, y: 68.5}
-        - {x: 23, y: 73.5}
-    - name: snakeSlime_dead
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28405410000000000800000000000000
+      internalID: 21300354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snakeSlime_dead
       rect:
         serializedVersion: 2
         x: 319
@@ -1628,15 +2322,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20.5, y: 73.5}
-        - {x: -26.5, y: 55.5}
-        - {x: -26.5, y: -73.5}
-        - {x: 22.5, y: -73.5}
-        - {x: 26.5, y: -57.5}
-        - {x: 26.5, y: 63.5}
-        - {x: 20.5, y: 73.5}
-    - name: snakeSlime_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48405410000000000800000000000000
+      internalID: 21300356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snakeSlime_hit
       rect:
         serializedVersion: 2
         x: 371
@@ -1646,15 +2343,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20.5, y: 73.5}
-        - {x: -26.5, y: 55.5}
-        - {x: -26.5, y: -73.5}
-        - {x: 22.5, y: -73.5}
-        - {x: 26.5, y: -57.5}
-        - {x: 26.5, y: 63.5}
-        - {x: 20.5, y: 73.5}
-    - name: snake_dead
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68405410000000000800000000000000
+      internalID: 21300358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snake_dead
       rect:
         serializedVersion: 2
         x: 72
@@ -1665,7 +2365,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: snake_hit
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88405410000000000800000000000000
+      internalID: 21300360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snake_hit
       rect:
         serializedVersion: 2
         x: 134
@@ -1676,7 +2386,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: snake_walk
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8405410000000000800000000000000
+      internalID: 21300362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snake_walk
       rect:
         serializedVersion: 2
         x: 134
@@ -1687,7 +2407,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: spider
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8405410000000000800000000000000
+      internalID: 21300364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider
       rect:
         serializedVersion: 2
         x: 0
@@ -1697,12 +2427,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 35.5, y: 22.5}
-        - {x: -35.5, y: 22.5}
-        - {x: -35.5, y: -22.5}
-        - {x: 35.5, y: -22.5}
-    - name: spider_dead
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8405410000000000800000000000000
+      internalID: 21300366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider_dead
       rect:
         serializedVersion: 2
         x: 71
@@ -1712,15 +2448,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -34.5, y: 25.5}
-        - {x: -34.5, y: -23.5}
-        - {x: -30.5, y: -25.5}
-        - {x: 21.5, y: -25.5}
-        - {x: 34.5, y: -22.5}
-        - {x: 34.5, y: 11.5}
-        - {x: 29.5, y: 25.5}
-    - name: spider_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09405410000000000800000000000000
+      internalID: 21300368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider_hit
       rect:
         serializedVersion: 2
         x: 0
@@ -1730,12 +2469,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -35.5, y: 22.5}
-        - {x: -35.5, y: -22.5}
-        - {x: 35.5, y: -22.5}
-        - {x: 35.5, y: 22.5}
-    - name: spider_walk1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29405410000000000800000000000000
+      internalID: 21300370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider_walk1
       rect:
         serializedVersion: 2
         x: 0
@@ -1745,20 +2490,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 25, y: -25.5}
-        - {x: 36, y: -22.5}
-        - {x: 36, y: 9.5}
-        - {x: 34, y: 25.5}
-        - {x: -22, y: 25.5}
-        - {x: -34, y: 24.5}
-        - {x: -36, y: 18.5}
-        - {x: -36, y: -25.5}
-        - {x: -18, y: -25.5}
-        - {x: -5, y: -23.5}
-        - {x: -4, y: -20.5}
-        - {x: 1, y: -25.5}
-    - name: spider_walk2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49405410000000000800000000000000
+      internalID: 21300372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider_walk2
       rect:
         serializedVersion: 2
         x: 0
@@ -1768,24 +2511,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 23.5, y: -23.5}
-        - {x: 22.5, y: -24.5}
-        - {x: 22.5, y: -26.5}
-        - {x: 38.5, y: -26.5}
-        - {x: 38.5, y: 12.5}
-        - {x: 35.5, y: 24.5}
-        - {x: 11.5, y: 26.5}
-        - {x: -27.5, y: 26.5}
-        - {x: -38.5, y: -2.5}
-        - {x: -38.5, y: -22.5}
-        - {x: -30.5, y: -26.5}
-        - {x: 10.5, y: -26.5}
-        - {x: 21.5, y: -23.5}
-        - {x: 23.5, y: -21.5}
-        - {x: 22.5, y: -14.5}
-        - {x: 23.5, y: -13.5}
-    - name: spinner
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69405410000000000800000000000000
+      internalID: 21300374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spinner
       rect:
         serializedVersion: 2
         x: 134
@@ -1795,15 +2532,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -31.5, y: 31}
-        - {x: -31.5, y: -23}
-        - {x: -22.5, y: -31}
-        - {x: 24.5, y: -31}
-        - {x: 31.5, y: -18}
-        - {x: 31.5, y: 24}
-        - {x: 26.5, y: 31}
-    - name: spinnerHalf
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89405410000000000800000000000000
+      internalID: 21300376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spinnerHalf
       rect:
         serializedVersion: 2
         x: 71
@@ -1814,7 +2554,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: spinnerHalf_dead
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9405410000000000800000000000000
+      internalID: 21300378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spinnerHalf_dead
       rect:
         serializedVersion: 2
         x: 71
@@ -1825,7 +2575,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: spinnerHalf_hit
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9405410000000000800000000000000
+      internalID: 21300380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spinnerHalf_hit
       rect:
         serializedVersion: 2
         x: 136
@@ -1836,7 +2596,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: spinnerHalf_spin
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9405410000000000800000000000000
+      internalID: 21300382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spinnerHalf_spin
       rect:
         serializedVersion: 2
         x: 134
@@ -1847,7 +2617,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: spinner_dead
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a405410000000000800000000000000
+      internalID: 21300384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spinner_dead
       rect:
         serializedVersion: 2
         x: 77
@@ -1857,15 +2637,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -31.5, y: 31}
-        - {x: -31.5, y: -23}
-        - {x: -22.5, y: -31}
-        - {x: 24.5, y: -31}
-        - {x: 31.5, y: -18}
-        - {x: 31.5, y: 24}
-        - {x: 26.5, y: 31}
-    - name: spinner_hit
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a405410000000000800000000000000
+      internalID: 21300386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spinner_hit
       rect:
         serializedVersion: 2
         x: 141
@@ -1875,15 +2658,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 19.5, y: 30.5}
-        - {x: -30.5, y: 30.5}
-        - {x: -30.5, y: -30.5}
-        - {x: 24.5, y: -30.5}
-        - {x: 30.5, y: -19.5}
-        - {x: 30.5, y: 17.5}
-        - {x: 29.5, y: 23.5}
-    - name: spinner_spin
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a405410000000000800000000000000
+      internalID: 21300388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spinner_spin
       rect:
         serializedVersion: 2
         x: 196
@@ -1893,15 +2679,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 19.5, y: 30.5}
-        - {x: -30.5, y: 30.5}
-        - {x: -30.5, y: -30.5}
-        - {x: 24.5, y: -30.5}
-        - {x: 30.5, y: -19.5}
-        - {x: 30.5, y: 17.5}
-        - {x: 29.5, y: 23.5}
-    - name: worm
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a405410000000000800000000000000
+      internalID: 21300390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm
       rect:
         serializedVersion: 2
         x: 71
@@ -1912,7 +2701,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: worm_dead
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a405410000000000800000000000000
+      internalID: 21300392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm_dead
       rect:
         serializedVersion: 2
         x: 71
@@ -1923,7 +2722,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: worm_hit
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa405410000000000800000000000000
+      internalID: 21300394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm_hit
       rect:
         serializedVersion: 2
         x: 134
@@ -1934,7 +2743,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: worm_walk
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca405410000000000800000000000000
+      internalID: 21300396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm_walk
       rect:
         serializedVersion: 2
         x: 71
@@ -1945,8 +2764,28 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea405410000000000800000000000000
+      internalID: 21300398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
