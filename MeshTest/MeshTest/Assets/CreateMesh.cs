@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 /// <summary>
 /// Create mesh of any shape in the run-time;
@@ -90,5 +92,22 @@ public class CreateMesh : MonoBehaviour
         MF3.mesh.RecalculateNormals();
         MR3.material = material;
 
+        add_collider(OBJ0, vertices0);
+    }
+
+    private void add_collider(GameObject GO, Vector3[] vertices)
+    {
+        //MeshCollider MC = GO.AddComponent<MeshCollider>();
+        //MC.convex = true;
+        //GO.AddComponent<Rigidbody>();
+
+        PolygonCollider2D PC = GO.AddComponent<PolygonCollider2D>();
+        List<Vector2> poi = new List<Vector2>();
+        foreach(Vector3 po in vertices)
+        {
+            poi.Add(po);
+        }
+        PC.points = poi.ToArray();
+        GO.AddComponent<Rigidbody2D>();
     }
 }
