@@ -10,14 +10,14 @@ public class MathTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-
+        //test2();
+        test3();
     }
 
     // Update is called once per frame
     void Update()
     {
-        area_test1();
+        //area_test1();
     }
 
     private float area_cal(Vector2[] verts)
@@ -39,5 +39,15 @@ public class MathTest : MonoBehaviour
     {
         float ans = area_cal(verts);
         TM.text = ans.ToString("F2");
+    }
+
+    private void test2()
+    {
+        Debug.Log(Random.Range(0, -100));
+    }
+
+    private void test3()
+    {
+        Debug.Log(Mathf.Pow((float)1 / (float)2, 2));
     }
 }
