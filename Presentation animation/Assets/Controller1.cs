@@ -12,7 +12,9 @@ public class Controller1 : MonoBehaviour
     public Transform H;
     public Transform D1;
     public Transform D2;
+    public Transform GA;
     public float time;
+    public TextMesh TM;
 
     public Animator ani;
 
@@ -36,6 +38,8 @@ public class Controller1 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2)) { ani.SetInteger("state", 2); }
         if (Input.GetKeyDown(KeyCode.Alpha3)) { ani.SetInteger("state", 3); }
         if (Input.GetKeyDown(KeyCode.Alpha4)) { ani.SetInteger("state", 4); }
+        if (Input.GetKeyDown(KeyCode.Alpha5)) { ani.SetInteger("state", 5); }
+        if (Input.GetKeyDown(KeyCode.Alpha6)) { ani.SetInteger("state", 6); }
         if (Input.GetKeyDown(KeyCode.D)) { ani.SetTrigger("Next"); }
     }
 
@@ -48,7 +52,7 @@ public class Controller1 : MonoBehaviour
     {
         float timer = 0.0f;
         Controller1.IS.O1.gameObject.SetActive(true);
-        while (timer < 0.08f)
+        while (timer < 1.0f)
         {
             timer += Time.deltaTime;
             yield return null;
@@ -72,4 +76,10 @@ public class Controller1 : MonoBehaviour
             yield return null;
         }
     }
+
+    public void an_next()
+    {
+        ani.SetTrigger("Next");
+    }
+
 }
