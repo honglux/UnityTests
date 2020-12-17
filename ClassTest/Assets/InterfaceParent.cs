@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InterfaceParent : MonoBehaviour, InterfaceTestIF
 {
+    public int c = 100;
+
     // Start is called before the first frame update
     void Start()
     {
