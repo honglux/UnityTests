@@ -9,7 +9,7 @@ public class PrefabTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        test1();
+        //test1();
     }
 
     // Update is called once per frame
