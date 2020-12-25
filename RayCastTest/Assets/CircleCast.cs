@@ -83,7 +83,6 @@ public class CircleCast : MonoBehaviour
         float theta = Mathf.Asin((end_width / 2.0f) / distance) *Mathf.Rad2Deg * 2;
         Vector3 ref_dir_xz = new Vector3(ref_dir.x, 0.0f, ref_dir.z);
         float ref_theta = Angle_from_dir_hori(Vector3.right, ref_dir_xz);
-        Debug.Log("@@@@@@@@@@" + ref_theta);
         List<Ray> res = new List<Ray>();
         float temp_theta = 0.0f;
         Vector3 temp_dir = new Vector3();
