@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/CorotineTest.unity
+    guid: 2fd61546f93a7b04d8e5c38407ad543f
   m_configObjects: {}
