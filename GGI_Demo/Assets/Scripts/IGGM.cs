@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Enum_Controller;
 
 /// <summary>
 /// GameMode in InGameScene;
@@ -20,6 +21,10 @@ public class IGGM : MonoBehaviour
     private float last_win; //Last win;
     private bool receive_Mcast; //whether should reveive the mouse cast;
     private int hovering_id;    //id that the mouse is current hovering;
+    private GameModeState curr_GMstate; //current game mode state; 
+    private float curr_multi;   //current multiplier;
+    private float[] chest_reward_arr;   //Dynamic chest reward array;
+    private float curr_predict_reward;  //Total reward by prediction;
 
     private void Awake()
     {
@@ -33,6 +38,9 @@ public class IGGM : MonoBehaviour
         last_win = 0.0f;
         receive_Mcast = false;
         hovering_id = -1;
+        curr_GMstate = GameModeState.Default;
+        curr_multi = 0.0f;
+        curr_predict_reward = 0.0f;
     }
 
     // Start is called before the first frame update
@@ -45,9 +53,21 @@ public class IGGM : MonoBehaviour
     void Update()
     {
         if (receive_Mcast) { receiv_mouse_cast(); }
+        if (Input.GetMouseButtonDown(0)) { leftMouseEvent(); }
     }
 
     #region private methods;
+
+    /// <summary>
+    /// Handle left mouse button event;
+    /// </summary>
+    private void leftMouseEvent()
+    {
+        if(curr_GMstate == GameModeState.ChooseChest)
+        {
+            //IGRC.IS.ChestGroup_TRANS_dict[hovering_id].GetComponent<ChestGroup>().OpenChest();
+        }
+    }
 
     /// <summary>
     /// Calculate the chest group scale;
@@ -105,6 +125,15 @@ public class IGGM : MonoBehaviour
     private void init_gamedata()
     {
         curr_balance = GSD.IS.Init_balance;
+        init_chest_reward_arr();
+    }
+
+    /// <summary>
+    /// Init the chest reward arr;
+    /// </summary>
+    private void init_chest_reward_arr()
+    {
+        chest_reward_arr = new float[GSD.IS.VP_Cpos_XY_arr.Length];
     }
 
     /// <summary>
@@ -227,6 +256,99 @@ public class IGGM : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Bet the denomitaion amount;
+    /// </summary>
+    private void bet_deno(float deno)
+    {
+        curr_balance -= deno;
+        IGUIC.IS.Update_CB_RO(curr_balance);
+    }
+
+
+    private void generate_multiplier()
+    {
+        int curr_tieri = choose_tier_index();
+        curr_multi = choose_multiplier(curr_tieri);
+        curr_predict_reward = curr_deno * curr_multi;
+    }
+
+    /// <summary>
+    /// Choose the tier index;
+    /// </summary>
+    /// <returns></returns>
+    private int choose_tier_index()
+    {
+        int tier_random = Random.Range(0, 100);
+        int tempperc = 0;
+        int curr_tieri = 0;
+        foreach (KeyValuePair<int, int> perc_index in GSD.IS.Multi_perc_tierind_dict)
+        {
+            tempperc = perc_index.Key;
+            if (tier_random >= tempperc % 100 && tier_random <= tempperc / 100)
+            {
+                curr_tieri = perc_index.Value;
+                break;
+            }
+        }
+
+        return curr_tieri;
+    }
+
+    /// <summary>
+    /// Choose the multiplier based on the tier;
+    /// </summary>
+    /// <param name="tieri"></param>
+    /// <returns></returns>
+    private int choose_multiplier(int tieri)
+    {
+        int[] multi_arr = GSD.IS.Multiplier_2darr[tieri].Multiplier_list;
+        int multiplier_random = Random.Range(0, multi_arr.Length);
+        int curr_multi = multi_arr[multiplier_random];
+        return curr_multi;
+    }
+
+    /// <summary>
+    /// Generate the chest reward;
+    /// </summary>
+    private void generate_chest_reward()
+    {
+        Debug.Log("curr_predict_reward " + curr_predict_reward.ToString());
+        float increament = (float)GSD.IS.MiniChestIncreament;
+        int valid_Cnumber = Random.Range(1, GSD.IS.AverageValidChestUpbound + 1);
+        Debug.Log("valid_Cnumber " + valid_Cnumber);
+        float total_multi_increament = curr_predict_reward / increament;
+        int total_multi_incre_int = Mathf.FloorToInt(total_multi_increament);
+        if (total_multi_incre_int != total_multi_increament) 
+        {
+            Debug.LogError("multi_fivecent calculation error!");
+            return;
+        }
+        int average_multi_incre = Mathf.CeilToInt(total_multi_incre_int / valid_Cnumber);
+        float temp_reward = 0.0f;
+        int temp_multi_incre = 0, multi_incre_sum = 0;
+        bool finished = false;
+        int i = 0;
+        for (; i < chest_reward_arr.Length - 2 && !finished; ++i)
+        {
+            temp_multi_incre = Random.Range(1, average_multi_incre);
+            if(temp_multi_incre + multi_incre_sum > total_multi_incre_int)
+            {
+                temp_multi_incre = total_multi_incre_int - multi_incre_sum;
+                finished = true;
+            }
+            temp_reward = increament * temp_multi_incre;
+            chest_reward_arr[i] = temp_reward;
+            multi_incre_sum += temp_multi_incre;
+        }
+        if(multi_incre_sum < total_multi_incre_int)
+        {
+            chest_reward_arr[i++] = (total_multi_incre_int - multi_incre_sum) * increament;
+        }
+        chest_reward_arr[i] = -1.0f;
+        Utilities.print_arr<float[], float>(chest_reward_arr);
+    }
+
     #endregion
 
     #region public methods;
@@ -248,6 +370,9 @@ public class IGGM : MonoBehaviour
     public void Play_button()
     {
         IGUIC.IS.ToggleButtonLock_ChooseChest();
+        bet_deno(curr_deno);
+        generate_multiplier();
+        generate_chest_reward();
         GetComponent<Animator>().SetTrigger(SD.AniPlayTrigger);
     }
 
@@ -274,6 +399,7 @@ public class IGGM : MonoBehaviour
     /// </summary>
     public void ToCalling()
     {
+        curr_GMstate = GameModeState.Calling;
         toggle_lock_CGroups(true);
         callingState_reset();
     }
@@ -291,6 +417,7 @@ public class IGGM : MonoBehaviour
     /// </summary>
     public void ToChooseChest()
     {
+        curr_GMstate = GameModeState.ChooseChest;
         toggle_lock_CGroups(false);
         toggle_mouse_cast(true);
     }

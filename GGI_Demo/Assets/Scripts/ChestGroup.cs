@@ -73,4 +73,12 @@ public class ChestGroup : MonoBehaviour
         if (Lock_state) { return; }
         panel_TRANS.GetComponent<SpriteRenderer>().sprite = closed_panel_sprite;
     }
+
+    /// <summary>
+    /// Open chest; pass in the reward amount;
+    /// </summary>
+    public void OpenChest(float reward)
+    {
+
+    }
 }

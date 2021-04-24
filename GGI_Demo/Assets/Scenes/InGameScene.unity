@@ -1168,6 +1168,13 @@ MonoBehaviour:
   - 5
   - 11
   Init_balance: 6
+  Multiplier_arr:
+  - Multiplier_list: 00000000
+  - Multiplier_list: 0100000002000000030000000400000005000000060000000700000008000000090000000a000000
+  - Multiplier_list: 0c0000001000000018000000200000003000000040000000
+  - Multiplier_list: 64000000c80000002c01000090010000
+  MiniChestIncreament: 0.05
+  AverageValidChestUpbound: 3
 --- !u!1 &1261268041
 GameObject:
   m_ObjectHideFlags: 0
