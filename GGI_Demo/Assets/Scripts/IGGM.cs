@@ -18,6 +18,8 @@ public class IGGM : MonoBehaviour
     private int curr_deno_i;    //Current denomination index;
     private float curr_balance; //Current balance;
     private float last_win; //Last win;
+    private bool receive_Mcast; //whether should reveive the mouse cast;
+    private int hovering_id;    //id that the mouse is current hovering;
 
     private void Awake()
     {
@@ -29,6 +31,8 @@ public class IGGM : MonoBehaviour
         curr_deno_i = 0;
         curr_balance = 0.0f;
         last_win = 0.0f;
+        receive_Mcast = false;
+        hovering_id = -1;
     }
 
     // Start is called before the first frame update
@@ -40,7 +44,7 @@ public class IGGM : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (receive_Mcast) { receiv_mouse_cast(); }
     }
 
     #region private methods;
@@ -73,19 +77,31 @@ public class IGGM : MonoBehaviour
     /// </summary>
     private void spawn_chestgroups()
     {
+        int tempid = 0;
         foreach (Vector3 Cpos in chestg_pos_list)
         {
-            spawn_single_CG(Cpos);
+            spawn_single_CG(Cpos, tempid);
+            ++tempid;
         }
     }
 
-    private void spawn_single_CG(Vector3 pos)
+    /// <summary>
+    /// Spawn a single chest group;
+    /// </summary>
+    /// <param name="pos"></param>
+    /// <param name="id"></param>
+    private void spawn_single_CG(Vector3 pos, int id)
     {
         Transform temp_TRANS = Instantiate(IGRC.IS.ChestGroup_PRE, pos, Quaternion.identity).transform;
         temp_TRANS.localScale *= chestg_scale;
-        IGRC.IS.ChestGroup_TRANS_list.Add(temp_TRANS);
+        IGRC.IS.ChestGroup_TRANS_dict.Add(id, temp_TRANS);
+        ChestGroup chest_group = temp_TRANS.GetComponent<ChestGroup>();
+        chest_group.Init_CG(id);
     }
 
+    /// <summary>
+    /// Initialize tje game data;
+    /// </summary>
     private void init_gamedata()
     {
         curr_balance = GSD.IS.Init_balance;
@@ -122,7 +138,8 @@ public class IGGM : MonoBehaviour
     private void update_denomination(float deno)
     {
         curr_deno = deno;
-        IGUIC.IS.Toggle_playbutton(check_playable());
+        IGUIC.IS.Update_CD_RO(curr_deno);
+        IGUIC.IS.Toggle_playbutton_lock(check_playable());
     }
 
     /// <summary>
@@ -143,6 +160,73 @@ public class IGGM : MonoBehaviour
         IGUIC.IS.CallingUI_reset(curr_balance);
     }
 
+    /// <summary>
+    /// Set the lock state of the chest groups;
+    /// </summary>
+    /// <param name="lockstate"></param>
+    private void toggle_lock_CGroups(bool lockstate)
+    {
+        foreach(KeyValuePair<int, Transform> id_CTRANS in IGRC.IS.ChestGroup_TRANS_dict)
+        {
+            toggle_lock_singleCGroup(id_CTRANS.Value.GetComponent<ChestGroup>(), lockstate);
+        }
+    }
+
+    /// <summary>
+    /// Set the lock state of a single chest group;
+    /// </summary>
+    /// <param name="lockstate"></param>
+    private void toggle_lock_singleCGroup(ChestGroup chest_group, bool lockstate)
+    {
+        if (lockstate) { chest_group.Lock_Cgroup(); }
+        else { chest_group.Unlock_Cgroup(); }
+    }
+
+    /// <summary>
+    /// Set the mouse ray cast state;
+    /// </summary>
+    /// <param name="casting"></param>
+    private void toggle_mouse_cast(bool casting)
+    {
+        MouseRayCast.IS.Toggle_casting(casting);
+        receive_Mcast = casting;
+    }
+
+    /// <summary>
+    /// Excute the mouse raycast system;
+    /// Whether we should put this to update or fixed-update, or adjust the MouseRayCast class, 
+    /// is a debatable question, both of them have pros and cons;
+    /// </summary>
+    private void receiv_mouse_cast()
+    {
+        RaycastHit hit_info = MouseRayCast.IS.Get_hitinfo();
+        ChestGroup hit_chest_group = null;
+        if (MouseRayCast.IS.hit_flag && hit_info.transform.CompareTag(SD.ChestGroupTriggerTag) &&
+            hit_info.transform.GetComponent<GeneralTrigger>() != null)
+        {
+            
+            hit_chest_group = hit_info.transform.GetComponent<GeneralTrigger>().
+                Get_root_TRANS().GetComponent<ChestGroup>();
+            if(hit_chest_group.Cid != hovering_id)
+            {
+                if(hovering_id != -1)
+                {
+                    IGRC.IS.ChestGroup_TRANS_dict[hovering_id].GetComponent<ChestGroup>().MouseUnHover();
+                }
+                hit_chest_group.MouseHover();
+            }
+            hovering_id = hit_chest_group.Cid;
+        }
+        else
+        {
+            if (hovering_id != -1)
+            {
+                IGRC.IS.ChestGroup_TRANS_dict[hovering_id].GetComponent<ChestGroup>().MouseUnHover();
+            }
+            hovering_id = -1;
+        }
+    }
+
     #endregion
 
     #region public methods;
@@ -150,7 +234,7 @@ public class IGGM : MonoBehaviour
     public void Increase_denomination()
     {
         ++curr_deno_i;
-        curr_deno_i = Mathf.Min(GSD.IS.Denomination_arr.Length, curr_deno_i);
+        curr_deno_i = Mathf.Min(GSD.IS.Denomination_arr.Length - 1, curr_deno_i);
         update_denomination(GSD.IS.Denomination_arr[curr_deno_i]);
     }
 
@@ -161,11 +245,20 @@ public class IGGM : MonoBehaviour
         update_denomination(GSD.IS.Denomination_arr[curr_deno_i]);
     }
 
+    public void Play_button()
+    {
+        IGUIC.IS.ToggleButtonLock_ChooseChest();
+        GetComponent<Animator>().SetTrigger(SD.AniPlayTrigger);
+    }
+
     #endregion
 
 
     #region StateMachine;
 
+    /// <summary>
+    /// Star init state;
+    /// </summary>
     public void ToInit()
     {
         chestg_scale_cal();
@@ -176,9 +269,30 @@ public class IGGM : MonoBehaviour
         GetComponent<Animator>().SetTrigger(SD.AniNextTrigger);
     }
 
+    /// <summary>
+    /// Start the calling state;
+    /// </summary>
     public void ToCalling()
     {
+        toggle_lock_CGroups(true);
         callingState_reset();
+    }
+    
+    /// <summary>
+    /// Start the CallingToCChestTrans state;
+    /// </summary>
+    public void ToCallingToCCTrans()
+    {
+        GetComponent<Animator>().SetTrigger(SD.AniNextTrigger);
+    }
+
+    /// <summary>
+    /// Start tje Choose Chest state;
+    /// </summary>
+    public void ToChooseChest()
+    {
+        toggle_lock_CGroups(false);
+        toggle_mouse_cast(true);
     }
 
     #endregion

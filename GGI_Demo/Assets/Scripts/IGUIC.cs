@@ -59,15 +59,25 @@ public class IGUIC : MonoBehaviour
     /// </summary>
     public void ToggleButtonLock_Calling()
     {
-        Toggle_deno_decr_button(true);
-        Toggle_deno_incr_button(true);
+        Toggle_deno_decr_button_lock(true);
+        Toggle_deno_incr_button_lock(true);
+    }
+
+    /// <summary>
+    /// Set the lock state for choose the chests;
+    /// </summary>
+    public void ToggleButtonLock_ChooseChest()
+    {
+        Toggle_deno_decr_button_lock(false);
+        Toggle_deno_incr_button_lock(false);
+        Toggle_playbutton_lock(false);
     }
 
     /// <summary>
     /// Toggle the play button;
     /// </summary>
     /// <param name="enable">Enable state</param>
-    public void Toggle_playbutton(bool enable)
+    public void Toggle_playbutton_lock(bool enable)
     {
         play_button.interactable = enable;
     }
@@ -76,18 +86,18 @@ public class IGUIC : MonoBehaviour
     /// Toggle the denomination decrease button;
     /// </summary>
     /// <param name="enable"></param>
-    public void Toggle_deno_decr_button(bool enable)
+    public void Toggle_deno_decr_button_lock(bool enable)
     {
-        play_button.interactable = enable;
+        Deno_decre_button.interactable = enable;
     }
 
     /// <summary>
     /// Toggle the denomination increase button;
     /// </summary>
     /// <param name="enable"></param>
-    public void Toggle_deno_incr_button(bool enable)
+    public void Toggle_deno_incr_button_lock(bool enable)
     {
-        play_button.interactable = enable;
+        Deno_incre_button.interactable = enable;
     }
 
     /// <summary>

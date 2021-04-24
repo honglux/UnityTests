@@ -17,11 +17,13 @@ public class IGRC : MonoBehaviour
     public GameObject ChestGroup_PRE;
 
     //Runtime reference;
-    public List<Transform> ChestGroup_TRANS_list;
+    public Dictionary<int, Transform> ChestGroup_TRANS_dict { get; private set; }
          
     private void Awake()
     {
         IS = this;
+
+        ChestGroup_TRANS_dict = new Dictionary<int, Transform>();
     }
 
     // Start is called before the first frame update
