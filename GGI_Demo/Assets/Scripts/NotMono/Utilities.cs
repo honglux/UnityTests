@@ -13,4 +13,14 @@ public static class Utilities
         }
         Debug.Log(str);
     }
+
+    public static void print_dict<T,U,V>(T dict) where T:IDictionary<U,V>
+    {
+        string str = "";
+        foreach(KeyValuePair<U,V> k_v in dict)
+        {
+            str += k_v.Key + "_" + k_v.Value + "|";
+        }
+        Debug.Log(str);
+    }
 }

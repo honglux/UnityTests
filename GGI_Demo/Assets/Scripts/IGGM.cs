@@ -11,6 +11,11 @@ public class IGGM : MonoBehaviour
 {
     public static IGGM IS;
 
+    public const float Pooper_reward_amount = -1.0f;
+    public const int Invalid_chest_id = -1;
+
+    [SerializeField] private float closeallchest_timegap;   //Animation gap for close all chests;
+
     private float chestg_scale; //Scale of the chest group;
     private List<Vector3> chestg_pos_list;  //Chest group position list;
 
@@ -18,13 +23,17 @@ public class IGGM : MonoBehaviour
     private float curr_deno;    //Current denomination;
     private int curr_deno_i;    //Current denomination index;
     private float curr_balance; //Current balance;
-    private float last_win; //Last win;
+    private float curr_win; //Track the current win amount;
     private bool receive_Mcast; //whether should reveive the mouse cast;
     private int hovering_id;    //id that the mouse is current hovering;
     private GameModeState curr_GMstate; //current game mode state; 
-    private float curr_multi;   //current multiplier;
-    private float[] chest_reward_arr;   //Dynamic chest reward array;
-    private float curr_predict_reward;  //Total reward by prediction;
+    private float predict_multi;   //Predicted multiplier;
+    private float[] chest_reward_arr;   //Dynamic reward for each chest array;
+    private float total_pred_reward;   //Total predicted reward;
+    private int curr_chest_reward_index;    //Current chest reward index;
+    private float[] chest_ani_tier_arr; //Used for chest animation change tier;
+    private IEnumerator closeallchest_ani_coro; //Coroutine for close all chests animation;
+    private int transition_finished_cnt;    //transition count of finish state; till 9 for example;
 
     private void Awake()
     {
@@ -35,12 +44,17 @@ public class IGGM : MonoBehaviour
         curr_deno = 0.0f;
         curr_deno_i = 0;
         curr_balance = 0.0f;
-        last_win = 0.0f;
         receive_Mcast = false;
         hovering_id = -1;
         curr_GMstate = GameModeState.Default;
-        curr_multi = 0.0f;
-        curr_predict_reward = 0.0f;
+        predict_multi = 0.0f;
+        total_pred_reward = 0.0f;
+        curr_chest_reward_index = 0;
+        curr_win = 0;
+        chest_reward_arr = new float[0];
+        chest_ani_tier_arr = new float[0];
+        closeallchest_ani_coro = null;
+        transition_finished_cnt = 0;
     }
 
     // Start is called before the first frame update
@@ -63,10 +77,45 @@ public class IGGM : MonoBehaviour
     /// </summary>
     private void leftMouseEvent()
     {
-        if(curr_GMstate == GameModeState.ChooseChest)
+        switch(curr_GMstate)
         {
-            //IGRC.IS.ChestGroup_TRANS_dict[hovering_id].GetComponent<ChestGroup>().OpenChest();
+            case GameModeState.ChooseChest:
+                open_chest();
+                break;
+            default:
+                break;
         }
+    }
+
+    /// <summary>
+    /// Open chest action;
+    /// </summary>
+    private void open_chest()
+    {
+        ChestGroup temp = null;
+        if (curr_GMstate == GameModeState.ChooseChest)
+        {
+            if (hovering_id == Invalid_chest_id || curr_chest_reward_index >= chest_reward_arr.Length)
+            { return; }
+            float reward = chest_reward_arr[curr_chest_reward_index];
+            temp = IGRC.IS.ChestGroup_TRANS_dict[hovering_id].GetComponent<ChestGroup>();
+            if (temp == null || !temp.OpenChest(reward, reward == Pooper_reward_amount,
+                text_animation: GSD.IS.Use_chest_text_ani, ani_tier: chest_ani_tier_arr))
+            {
+                return;
+            }
+            curr_win += Mathf.Max(reward, 0.0f);
+            ++curr_chest_reward_index;
+            if (reward == Pooper_reward_amount) { finish_choose_chest(); }
+        }
+    }
+
+    /// <summary>
+    /// Warpup the choose chest state;
+    /// </summary>
+    private void finish_choose_chest()
+    {
+        GetComponent<Animator>().SetTrigger(SD.AniNextTrigger);
     }
 
     /// <summary>
@@ -150,7 +199,7 @@ public class IGGM : MonoBehaviour
     /// </summary>
     private void callingdata_reset()
     {
-        curr_balance += last_win;
+        curr_balance += curr_win;
         if (GSD.IS.Denomination_arr.Length == 0) 
         {
             Debug.LogError("Denomination_arr is unset!");
@@ -238,7 +287,7 @@ public class IGGM : MonoBehaviour
                 Get_root_TRANS().GetComponent<ChestGroup>();
             if(hit_chest_group.Cid != hovering_id)
             {
-                if(hovering_id != -1)
+                if(hovering_id != Invalid_chest_id)
                 {
                     IGRC.IS.ChestGroup_TRANS_dict[hovering_id].GetComponent<ChestGroup>().MouseUnHover();
                 }
@@ -248,11 +297,11 @@ public class IGGM : MonoBehaviour
         }
         else
         {
-            if (hovering_id != -1)
+            if (hovering_id != Invalid_chest_id)
             {
                 IGRC.IS.ChestGroup_TRANS_dict[hovering_id].GetComponent<ChestGroup>().MouseUnHover();
             }
-            hovering_id = -1;
+            hovering_id = Invalid_chest_id;
         }
     }
 
@@ -269,8 +318,8 @@ public class IGGM : MonoBehaviour
     private void generate_multiplier()
     {
         int curr_tieri = choose_tier_index();
-        curr_multi = choose_multiplier(curr_tieri);
-        curr_predict_reward = curr_deno * curr_multi;
+        predict_multi = choose_multiplier(curr_tieri);
+        total_pred_reward = curr_deno * predict_multi;
     }
 
     /// <summary>
@@ -313,15 +362,16 @@ public class IGGM : MonoBehaviour
     /// </summary>
     private void generate_chest_reward()
     {
-        Debug.Log("curr_predict_reward " + curr_predict_reward.ToString());
+        init_chest_reward_arr();
+        Debug.Log("curr_predict_reward " + total_pred_reward.ToString());
         float increament = (float)GSD.IS.MiniChestIncreament;
         int valid_Cnumber = Random.Range(1, GSD.IS.AverageValidChestUpbound + 1);
         Debug.Log("valid_Cnumber " + valid_Cnumber);
-        float total_multi_increament = curr_predict_reward / increament;
+        float total_multi_increament = total_pred_reward / increament;
         int total_multi_incre_int = Mathf.FloorToInt(total_multi_increament);
         if (total_multi_incre_int != total_multi_increament) 
         {
-            Debug.LogError("multi_fivecent calculation error!");
+            Debug.LogError("total_multi_incre_int calculation error!");
             return;
         }
         int average_multi_incre = Mathf.CeilToInt(total_multi_incre_int / valid_Cnumber);
@@ -329,24 +379,84 @@ public class IGGM : MonoBehaviour
         int temp_multi_incre = 0, multi_incre_sum = 0;
         bool finished = false;
         int i = 0;
-        for (; i < chest_reward_arr.Length - 2 && !finished; ++i)
+        if(total_multi_incre_int != 0)
         {
-            temp_multi_incre = Random.Range(1, average_multi_incre);
-            if(temp_multi_incre + multi_incre_sum > total_multi_incre_int)
+            for (; i < chest_reward_arr.Length - 2 && !finished; ++i)
             {
-                temp_multi_incre = total_multi_incre_int - multi_incre_sum;
-                finished = true;
+                temp_multi_incre = Random.Range(1, average_multi_incre);
+                if (temp_multi_incre + multi_incre_sum >= total_multi_incre_int)
+                {
+                    temp_multi_incre = total_multi_incre_int - multi_incre_sum;
+                    finished = true;
+                }
+                temp_reward = increament * temp_multi_incre;
+                chest_reward_arr[i] = temp_reward;
+                multi_incre_sum += temp_multi_incre;
             }
-            temp_reward = increament * temp_multi_incre;
-            chest_reward_arr[i] = temp_reward;
-            multi_incre_sum += temp_multi_incre;
+            if (multi_incre_sum < total_multi_incre_int)
+            {
+                chest_reward_arr[i++] = (total_multi_incre_int - multi_incre_sum) * increament;
+            }
         }
-        if(multi_incre_sum < total_multi_incre_int)
-        {
-            chest_reward_arr[i++] = (total_multi_incre_int - multi_incre_sum) * increament;
-        }
-        chest_reward_arr[i] = -1.0f;
+        chest_reward_arr[i] = Pooper_reward_amount;
+        Debug.Log("predict_multi " + predict_multi.ToString());
         Utilities.print_arr<float[], float>(chest_reward_arr);
+    }
+
+    /// <summary>
+    /// Generate the chest animation tier with dollars based on multiplier;
+    /// </summary>
+    /// <returns></returns>
+    private void generate_Cani_tier(float deno)
+    {
+        chest_ani_tier_arr = new float[GSD.IS.C_ani_tier_multi_arr.Length];
+        for (int i = 0; i < GSD.IS.C_ani_tier_multi_arr.Length; ++i) 
+        {
+            chest_ani_tier_arr[i] = deno * GSD.IS.C_ani_tier_multi_arr[i];
+        }
+        Utilities.print_arr<float[], float>(chest_ani_tier_arr);
+    }
+
+    private void Cchestdata_reset()
+    {
+        curr_win = 0;
+        curr_chest_reward_index = 0;
+    }
+
+    /// <summary>
+    /// Do all the cleanups for choose chest state;
+    /// </summary>
+    private void cleanup_chest_toCC_state()
+    {
+        close_all_chests();
+    }
+
+    private void close_all_chests()
+    {
+        if(!GSD.IS.Use_closeAllChests_ani)
+        {
+            foreach (KeyValuePair<int, Transform> id_TRANSs in IGRC.IS.ChestGroup_TRANS_dict)
+            {
+                id_TRANSs.Value.GetComponent<ChestGroup>().CloseChest();
+                ++transition_finished_cnt;
+            }
+        }
+        else
+        {
+            if (closeallchest_ani_coro != null) { StopCoroutine(closeallchest_ani_coro); }
+            closeallchest_ani_coro = closeallchests_ani_coroutine();
+            StartCoroutine(closeallchest_ani_coro);
+        }
+    }
+
+    private IEnumerator closeallchests_ani_coroutine()
+    {
+        foreach (KeyValuePair<int, Transform> id_TRANSs in IGRC.IS.ChestGroup_TRANS_dict)
+        {
+            id_TRANSs.Value.GetComponent<ChestGroup>().CloseChest();
+            ++transition_finished_cnt;
+            yield return new WaitForSeconds(closeallchest_timegap);
+        }
     }
 
     #endregion
@@ -370,10 +480,16 @@ public class IGGM : MonoBehaviour
     public void Play_button()
     {
         IGUIC.IS.ToggleButtonLock_ChooseChest();
-        bet_deno(curr_deno);
-        generate_multiplier();
-        generate_chest_reward();
         GetComponent<Animator>().SetTrigger(SD.AniPlayTrigger);
+    }
+
+    /// <summary>
+    /// Called when we open the chest to show current win animation;
+    /// </summary>
+    /// <param name="amount"></param>
+    public void Update_cur_win(float amount)
+    {
+        IGUIC.IS.Update_LW_RO(curr_win);
     }
 
     #endregion
@@ -409,7 +525,18 @@ public class IGGM : MonoBehaviour
     /// </summary>
     public void ToCallingToCCTrans()
     {
-        GetComponent<Animator>().SetTrigger(SD.AniNextTrigger);
+        transition_finished_cnt = 0;
+        bet_deno(curr_deno);
+        generate_multiplier();
+        generate_chest_reward();
+        generate_Cani_tier(curr_deno);
+        cleanup_chest_toCC_state();
+    }
+
+    public void UpdateCallingToCCTrans()
+    {
+        if (transition_finished_cnt >= GSD.IS.VP_Cpos_XY_arr.Length) 
+        { GetComponent<Animator>().SetTrigger(SD.AniNextTrigger); }
     }
 
     /// <summary>
@@ -418,8 +545,15 @@ public class IGGM : MonoBehaviour
     public void ToChooseChest()
     {
         curr_GMstate = GameModeState.ChooseChest;
-        toggle_lock_CGroups(false);
+        //toggle_lock_CGroups(false);
         toggle_mouse_cast(true);
+        Cchestdata_reset();
+        IGUIC.IS.ChooseChestUI_reset();
+    }
+
+    public void ToCChestToCallingTrans()
+    {
+        GetComponent<Animator>().SetTrigger(SD.AniNextTrigger);
     }
 
     #endregion

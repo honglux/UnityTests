@@ -38,10 +38,12 @@ public class LastWinReadoutGroup : ReadoutGroup
     public void Change_to_first_init()
     {
         curr_text = init_text;
+        Change_text(readout_num, num_format);
     }
 
     public void Change_to_second_init()
     {
         curr_text = init_text2;
+        Change_text(readout_num, num_format);
     }
 }

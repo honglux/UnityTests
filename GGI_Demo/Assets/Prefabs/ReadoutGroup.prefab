@@ -186,6 +186,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   readout_text: {fileID: 2972287596620478996}
   init_text: 
+  num_format: 
+  ani_frequency: 0.1
 --- !u!1 &9147656703012188265
 GameObject:
   m_ObjectHideFlags: 0

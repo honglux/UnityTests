@@ -55,6 +55,16 @@ public class IGUIC : MonoBehaviour
     }
 
     /// <summary>
+    /// UI reset for choose chest state;
+    /// </summary>
+    public void ChooseChestUI_reset()
+    {
+        ToggleButtonLock_ChooseChest();
+        last_win_ROG.Change_to_second_init();
+        Update_LW_RO_force_no_ani(0.0f);
+    }
+
+    /// <summary>
     /// Set the lock state of the buttons, in calling state;
     /// </summary>
     public void ToggleButtonLock_Calling()
@@ -106,16 +116,21 @@ public class IGUIC : MonoBehaviour
     /// <param name="curr_balan"></param>
     public void Update_CB_RO(float curr_balan)
     {
-        curr_balance_ROG.Update_number(curr_balan, use_ani: GSD.IS.Use_text_animation);
+        curr_balance_ROG.Update_number(curr_balan, use_ani: GSD.IS.Use_UI_text_animation);
     }
 
     /// <summary>
-    /// Update the last win readout number;
+    /// Update the last win readout number; Force no animation;
     /// </summary>
     /// <param name="last_win"></param>
     public void Update_LW_RO(float last_win)
     {
-        last_win_ROG.Update_number(last_win, use_ani: GSD.IS.Use_text_animation);
+        last_win_ROG.Update_number(last_win, use_ani: GSD.IS.Use_UI_text_animation);
+    }
+
+    public void Update_LW_RO_force_no_ani(float last_win)
+    {
+        last_win_ROG.Update_number(last_win, use_ani: false);
     }
 
     /// <summary>

@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea8163d1b13a1f541baa928bfa1bd54f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  closeallchest_timegap: 0.1
 --- !u!95 &39591679
 Animator:
   serializedVersion: 3
@@ -380,7 +381,7 @@ Transform:
   m_GameObject: {fileID: 199853636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.5}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 219653978}
   m_RootOrder: 0
@@ -1157,17 +1158,20 @@ MonoBehaviour:
   - {x: 0.25, y: 0.4}
   - {x: 0.5, y: 0.4}
   - {x: 0.75, y: 0.4}
-  VP_Csize: 0.05
+  VP_Csize: 0.07
   CG_zoffset: 10
-  Use_text_animation: 0
-  Text_ani_time: 0
+  Use_chest_text_ani: 1
+  C_ani_tier_multi_arr: 010000000c00000064000000
+  Use_text_animation: 1
+  Text_ani_time: 1
+  Text_ani_frenquency: 0.1
   Denomination_arr:
   - 0
   - 0.25
-  - 2.5
+  - 0.5
+  - 1
   - 5
-  - 11
-  Init_balance: 6
+  Init_balance: 10
   Multiplier_arr:
   - Multiplier_list: 00000000
   - Multiplier_list: 0100000002000000030000000400000005000000060000000700000008000000090000000a000000
@@ -1175,6 +1179,7 @@ MonoBehaviour:
   - Multiplier_list: 64000000c80000002c01000090010000
   MiniChestIncreament: 0.05
   AverageValidChestUpbound: 3
+  Use_closeAllChests_ani: 1
 --- !u!1 &1261268041
 GameObject:
   m_ObjectHideFlags: 0
@@ -2177,7 +2182,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2078904930}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1, y: 0, z: 0}
+  m_LocalPosition: {x: 1.5, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 205946801}
