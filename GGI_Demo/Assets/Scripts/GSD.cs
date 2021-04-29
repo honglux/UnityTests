@@ -28,7 +28,8 @@ public class GSD : MonoBehaviour
     public UtilityClasses.TierMulti_list[] Multiplier_2darr { get; private set; }  //Multiplier 2d list; row: tier, col: real multiplier among this tier;
     public float MiniChestIncreament { get; private set; }   //Minimun chest reward;
     public int AverageValidChestUpbound { get; private set; }   //The Upbound to radomize the chest valid number; The actual number will be expended, so this number is close to the average number;
-    public bool Use_closeAllChests_ani { get; private set; }    //Whether to animate close all chests;
+    public bool Use_closeAllChests_ani { get; private set; }    //Whether to animate close all chests SEPARATElY;
+    public float Closeallchest_timegap { get; private set; }    //Time gap for each chest to run the animation;
 
     private void Awake()
     {
@@ -71,5 +72,6 @@ public class GSD : MonoBehaviour
         UI_text_ani_frenquency = _TGSData.Text_ani_frenquency;
         C_ani_tier_multi_arr = _TGSData.C_ani_tier_multi_arr;
         Use_closeAllChests_ani = _TGSData.Use_closeAllChests_ani;
+        Closeallchest_timegap = _TGSData.Closeallchest_timegap;
     }
 }

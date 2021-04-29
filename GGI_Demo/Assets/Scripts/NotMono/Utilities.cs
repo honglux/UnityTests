@@ -4,9 +4,8 @@ using UnityEngine;
 
 public static class Utilities
 {
-    public static void print_arr<T,U>(T arr) where T : IEnumerable<U>
+    public static void print_arr<T,U>(T arr, string str = "") where T : IEnumerable<U>
     {
-        string str = "";
         foreach(U elem in arr)
         {
             str += elem.ToString() + " | ";
@@ -14,9 +13,8 @@ public static class Utilities
         Debug.Log(str);
     }
 
-    public static void print_dict<T,U,V>(T dict) where T:IDictionary<U,V>
+    public static void print_dict<T,U,V>(T dict, string str = "") where T:IDictionary<U,V>
     {
-        string str = "";
         foreach(KeyValuePair<U,V> k_v in dict)
         {
             str += k_v.Key + "_" + k_v.Value + "|";

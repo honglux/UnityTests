@@ -11,10 +11,13 @@ public class IGGM : MonoBehaviour
 {
     public static IGGM IS;
 
-    public const float Pooper_reward_amount = -1.0f;
-    public const int Invalid_chest_id = -1;
+    public const float Pooper_reward_amount = -1.0f;    //Default pooper reward amount;
+    public const int Invalid_chest_id = -1; //Default invalid chest id;
+    public const int Deno_button_soundi = 1;    //Sound clip index for the denomination button;
+    public const int Play_button_soundi = 0;    //Sound clip index for the play button;
 
-    [SerializeField] private float closeallchest_timegap;   //Animation gap for close all chests;
+    [SerializeField] private AudioClip[] button_clips;  //Audio clips for buttons;
+    [SerializeField] private AudioSource button_AS; //Audio source for buttons;
 
     private float chestg_scale; //Scale of the chest group;
     private List<Vector3> chestg_pos_list;  //Chest group position list;
@@ -162,6 +165,7 @@ public class IGGM : MonoBehaviour
     private void spawn_single_CG(Vector3 pos, int id)
     {
         Transform temp_TRANS = Instantiate(IGRC.IS.ChestGroup_PRE, pos, Quaternion.identity).transform;
+        temp_TRANS.parent = IGRC.IS.ChestGroup_parent;
         temp_TRANS.localScale *= chestg_scale;
         IGRC.IS.ChestGroup_TRANS_dict.Add(id, temp_TRANS);
         ChestGroup chest_group = temp_TRANS.GetComponent<ChestGroup>();
@@ -363,10 +367,10 @@ public class IGGM : MonoBehaviour
     private void generate_chest_reward()
     {
         init_chest_reward_arr();
-        Debug.Log("curr_predict_reward " + total_pred_reward.ToString());
+        Debug.Log("Current predicted reward " + total_pred_reward.ToString());
         float increament = (float)GSD.IS.MiniChestIncreament;
         int valid_Cnumber = Random.Range(1, GSD.IS.AverageValidChestUpbound + 1);
-        Debug.Log("valid_Cnumber " + valid_Cnumber);
+        Debug.Log("Valid predicted chest number " + valid_Cnumber);
         float total_multi_increament = total_pred_reward / increament;
         int total_multi_incre_int = Mathf.FloorToInt(total_multi_increament);
         if (total_multi_incre_int != total_multi_increament) 
@@ -399,8 +403,8 @@ public class IGGM : MonoBehaviour
             }
         }
         chest_reward_arr[i] = Pooper_reward_amount;
-        Debug.Log("predict_multi " + predict_multi.ToString());
-        Utilities.print_arr<float[], float>(chest_reward_arr);
+        Debug.Log("Predicted muliplier for this run " + predict_multi.ToString());
+        Utilities.print_arr<float[], float>(chest_reward_arr, str: "Predicted reward for each chest ");
     }
 
     /// <summary>
@@ -414,7 +418,7 @@ public class IGGM : MonoBehaviour
         {
             chest_ani_tier_arr[i] = deno * GSD.IS.C_ani_tier_multi_arr[i];
         }
-        Utilities.print_arr<float[], float>(chest_ani_tier_arr);
+        Utilities.print_arr<float[], float>(chest_ani_tier_arr, str: "Chest tier threshold ");
     }
 
     private void Cchestdata_reset()
@@ -455,8 +459,26 @@ public class IGGM : MonoBehaviour
         {
             id_TRANSs.Value.GetComponent<ChestGroup>().CloseChest();
             ++transition_finished_cnt;
-            yield return new WaitForSeconds(closeallchest_timegap);
+            yield return new WaitForSeconds(GSD.IS.Closeallchest_timegap);
         }
+    }
+
+    private void play_BGM()
+    {
+        if (BGMController.IS == null) 
+        { Debug.LogError("BGMController loading error!"); return; }
+        BGMController.IS.Play_BGM();
+    }
+
+    /// <summary>
+    /// Play button sound based on the index of the clip;
+    /// </summary>
+    /// <param name="index"></param>
+    private void play_button_sound(int index)
+    {
+        if (index >= button_clips.Length) 
+        { Debug.LogError("Button clips loading error!"); return; }
+        button_AS.PlayOneShot(button_clips[index]);
     }
 
     #endregion
@@ -468,6 +490,7 @@ public class IGGM : MonoBehaviour
         ++curr_deno_i;
         curr_deno_i = Mathf.Min(GSD.IS.Denomination_arr.Length - 1, curr_deno_i);
         update_denomination(GSD.IS.Denomination_arr[curr_deno_i]);
+        play_button_sound(Deno_button_soundi);
     }
 
     public void Decrease_denomination()
@@ -475,12 +498,19 @@ public class IGGM : MonoBehaviour
         --curr_deno_i;
         curr_deno_i = Mathf.Max(0, curr_deno_i);
         update_denomination(GSD.IS.Denomination_arr[curr_deno_i]);
+        play_button_sound(Deno_button_soundi);
     }
 
     public void Play_button()
     {
         IGUIC.IS.ToggleButtonLock_ChooseChest();
         GetComponent<Animator>().SetTrigger(SD.AniPlayTrigger);
+        play_button_sound(Play_button_soundi);
+    }
+
+    public void Exit_button()
+    {
+        Application.Quit();
     }
 
     /// <summary>
@@ -508,6 +538,7 @@ public class IGGM : MonoBehaviour
         IGRC.IS.CBGTemplate.Self_destroy();
         init_gamedata();
         GetComponent<Animator>().SetTrigger(SD.AniNextTrigger);
+        play_BGM();
     }
 
     /// <summary>

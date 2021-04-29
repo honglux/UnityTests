@@ -8,6 +8,10 @@ public class ChestGroup : MonoBehaviour
     [SerializeField] private Transform chest_model_TRANS;
     [SerializeField] private Transform chest_text_TRANS;
     [SerializeField] private Transform chest_content_TRANS;
+    [SerializeField] private AudioSource loop_AS;
+    [SerializeField] private AudioSource oneshot_AS;
+    [SerializeField] private AudioClip[] tier_ACs;
+    [SerializeField] private AudioClip pooper_AC;
     [Header("Info")]
     [SerializeField] private Sprite closed_panel_sprite;
     [SerializeField] private Sprite hovering_panel_sprite;
@@ -71,6 +75,7 @@ public class ChestGroup : MonoBehaviour
         int total_step = Mathf.FloorToInt(ani_time / ani_freq);
         float gap = amount / ani_time * ani_freq;
         int curr_step = 0;
+        play_coin_sound();
         while (curr_step < total_step)
         {
             chest_ani_amount += gap;
@@ -82,6 +87,7 @@ public class ChestGroup : MonoBehaviour
         }
         chest_ani_amount = amount;
         Update_text(chest_ani_amount);
+        stop_coin_sound();
     }
 
     /// <summary>
@@ -114,6 +120,10 @@ public class ChestGroup : MonoBehaviour
         if (next_tier < opened_text_colors.Length)
         {
             change_text_color(opened_text_colors[next_tier]);
+        }
+        if (next_tier < tier_ACs.Length)
+        {
+            play_tier_sound(next_tier);
         }
         if (chest_scale_ani_coro != null)
         { StopCoroutine(chest_scale_ani_coro); }
@@ -153,6 +163,7 @@ public class ChestGroup : MonoBehaviour
     private void show_pooper()
     {
         chest_text_TRANS.GetComponent<ChestText>().Show_pooper();
+        play_pooper_sound();
     }
 
     /// <summary>
@@ -195,6 +206,40 @@ public class ChestGroup : MonoBehaviour
     private void turn_off_content()
     {
         chest_content_TRANS.gameObject.SetActive(false);
+    }
+
+    /// <summary>
+    /// Play the coin sound; This loops;
+    /// </summary>
+    private void play_coin_sound()
+    {
+        loop_AS.Play();
+    }
+
+    /// <summary>
+    /// Stop the coin sound;
+    /// </summary>
+    private void stop_coin_sound()
+    {
+        loop_AS.Stop();
+    }
+
+    /// <summary>
+    /// Player pooper sound;
+    /// </summary>
+    private void play_pooper_sound()
+    {
+        oneshot_AS.PlayOneShot(pooper_AC);
+    }
+
+    /// <summary>
+    /// player tier sound based on the tier;
+    /// </summary>
+    /// <param name="tier"></param>
+    private void play_tier_sound(int tier)
+    {
+        if (tier >= tier_ACs.Length) { return; }
+        oneshot_AS.PlayOneShot(tier_ACs[tier]);
     }
 
     /// <summary>

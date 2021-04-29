@@ -23,7 +23,8 @@ public class TemporaryGameSettingsData : MonoBehaviour
     public UtilityClasses.TierMulti_list[] Multiplier_arr;  //Multiplier 2d list; row: tier, col: real multiplier among this tier;
     public float MiniChestIncreament;   //Minimun chest reward;
     public int AverageValidChestUpbound;    //The Upbound to radomize the chest valid number; The actual number will be expended, so this number is close to the average number;
-    public bool Use_closeAllChests_ani;   //Whether to animate close all chests;
+    public bool Use_closeAllChests_ani;   //Whether to animate close all chests SEPARATElY;
+    public float Closeallchest_timegap;    //Time gap for each chest to run the animation;
 
     //Not showing in the inspector since it is a little tidious to do that; Will be possibile to fix it if necessary;
     //Multiplier dictionary <percentage, tier index>; Percentage format, highbound * 100 + lowbound;

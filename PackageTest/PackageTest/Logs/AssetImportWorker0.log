@@ -15,11 +15,11 @@ G:/UnityProject/UnityTests/PackageTest/PackageTest
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61003
+53624
 Successfully changed project path to: G:/UnityProject/UnityTests/PackageTest/PackageTest
 G:/UnityProject/UnityTests/PackageTest/PackageTest
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 78.97 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 85.31 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.4f1 (0abb6314276a)
 [Subsystems] Discovering subsystems at path G:/Unity/2020.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -35,116 +35,492 @@ Initialize mono
 Mono path[0] = 'G:/Unity/2020.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'G:/Unity/2020.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'G:/Unity/2020.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56248
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56680
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: G:/Unity/2020.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007758 seconds.
+Registered in 0.008315 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 52.58 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 64.16 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.670 seconds
+- Completed reload, in  1.970 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004822 seconds.
+Registered in 0.006989 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.023 seconds
+- Completed reload, in  1.101 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.59 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1396 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.7 MB.
-System memory in use after: 64.8 MB.
+System memory in use before: 66.0 MB.
+System memory in use after: 66.1 MB.
 
 Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 1828.
-Total: 4.371900 ms (FindLiveObjects: 0.215000 ms CreateObjectMapping: 0.059600 ms MarkObjects: 3.961300 ms  DeleteObjects: 0.134500 ms)
+Total: 1.956200 ms (FindLiveObjects: 0.139100 ms CreateObjectMapping: 0.046900 ms MarkObjects: 1.674200 ms  DeleteObjects: 0.095100 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes
-  artifactKey: Guid(c9e01d84f70efb94c95a6a8207b4468a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes using Guid(c9e01d84f70efb94c95a6a8207b4468a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '786be47088868c144e22e88f80b77b51') in 0.008523 seconds
-  Import took 0.010815 seconds .
+  path: Assets/Monster_SFX_Pack_2020_2/A - Full Scences
+  artifactKey: Guid(32c38754a4762034daf0422f02f22f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monster_SFX_Pack_2020_2/A - Full Scences using Guid(32c38754a4762034daf0422f02f22f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f228b4e300c91da60f5d9183b4f2d73e') in 0.010422 seconds
+  Import took 0.013306 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 15.131690 seconds.
-  path: Assets/Rpr_Loot_Pack/Textures/red_gold.png
-  artifactKey: Guid(57283dd0925694444930b2b9b64d36fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rpr_Loot_Pack/Textures/red_gold.png using Guid(57283dd0925694444930b2b9b64d36fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dca93a204508f57ecdaf5c120dc32013') in 0.119222 seconds
-  Import took 0.121648 seconds .
+  Time since last request: 1.704836 seconds.
+  path: Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Draconic Speech
+  artifactKey: Guid(620ce8b2e588e6644bb40d1edfefcc11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Draconic Speech using Guid(620ce8b2e588e6644bb40d1edfefcc11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b33515bc628a5f9323229213b3211dd6') in 0.008422 seconds
+  Import took 0.011003 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.553529 seconds.
-  path: Assets/Rpr_Loot_Pack/Textures/goldcoin.png
-  artifactKey: Guid(37efa423c0105ab459cbc869330f5294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rpr_Loot_Pack/Textures/goldcoin.png using Guid(37efa423c0105ab459cbc869330f5294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f8608466e1291d8412b38d792a45dcb') in 0.016254 seconds
-  Import took 0.019383 seconds .
+  Time since last request: 1.760121 seconds.
+  path: Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Draconic Speech/Draconic Speech Amused.wav
+  artifactKey: Guid(d299a6255d62bd64ab83899f27c608ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Draconic Speech/Draconic Speech Amused.wav using Guid(d299a6255d62bd64ab83899f27c608ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [21956:NonCelloThread] registry_win.h:62:GetProtoFromRegistryValue Getting length of binary registry key Software\Google\DriveFS\Share failed with 0x2
+ -> (artifact id: '493c49ab702f4b231fca09fb184dcd6c') in 0.277712 seconds
+  Import took 0.281042 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.545847 seconds.
-  path: Assets/Rpr_Loot_Pack/Textures/gem_green.png
-  artifactKey: Guid(678ccb30d30fde140aef02bef251b439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rpr_Loot_Pack/Textures/gem_green.png using Guid(678ccb30d30fde140aef02bef251b439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9527d1122e418839236d15c28dd00353') in 0.013051 seconds
-  Import took 0.015625 seconds .
+  Time since last request: 14.509560 seconds.
+  path: Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Draconic Speech/Draconic Speech Angry.wav
+  artifactKey: Guid(6f4c0b90ecb19684e9ab770a3df09c15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Draconic Speech/Draconic Speech Angry.wav using Guid(6f4c0b90ecb19684e9ab770a3df09c15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1872e0f58c0d59bd0c2a22401b8dc125') in 0.019001 seconds
+  Import took 0.022149 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.220666 seconds.
-  path: Assets/Rpr_Loot_Pack/Meshes/chest_lvl1.fbx
-  artifactKey: Guid(7e774093601d5d04496956584e9f8f04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rpr_Loot_Pack/Meshes/chest_lvl1.fbx using Guid(7e774093601d5d04496956584e9f8f04) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [8376:NonCelloThread] registry_win.h:62:GetProtoFromRegistryValue Getting length of binary registry key Software\Google\DriveFS\Share failed with 0x2
- -> (artifact id: '2c92ee0e5dea72d66a7c816cd8395803') in 0.452286 seconds
-  Import took 0.455057 seconds .
+  Time since last request: 16.659928 seconds.
+  path: Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Draconic Speech/Draconic Speech Casual 1.wav
+  artifactKey: Guid(c2f567421efd5e947a810ab24f5ca5b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Draconic Speech/Draconic Speech Casual 1.wav using Guid(c2f567421efd5e947a810ab24f5ca5b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '768f135883833fcb3b65862a143c315d') in 0.018764 seconds
+  Import took 0.022115 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000215 seconds.
-  path: Assets/Rpr_Loot_Pack/Meshes/coin_star.fbx
-  artifactKey: Guid(32a283da1ce40144489916751e14910a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rpr_Loot_Pack/Meshes/coin_star.fbx using Guid(32a283da1ce40144489916751e14910a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41a47b3844115078c076142706f18da8') in 0.020724 seconds
-  Import took 0.023500 seconds .
+  Time since last request: 12.884798 seconds.
+  path: Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Crazy Goblin Background_1_Loop.wav
+  artifactKey: Guid(39724ba0f6ea42149adb80aa3f5c35d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Crazy Goblin Background_1_Loop.wav using Guid(39724ba0f6ea42149adb80aa3f5c35d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60bc1d6c76a804689e36cdd16deba1d6') in 0.015674 seconds
+  Import took 0.020252 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.054892 seconds.
-  path: Assets/Rpr_Loot_Pack/Meshes/coin_star.fbx
-  artifactKey: Guid(32a283da1ce40144489916751e14910a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rpr_Loot_Pack/Meshes/coin_star.fbx using Guid(32a283da1ce40144489916751e14910a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41a47b3844115078c076142706f18da8') in 0.013527 seconds
-  Import took 0.016153 seconds .
+  Time since last request: 0.501680 seconds.
+  path: Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Crazy Goblin Background_2_Loop.wav
+  artifactKey: Guid(eae7fca2b83f2524c8c65ca6a6d95201) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Crazy Goblin Background_2_Loop.wav using Guid(eae7fca2b83f2524c8c65ca6a6d95201) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9587d2de408befc5f6b34ee9fa046401') in 0.021813 seconds
+  Import took 0.025925 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.107357 seconds.
-  path: Assets/Rpr_Loot_Pack/Meshes/gem.fbx
-  artifactKey: Guid(42dd7bd0519a8384ebd05d53fc59a00a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rpr_Loot_Pack/Meshes/gem.fbx using Guid(42dd7bd0519a8384ebd05d53fc59a00a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8de9519c6e81b2b7573e9b52acb28155') in 0.019620 seconds
-  Import took 0.022306 seconds .
+  Time since last request: 0.003919 seconds.
+  path: Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Crazy Goblin Background_2_Loop.wav
+  artifactKey: Guid(eae7fca2b83f2524c8c65ca6a6d95201) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Crazy Goblin Background_2_Loop.wav using Guid(eae7fca2b83f2524c8c65ca6a6d95201) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9587d2de408befc5f6b34ee9fa046401') in 0.027859 seconds
+  Import took 0.031452 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 10.255544 seconds.
-  path: Assets/Rpr_Loot_Pack/Scenes/ChestModel.unity
-  artifactKey: Guid(99c9720ab356a0642a771bea13969a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rpr_Loot_Pack/Scenes/ChestModel.unity using Guid(99c9720ab356a0642a771bea13969a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2dc0f4cb248f81448785cb25320bf4d') in 0.008051 seconds
-  Import took 0.011303 seconds .
+  Time since last request: 5.605539 seconds.
+  path: Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Dragon Air Attack.wav
+  artifactKey: Guid(1b92ae5eef5fd1f4d9e1f11ab2bd4570) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Dragon Air Attack.wav using Guid(1b92ae5eef5fd1f4d9e1f11ab2bd4570) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a37ad7b00096dae2ea2843fa4250ae8d') in 0.015711 seconds
+  Import took 0.018609 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000593 seconds.
-  path: Assets/Rpr_Loot_Pack/Scenes/ChestModel.unity
-  artifactKey: Guid(99c9720ab356a0642a771bea13969a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rpr_Loot_Pack/Scenes/ChestModel.unity using Guid(99c9720ab356a0642a771bea13969a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2dc0f4cb248f81448785cb25320bf4d') in 0.003506 seconds
-  Import took 0.005935 seconds .
+  Time since last request: 0.000581 seconds.
+  path: Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Dragon Air Attack.wav
+  artifactKey: Guid(1b92ae5eef5fd1f4d9e1f11ab2bd4570) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Dragon Air Attack.wav using Guid(1b92ae5eef5fd1f4d9e1f11ab2bd4570) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a37ad7b00096dae2ea2843fa4250ae8d') in 0.014453 seconds
+  Import took 0.017456 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.850020 seconds.
+  path: Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Dragon Ground Attack.wav
+  artifactKey: Guid(6f4498520fbe56a45ad9ad0381981232) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Dragon Ground Attack.wav using Guid(6f4498520fbe56a45ad9ad0381981232) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd93e9c24353a202a36833b4e68bf3876') in 0.012329 seconds
+  Import took 0.015722 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001976 seconds.
+  path: Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Dragon Ground Attack.wav
+  artifactKey: Guid(6f4498520fbe56a45ad9ad0381981232) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Dragon Ground Attack.wav using Guid(6f4498520fbe56a45ad9ad0381981232) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd93e9c24353a202a36833b4e68bf3876') in 0.010234 seconds
+  Import took 0.012806 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 49.293799 seconds.
+  path: Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Fire Monster Full Speech_With Effects.wav
+  artifactKey: Guid(da0705065e5e9864db814a730a0e71ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Fire Monster Full Speech_With Effects.wav using Guid(da0705065e5e9864db814a730a0e71ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c07b5a2b267963cf266a9a618ff2d65') in 0.012554 seconds
+  Import took 0.015410 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003677 seconds.
+  path: Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Fire Monster Full Speech_With Effects.wav
+  artifactKey: Guid(da0705065e5e9864db814a730a0e71ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Fire Monster Full Speech_With Effects.wav using Guid(da0705065e5e9864db814a730a0e71ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c07b5a2b267963cf266a9a618ff2d65') in 0.010258 seconds
+  Import took 0.012968 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.516994 seconds.
+  path: Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Flying Dragon_Loop.wav
+  artifactKey: Guid(47999d87eda8cf64ea9a886ecec9e209) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Flying Dragon_Loop.wav using Guid(47999d87eda8cf64ea9a886ecec9e209) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1d44a5f68235485577ad7eb5ce31d48') in 0.012413 seconds
+  Import took 0.016473 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002121 seconds.
+  path: Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Flying Dragon_Loop.wav
+  artifactKey: Guid(47999d87eda8cf64ea9a886ecec9e209) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Flying Dragon_Loop.wav using Guid(47999d87eda8cf64ea9a886ecec9e209) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1d44a5f68235485577ad7eb5ce31d48') in 0.017837 seconds
+  Import took 0.020595 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.921359 seconds.
+  path: Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Fire Monster Full_Loop.wav
+  artifactKey: Guid(e81a7fea4f6c1794bb122da719acf33f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Fire Monster Full_Loop.wav using Guid(e81a7fea4f6c1794bb122da719acf33f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a25d18089f3eed7550518d5da8f48f44') in 0.014042 seconds
+  Import took 0.017419 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002691 seconds.
+  path: Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Fire Monster Full_Loop.wav
+  artifactKey: Guid(e81a7fea4f6c1794bb122da719acf33f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Fire Monster Full_Loop.wav using Guid(e81a7fea4f6c1794bb122da719acf33f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a25d18089f3eed7550518d5da8f48f44') in 0.013496 seconds
+  Import took 0.017559 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.468451 seconds.
+  path: Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Ghoul Aggressive - Full Scene.wav
+  artifactKey: Guid(a5097870a761fe7469b34aab16c6a1e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Ghoul Aggressive - Full Scene.wav using Guid(a5097870a761fe7469b34aab16c6a1e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85587a8b3d66bab7de6e4d92a0b068cd') in 0.014760 seconds
+  Import took 0.018404 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000740 seconds.
+  path: Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Ghoul Aggressive - Full Scene.wav
+  artifactKey: Guid(a5097870a761fe7469b34aab16c6a1e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monster_SFX_Pack_2020_2/A - Full Scences/Ghoul Aggressive - Full Scene.wav using Guid(a5097870a761fe7469b34aab16c6a1e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85587a8b3d66bab7de6e4d92a0b068cd') in 0.011404 seconds
+  Import took 0.014524 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 453.768312 seconds.
+  path: Assets/Sound
+  artifactKey: Guid(db590bb480e4b6d4ba8af207c34bfc04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound using Guid(db590bb480e4b6d4ba8af207c34bfc04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41ba287d9d6d0d2913975b5146353908') in 0.007285 seconds
+  Import took 0.010474 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004549 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.957 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.0 MB.
+System memory in use after: 69.1 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1840.
+Total: 2.045400 ms (FindLiveObjects: 0.148200 ms CreateObjectMapping: 0.075800 ms MarkObjects: 1.776500 ms  DeleteObjects: 0.044100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005261 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.936 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.0 MB.
+System memory in use after: 69.1 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1843.
+Total: 2.286000 ms (FindLiveObjects: 0.223000 ms CreateObjectMapping: 0.107200 ms MarkObjects: 1.907200 ms  DeleteObjects: 0.047900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004594 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.977 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.98 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.0 MB.
+System memory in use after: 69.1 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1846.
+Total: 3.256100 ms (FindLiveObjects: 0.356800 ms CreateObjectMapping: 0.202000 ms MarkObjects: 2.665900 ms  DeleteObjects: 0.029400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004453 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.932 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.0 MB.
+System memory in use after: 69.2 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1849.
+Total: 2.081300 ms (FindLiveObjects: 0.173600 ms CreateObjectMapping: 0.091800 ms MarkObjects: 1.766100 ms  DeleteObjects: 0.049200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006413 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.914 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.1 MB.
+System memory in use after: 69.2 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1852.
+Total: 1.956800 ms (FindLiveObjects: 0.168800 ms CreateObjectMapping: 0.127200 ms MarkObjects: 1.616500 ms  DeleteObjects: 0.043500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004522 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.979 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.1 MB.
+System memory in use after: 69.2 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1855.
+Total: 2.173300 ms (FindLiveObjects: 0.178900 ms CreateObjectMapping: 0.097300 ms MarkObjects: 1.867600 ms  DeleteObjects: 0.028700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 972.277709 seconds.
+  path: Assets/Sound/Coins 2.wav
+  artifactKey: Guid(a2102b4dc289e6b4ea230cfd4ea8d00e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound/Coins 2.wav using Guid(a2102b4dc289e6b4ea230cfd4ea8d00e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dee3602110f8b49ad35587d2fe429712') in 0.043833 seconds
+  Import took 0.046962 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003858 seconds.
+  path: Assets/Sound/Coins 2.wav
+  artifactKey: Guid(a2102b4dc289e6b4ea230cfd4ea8d00e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound/Coins 2.wav using Guid(a2102b4dc289e6b4ea230cfd4ea8d00e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dee3602110f8b49ad35587d2fe429712') in 0.014622 seconds
+  Import took 0.017531 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004804 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.954 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.1 MB.
+System memory in use after: 69.2 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1859.
+Total: 1.817800 ms (FindLiveObjects: 0.160800 ms CreateObjectMapping: 0.043500 ms MarkObjects: 1.588900 ms  DeleteObjects: 0.024000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004736 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.910 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.1 MB.
+System memory in use after: 69.2 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1862.
+Total: 2.242100 ms (FindLiveObjects: 0.211300 ms CreateObjectMapping: 0.109100 ms MarkObjects: 1.871000 ms  DeleteObjects: 0.050100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004808 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.83 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.147 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.1 MB.
+System memory in use after: 69.2 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1865.
+Total: 2.285600 ms (FindLiveObjects: 0.268400 ms CreateObjectMapping: 0.130800 ms MarkObjects: 1.857200 ms  DeleteObjects: 0.027800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005141 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.097 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.08 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.1 MB.
+System memory in use after: 69.2 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1868.
+Total: 2.268500 ms (FindLiveObjects: 0.188800 ms CreateObjectMapping: 0.099700 ms MarkObjects: 1.951200 ms  DeleteObjects: 0.027300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 45137.096399 seconds.
+  path: Assets/Sound/Click back sounds 20.wav
+  artifactKey: Guid(379f00b8dfb57cb4096a6f94ff31ac18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound/Click back sounds 20.wav using Guid(379f00b8dfb57cb4096a6f94ff31ac18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4b6dda4fe278c5ca66662d1cf27e998') in 0.160230 seconds
+  Import took 0.202817 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 338.056571 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '025e4f587c23674256bb898581e82961') in 0.010508 seconds
+  Import took 0.017238 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.640401 seconds.
+  path: Assets/STController.cs
+  artifactKey: Guid(565101331c1dcde45ab1ac1b60c77903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/STController.cs using Guid(565101331c1dcde45ab1ac1b60c77903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34ae218e663997e0da909499737dfc38') in 0.014871 seconds
+  Import took 0.017677 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004850 seconds.
+  path: Assets/STController.cs
+  artifactKey: Guid(565101331c1dcde45ab1ac1b60c77903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/STController.cs using Guid(565101331c1dcde45ab1ac1b60c77903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34ae218e663997e0da909499737dfc38') in 0.004131 seconds
+  Import took 0.008907 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005609 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.10 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.783 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.72 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1391 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.1 MB.
+System memory in use after: 69.2 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1873.
+Total: 2.308700 ms (FindLiveObjects: 0.197400 ms CreateObjectMapping: 0.092600 ms MarkObjects: 1.966400 ms  DeleteObjects: 0.051500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004623 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.92 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.103 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1391 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.1 MB.
+System memory in use after: 69.2 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1876.
+Total: 2.110100 ms (FindLiveObjects: 0.213100 ms CreateObjectMapping: 0.090000 ms MarkObjects: 1.784900 ms  DeleteObjects: 0.021000 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
