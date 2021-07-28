@@ -6,6 +6,7 @@ public class LerpTest : MonoBehaviour
 {
     [SerializeField] private Vector3 NewPos;
     [SerializeField] private float time;
+    [SerializeField] private float lerp_amount;
 
     private float s_time;
     private Vector3 speed;
@@ -43,5 +44,13 @@ public class LerpTest : MonoBehaviour
             Vector3.Lerp(transform.position, NewPos, mag_speed * Time.deltaTime);
 
         //transform.position = Vector3.SmoothDamp()
+
+        LerpTest2();
     }
+
+    public void LerpTest2()
+    {
+        Debug.Log("LerpTest2 " + Mathf.Lerp(0.0f, 1.0f, lerp_amount));
+    }
+
 }

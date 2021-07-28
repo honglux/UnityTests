@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7875830241760090228
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 11
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shader Graphs_WaterLitShaderGraph
+  m_Shader: {fileID: -6465566751694194690, guid: bd104c6cf9b6a7b4f993aadfd97c16f3, type: 3}
+  m_ShaderKeywords: _DISABLE_SSR_TRANSPARENT _ENABLE_FOG_ON_TRANSPARENT _SURFACE_TYPE_TRANSPARENT
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    MotionVector: User
+    RenderType: Transparent
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  - TransparentDepthPrepass
+  - TransparentDepthPostpass
+  - TransparentBackface
+  - RayTracingPrepass
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainNormal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_7ed502686e684be98c6727174f9e359f_Texture_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SecondNormal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_2fd84e823e4147c7afa309a123c51ef6: 0.1
+    - Vector1_665061bb77fc4864b6e598aadd0675c2: 3
+    - Vector1_7d15516b0ac84e07a42236af428cdbec: 0
+    - Vector1_81f1244face74f45a447d5a9643c9568: 10
+    - Vector1_95989c76958e41c7994521861d128662: 20
+    - Vector1_e9420ccb8a544c039cfa7095da4434d7: 0.01
+    - Vector1_fa42a2a4c780425e974e393212016427: 0.1
+    - _AddPrecomputedVelocity: 0
+    - _AlphaCutoffEnable: 0
+    - _AlphaDstBlend: 10
+    - _AlphaSrcBlend: 1
+    - _AlphaToMask: 0
+    - _AlphaToMaskInspectorValue: 0
+    - _BlendMode: 0
+    - _CullMode: 2
+    - _CullModeForward: 2
+    - _Depth: 1
+    - _DepthOffsetEnable: 0
+    - _DepthStrength: 0.1
+    - _DoubleSidedEnable: 0
+    - _DoubleSidedNormalMode: 2
+    - _DstBlend: 10
+    - _EnableBlendModePreserveSpecularLighting: 1
+    - _EnableFogOnTransparent: 1
+    - _LargeWaveScale: 10
+    - _LargeWaveSpeed: 14.3
+    - _LargeWaveVertexScale: 3
+    - _OpaqueCullMode: 2
+    - _RayTracing: 0
+    - _ReceivesSSR: 1
+    - _ReceivesSSRTransparent: 0
+    - _RefractionModel: 0
+    - _RenderQueueType: 4
+    - _RequireSplitLighting: 0
+    - _Smoothness: 0.8
+    - _SrcBlend: 1
+    - _StencilRef: 0
+    - _StencilRefDepth: 0
+    - _StencilRefDistortionVec: 4
+    - _StencilRefGBuffer: 2
+    - _StencilRefMV: 32
+    - _StencilWriteMask: 6
+    - _StencilWriteMaskDepth: 8
+    - _StencilWriteMaskDistortionVec: 4
+    - _StencilWriteMaskGBuffer: 14
+    - _StencilWriteMaskMV: 40
+    - _Strength: 0.1
+    - _SupportDecals: 1
+    - _SurfaceType: 1
+    - _TransparentBackfaceEnable: 0
+    - _TransparentCullMode: 2
+    - _TransparentDepthPostpassEnable: 0
+    - _TransparentDepthPrepassEnable: 0
+    - _TransparentSortPriority: 0
+    - _TransparentWritingMotionVec: 0
+    - _TransparentZWrite: 0
+    - _UseShadowThreshold: 0
+    - _VertexDisplacement: 0.05
+    - _Wave1SpeedInv: 100.5
+    - _Wave1Strength: 0.1
+    - _Wave2SpeedInv: 201
+    - _WaveClampMax: 1
+    - _WaveClampMin: 0.4
+    - _WaveScale1: 50
+    - _WaveScale2: 75
+    - _WaveStrength: 0.2
+    - _ZTestDepthEqualForOpaque: 4
+    - _ZTestGBuffer: 4
+    - _ZTestTransparent: 4
+    - _ZWrite: 0
+    m_Colors:
+    - Color_0e0e241d514c4f99b8ba07ac858c8489: {r: 0.9602952, g: 1.7702832, b: 1.7702832, a: 0}
+    - Vector2_13e5ce98e5c34586a1f35a9aee8400ab: {r: 10, g: 10, b: 0, a: 0}
+    - Vector2_c9565834ab3a4b16873586187b5b91d7: {r: -1, g: -1, b: 0, a: 0}
+    - Vector2_e6a74623313e4a00835e7227e93397e7: {r: 0, g: 1, b: 0, a: 0}
+    - _DeepWaterColor: {r: 0, g: 0.34564036, b: 0.7882353, a: 0.8431373}
+    - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ShallowWaterColor: {r: 0, g: 0.745283, b: 0.6937476, a: 0.3882353}
+    - _Wave1Direction: {r: 1, g: 2, b: 0, a: 0}
+    - _WaveEmitColor: {r: 2.494118, g: 1.34902, b: 0, a: 1}
+  m_BuildTextureStacks: []

@@ -719,7 +719,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &243907056
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1693,7 +1693,7 @@ MonoBehaviour:
   - Multiplier_list: 00000000
   - Multiplier_list: 0100000002000000030000000400000005000000060000000700000008000000090000000a000000
   - Multiplier_list: 0c0000001000000018000000200000003000000040000000
-  - Multiplier_list: 64000000c80000002c01000090010000
+  - Multiplier_list: 64000000c80000002c01000090010000f4010000
   MiniChestIncreament: 0.05
   AverageValidChestUpbound: 3
   Use_closeAllChests_ani: 1

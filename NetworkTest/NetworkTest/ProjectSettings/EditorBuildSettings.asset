@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TCPSendSceneToServer.unity
+    guid: e7b40fe3a9676f44185d8921bb0b0bbc
   m_configObjects: {}
